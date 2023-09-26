@@ -47,3 +47,60 @@
 2023-09-26 10:16:11.089 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
 2023-09-26 10:16:11.090 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2023-09-26 10:16:11.093 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-09-26 11:26:32.259 [restartedMain] INFO  j.hmanage.hospitalmanage.HospitalManageApplication - Starting HospitalManageApplication on lhz with PID 16592 (D:\java\IdeaProjects\app-hospital\hospital-system\hospital-manage\target\classes started by 21907 in D:\java\IdeaProjects\app-hospital\hospital-system)
+2023-09-26 11:26:32.261 [restartedMain] INFO  j.hmanage.hospitalmanage.HospitalManageApplication - The following profiles are active: dev
+2023-09-26 11:26:32.322 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-09-26 11:26:32.323 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-09-26 11:26:33.428 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-26 11:26:33.770 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2023-09-26 11:26:33.776 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2023-09-26 11:26:33.776 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-26 11:26:33.777 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2023-09-26 11:26:33.826 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-26 11:26:33.827 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1504 ms
+2023-09-26 11:26:34.697 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-09-26 11:26:34.783 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-26 11:26:34.827 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-09-26 11:26:35.072 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2023-09-26 11:26:35.083 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2023-09-26 11:26:35.130 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2023-09-26 11:26:35.158 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9998"]
+2023-09-26 11:26:35.218 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9998 (http) with context path ''
+2023-09-26 11:26:35.220 [restartedMain] INFO  j.hmanage.hospitalmanage.HospitalManageApplication - Started HospitalManageApplication in 3.757 seconds (JVM running for 6.828)
+2023-09-26 11:27:04.801 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-26 11:27:09.937 [restartedMain] INFO  j.hmanage.hospitalmanage.HospitalManageApplication - Starting HospitalManageApplication on lhz with PID 19504 (D:\java\IdeaProjects\app-hospital\hospital-system\hospital-manage\target\classes started by 21907 in D:\java\IdeaProjects\app-hospital\hospital-system)
+2023-09-26 11:27:09.939 [restartedMain] INFO  j.hmanage.hospitalmanage.HospitalManageApplication - The following profiles are active: dev
+2023-09-26 11:27:09.963 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-09-26 11:27:09.964 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-09-26 11:27:10.539 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-26 11:27:10.699 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2023-09-26 11:27:10.705 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2023-09-26 11:27:10.705 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-26 11:27:10.705 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2023-09-26 11:27:10.748 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-26 11:27:10.748 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 784 ms
+2023-09-26 11:27:11.403 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-09-26 11:27:11.453 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2023-09-26 11:27:11.474 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-09-26 11:27:11.616 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2023-09-26 11:27:11.626 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2023-09-26 11:27:11.648 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2023-09-26 11:27:11.661 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9998"]
+2023-09-26 11:27:11.674 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9998 (http) with context path ''
+2023-09-26 11:27:11.676 [restartedMain] INFO  j.hmanage.hospitalmanage.HospitalManageApplication - Started HospitalManageApplication in 2.065 seconds (JVM running for 2.587)
+2023-09-26 11:27:50.898 [http-nio-9998-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-26 11:27:50.898 [http-nio-9998-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-09-26 11:27:50.902 [http-nio-9998-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2023-09-26 11:27:53.310 [http-nio-9998-exec-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-09-26 11:27:53.464 [http-nio-9998-exec-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-09-26 11:27:54.561 [http-nio-9998-exec-9] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - --> 发送请求：post data sign=132a02d6fcde3edf42a386c5704229d1&hoscode=1000_0&timestamp=1695698874557&
+2023-09-26 11:27:55.989 [http-nio-9998-exec-1] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - 加密前：1000_0|10|1|1695698875988|bdf81065012e9e9f7f5ff0460421596e
+2023-09-26 11:27:55.990 [http-nio-9998-exec-1] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - 加密后：5d0140da64bff2099a87513719fe2f7e
+2023-09-26 11:27:55.992 [http-nio-9998-exec-1] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - --> 发送请求：post data limit=10&sign=5d0140da64bff2099a87513719fe2f7e&page=1&hoscode=1000_0&timestamp=1695698875988&
+2023-09-26 11:27:57.151 [http-nio-9998-exec-4] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - 加密前：1000_0|10|1|1695698877150|bdf81065012e9e9f7f5ff0460421596e
+2023-09-26 11:27:57.152 [http-nio-9998-exec-4] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - 加密后：2b54952ef8656aceedfa217cd5548741
+2023-09-26 11:27:57.154 [http-nio-9998-exec-4] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - --> 发送请求：post data limit=10&sign=2b54952ef8656aceedfa217cd5548741&page=1&hoscode=1000_0&timestamp=1695698877150&
+2023-09-26 11:28:14.134 [http-nio-9998-exec-9] INFO  jw.hmanage.hospitalmanage.utils.HttpRequestHelper - --> 发送请求：post data sign=132a02d6fcde3edf42a386c5704229d1&hoscode=1000_0&timestamp=1695698894128&
+2023-09-26 11:30:49.622 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-09-26 11:30:49.623 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-09-26 11:30:49.629 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

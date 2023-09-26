@@ -27,7 +27,7 @@
         <alibaba.version>2.1.0.RELEASE</alibaba.version>
         <mybatis-plus.version>3.4.2</mybatis-plus.version>
         <mysql.version>5.1.46</mysql.version>
-        <swagger.version>2.7.0</swagger.version>
+        <swagger.version>2.9.2</swagger.version>
         <jwt.version>0.7.0</jwt.version>
         <fastjson.version>1.2.83</fastjson.version>
         <httpclient.version>4.5.1</httpclient.version>
@@ -67,18 +67,6 @@
                 <version>${mysql.version}</version>
             </dependency>
 
-            <!--swagger-->
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger2</artifactId>
-                <version>${swagger.version}</version>
-            </dependency>
-            <!--swagger ui-->
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger-ui</artifactId>
-                <version>${swagger.version}</version>
-            </dependency>
 
             <dependency>
                 <groupId>io.jsonwebtoken</groupId>
