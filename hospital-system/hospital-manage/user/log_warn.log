@@ -13,3 +13,11 @@
 ### SQL: SELECT id,hoscode,sign_key,api_url,create_time,update_time,is_deleted FROM hospital_set WHERE id=?  AND is_deleted=0
 ### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'yygh_manage.hospital_set' doesn't exist
 ; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'yygh_manage.hospital_set' doesn't exist]
+2023-09-26 10:14:04.405 [http-nio-9998-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'yygh_manage.hospital_set' doesn't exist
+### The error may exist in jw/hmanage/hospitalmanage/mapper/HospitalSetMapper.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT id,hoscode,sign_key,api_url,create_time,update_time,is_deleted FROM hospital_set WHERE id=?  AND is_deleted=0
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'yygh_manage.hospital_set' doesn't exist
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'yygh_manage.hospital_set' doesn't exist]
