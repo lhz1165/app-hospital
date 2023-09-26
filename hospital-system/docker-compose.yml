@@ -1,0 +1,42 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: mysql5_7
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_USER: root #root用户
+      MYSQL_ROOT_PASSWORD: root #root密码
+      MYSQL_ROOT_HOST: '%'
+      TZ: Asia/Shanghai #时区
+    ports:
+      - "3306:3306"
+    volumes:
+      - ~/spring-website-docker/mysql-entrypoint:/docker-entrypoint-initdb.d
+      - ~/create_user_table.sql:/create_user_table.sql
+      - /etc/localtime:/etc/localtime
+    restart: always
+
+  mongo:
+    container_name: mongo
+    image: mongo
+    volumes:
+      - ~/mongodb:/data/db
+      - ~/mongo-log:/data/log
+      - ~/spring-website-docker/mongo-entrypoint:/docker-entrypoint-initdb.d
+      - /etc/localtime:/etc/localtime
+    ports:
+      - "27017:27017"
+    restart: always
+    command: mongod
+
+  hospital-service:
+    image: service-hospital:0.0.1-SNAPSHOT
+    container_name: service-hospital
+    ports:
+      - 8201:8201
+    volumes:
+      - /mydata/app/mall-tiny-docker-compose/logs:/var/logs
+    depends_on:
+      - mongo
+      - mysql
