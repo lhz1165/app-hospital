@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hospital-manage/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hospital-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hospital-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />

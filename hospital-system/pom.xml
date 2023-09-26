@@ -15,6 +15,7 @@
     <modules>
         <module>common</module>
         <module>hospital-service</module>
+        <module>hospital-manage</module>
     </modules>
     <version>0.0.1-SNAPSHOT</version>
     <name>hospital-system</name>
@@ -28,7 +29,7 @@
         <mysql.version>5.1.46</mysql.version>
         <swagger.version>2.7.0</swagger.version>
         <jwt.version>0.7.0</jwt.version>
-        <fastjson.version>1.2.75</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <httpclient.version>4.5.1</httpclient.version>
         <easyexcel.version>2.1.1</easyexcel.version>
     </properties>
