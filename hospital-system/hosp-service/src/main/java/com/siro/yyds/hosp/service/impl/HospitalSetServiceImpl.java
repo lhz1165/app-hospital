@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * @author docker
- * @date 2022-01-21
+ * @date 2023-10-05
  */
 @Service
 public class HospitalSetServiceImpl extends ServiceImpl<HospitalSetMapper, HospitalSet> implements HospitalSetService {

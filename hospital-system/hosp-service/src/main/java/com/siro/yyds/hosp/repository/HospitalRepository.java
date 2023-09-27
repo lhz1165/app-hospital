@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * 医院管理 保存到 mongodb中
  * @author docker
- * @date 2022-01-26
+ * @date 2023-10-05
  */
 @Repository
 public interface HospitalRepository extends MongoRepository<Hospital, String> {

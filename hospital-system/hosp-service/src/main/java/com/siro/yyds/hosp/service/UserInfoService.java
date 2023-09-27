@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
  * @author docker
- * @date 2022-02-03
+ * @date 2023-10-05
  */
 public interface UserInfoService extends IService<UserInfo> {
 

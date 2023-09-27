@@ -11,7 +11,7 @@ import java.util.TreeMap;
 /**
  * 对http请求加密处理
  * @author docker
- * @date 2022-01-20
+ * @date 2023-10-05
  */
 @Slf4j
 public class HttpRequestHelper {

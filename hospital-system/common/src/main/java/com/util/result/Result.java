@@ -7,7 +7,7 @@ import lombok.Data;
 /**
  * API统一返回结果封装类
  * @author docker
- * @date 2022-01-19
+ * @date 2023-10-05
  */
 @Data
 @ApiModel(value = "全局统一返回结果")

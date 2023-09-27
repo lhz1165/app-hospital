@@ -6,7 +6,7 @@ import com.util.pojo.model.user.Patient;
 
 /**
  * @author docker
- * @date 2022-02-05
+ * @date 2023-10-05
  */
 public interface PatientMapper extends BaseMapper<Patient> {
 

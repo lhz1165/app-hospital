@@ -18,7 +18,7 @@ import org.springframework.context.annotation.ComponentScan;
  * 医院api接口服务
  *
  * @author docker
- * @date 2022-01-21
+ * @date 2023-10-05
  */
 @SpringBootApplication
 @ComponentScan(basePackages = "com.siro.yyds")

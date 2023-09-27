@@ -7,7 +7,7 @@ import com.util.pojo.vo.order.SignInfoVo;
 
 /**
  * @author docker
- * @date 2022-01-21
+ * @date 2023-10-05
  */
 public interface HospitalSetService extends IService<HospitalSet> {
 

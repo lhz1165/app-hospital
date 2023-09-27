@@ -5,7 +5,7 @@ import com.util.pojo.model.user.UserInfo;
 
 /**
  * @author docker
- * @date 2022-02-03
+ * @date 2023-10-05
  */
 public interface UserInfoMapper extends BaseMapper<UserInfo> {
 

@@ -9,7 +9,7 @@ import org.springframework.beans.BeanUtils;
 
 /**
  * @author docker
- * @date 2022-01-25
+ * @date 2023-10-05
  */
 public class DictListener extends AnalysisEventListener<DictEeVo> {
 

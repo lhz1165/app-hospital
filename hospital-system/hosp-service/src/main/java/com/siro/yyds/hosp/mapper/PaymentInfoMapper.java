@@ -5,7 +5,7 @@ import com.util.pojo.model.order.PaymentInfo;
 
 /**
  * @author docker
- * @date 2022-02-08
+ * @date 2023-10-05
  */
 public interface PaymentInfoMapper extends BaseMapper<PaymentInfo> {
 

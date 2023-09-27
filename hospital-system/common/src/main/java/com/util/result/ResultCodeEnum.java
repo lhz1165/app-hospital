@@ -5,7 +5,7 @@ import lombok.Getter;
 /**
  * API统一返回结果状态信息
  * @author docker
- * @date 2022-01-19
+ * @date 2023-10-05
  */
 @Getter
 public enum ResultCodeEnum {

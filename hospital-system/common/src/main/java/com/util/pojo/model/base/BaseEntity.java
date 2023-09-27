@@ -15,7 +15,7 @@ import java.util.Map;
 
 /**
  * @author docker
- * @date 2022-01-20
+ * @date 2023-10-05
  */
 @Data
 public class BaseEntity implements Serializable {

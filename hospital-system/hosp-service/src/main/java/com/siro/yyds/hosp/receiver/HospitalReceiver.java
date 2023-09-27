@@ -20,7 +20,7 @@ package com.siro.yyds.hosp.receiver;//package com.siro.yyds.hosp.receiver;
 ///**
 // * mq监听器
 // * @author docker
-// * @date 2022-02-06
+// * @date 2023-10-05
 // */
 //@Component
 //public class HospitalReceiver {

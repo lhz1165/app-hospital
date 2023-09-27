@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 /**
  * @author docker
- * @date 2022-01-27
+ * @date 2023-10-05
  */
 @Repository
 public interface DepartmentRepository extends MongoRepository<Department, String> {

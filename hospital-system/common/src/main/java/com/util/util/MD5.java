@@ -6,7 +6,7 @@ import java.security.NoSuchAlgorithmException;
 /**
  * MD5加密工具类
  * @author docker
- * @date 2022-01-19
+ * @date 2023-10-05
  */
 public final class MD5 {
 

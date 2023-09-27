@@ -13,7 +13,7 @@ import java.util.Date;
  *  JWT的原理：一个JWT由三个部分组成：公共部分、私有部分、签名部分。最后由这三者组合进行base64编码得到JWT。
  *
  * @author docker
- * @date 2022-02-03
+ * @date 2023-10-05
  */
 public class JwtHelper {
 

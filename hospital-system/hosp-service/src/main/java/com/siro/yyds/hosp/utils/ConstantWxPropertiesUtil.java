@@ -7,7 +7,7 @@
 ///**
 // * 微信登录参数类
 // * @author docker
-// * @date 2022-02-03
+// * @date 2023-10-05
 // */
 //@Component
 //public class ConstantWxPropertiesUtil implements InitializingBean {

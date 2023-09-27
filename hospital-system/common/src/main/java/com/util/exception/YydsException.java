@@ -8,7 +8,7 @@ import lombok.Data;
 /**
  * 自定义全局异常
  * @author docker
- * @date 2022-01-19
+ * @date 2023-10-05
  */
 @Data
 @ApiModel(value = "自定义全局异常类")

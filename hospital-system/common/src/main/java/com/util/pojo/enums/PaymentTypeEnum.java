@@ -2,7 +2,7 @@ package com.util.pojo.enums;
 
 /**
  * @author docker
- * @date 2022-02-08
+ * @date 2023-10-05
  */
 public enum PaymentTypeEnum {
 
