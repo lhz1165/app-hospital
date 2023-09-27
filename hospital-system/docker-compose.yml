@@ -32,11 +32,13 @@ services:
     image: hosp-service:0.0.1
     container_name: hosp-service
     environment:
-      - SPRING_DATASOURCE_URL:jdbc:mysql://mysql:3306/yygh_hosp?characterEncoding=utf-8&useSSL=false
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/yygh_hosp?characterEncoding=utf-8&useSSL=false
       - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_PASSWORD=root
+      - SPRING_DATA_MONGODB_HOST= mongo
     ports:
       - 8201:8201
+      - 5005:5005
     depends_on:
       - mongo
       - mysql

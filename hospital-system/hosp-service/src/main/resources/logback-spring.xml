@@ -144,14 +144,18 @@
     </springProfile>
 
     <!--生产环境:输出到文件-->
-    <springProfile name="pro">
-
+    <springProfile name="prod">
+        <logger name="jw.hospital" level="INFO" />
+        <!--
+            root节点是必选节点，用来指定最基础的日志输出级别，只有一个level属性
+            level:用来设置打印级别，大小写无关：TRACE, DEBUG, INFO, WARN, ERROR, ALL 和 OFF，默认是DEBUG
+            可以包含零个或多个appender元素。
+        -->
         <root level="INFO">
             <appender-ref ref="CONSOLE" />
-            <appender-ref ref="DEBUG_FILE" />
             <appender-ref ref="INFO_FILE" />
-            <appender-ref ref="ERROR_FILE" />
             <appender-ref ref="WARN_FILE" />
+            <appender-ref ref="ERROR_FILE" />
         </root>
     </springProfile>
 
