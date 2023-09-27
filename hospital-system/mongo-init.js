@@ -1,4 +1,4 @@
-
+db = db.getSiblingDB('yygh_hosp');
 db.getCollection("Department").drop();
 db.createCollection("Department");
 db.getCollection("Department").createIndex({
