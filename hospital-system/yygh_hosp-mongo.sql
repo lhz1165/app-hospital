@@ -1,0 +1,6003 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : 47.94.151.26-mongodb
+ Source Server Type    : MongoDB
+ Source Server Version : 40406
+ Source Host           : 47.94.151.26:27017
+ Source Schema         : yygh_hosp
+
+ Target Server Type    : MongoDB
+ Target Server Version : 40406
+ File Encoding         : 65001
+
+ Date: 09/02/2022 14:33:35
+*/
+
+
+// ----------------------------
+// Collection structure for Department
+// ----------------------------
+db.getCollection("Department").drop();
+db.createCollection("Department");
+db.getCollection("Department").createIndex({
+    hoscode: NumberInt("1")
+}, {
+    name: "hoscode"
+});
+db.getCollection("Department").createIndex({
+    depcode: NumberInt("1")
+}, {
+    name: "depcode",
+    unique: true
+});
+
+// ----------------------------
+// Documents of Department
+// ----------------------------
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0e42318d4a24b19095"),
+    hoscode: "1000_0",
+    depcode: "200050923",
+    depname: "门诊部核酸检测门诊(东院)",
+    intro: "门诊部核酸检测门诊(东院)",
+    bigcode: "44f162029abb45f9ff0a5f743da0650d",
+    bigname: "全部科室",
+    createTime: ISODate("2022-02-01T10:44:30.291Z"),
+    updateTime: ISODate("2022-02-01T10:44:30.291Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0e42318d4a24b19096"),
+    hoscode: "1000_0",
+    depcode: "200050924",
+    depname: "国际医疗部门诊",
+    intro: "国际医疗部门诊",
+    bigcode: "44f162029abb45f9ff0a5f743da0650d",
+    bigname: "全部科室",
+    createTime: ISODate("2022-02-01T10:44:30.338Z"),
+    updateTime: ISODate("2022-02-01T10:44:30.338Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0e42318d4a24b19097"),
+    hoscode: "1000_0",
+    depcode: "200050931",
+    depname: "临床营养科(西院国际医疗)",
+    intro: "临床营养科(西院国际医疗)",
+    bigcode: "44f162029abb45f9ff0a5f743da0650d",
+    bigname: "全部科室",
+    createTime: ISODate("2022-02-01T10:44:30.368Z"),
+    updateTime: ISODate("2022-02-01T10:44:30.368Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0e42318d4a24b19098"),
+    hoscode: "1000_0",
+    depcode: "200050964",
+    depname: "内分泌科互联网诊疗",
+    intro: "内分泌科互联网诊疗",
+    bigcode: "44f162029abb45f9ff0a5f743da0650d",
+    bigname: "全部科室",
+    createTime: ISODate("2022-02-01T10:44:30.401Z"),
+    updateTime: ISODate("2022-02-01T10:44:30.401Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0e42318d4a24b19099"),
+    hoscode: "1000_0",
+    depcode: "200051188",
+    depname: "心内科互联网诊疗",
+    intro: "心内科互联网诊疗",
+    bigcode: "44f162029abb45f9ff0a5f743da0650d",
+    bigname: "全部科室",
+    createTime: ISODate("2022-02-01T10:44:30.436Z"),
+    updateTime: ISODate("2022-02-01T10:44:30.436Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0e42318d4a24b1909a"),
+    hoscode: "1000_0",
+    depcode: "200051469",
+    depname: "特需心理医学科门诊2",
+    intro: "特需心理医学科门诊2",
+    bigcode: "44f162029abb45f9ff0a5f743da0650d",
+    bigname: "全部科室",
+    createTime: ISODate("2022-02-01T10:44:30.463Z"),
+    updateTime: ISODate("2022-02-01T10:44:30.463Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0e42318d4a24b1909b"),
+    hoscode: "1000_0",
+    depcode: "200041542",
+    depname: "特需心内科门诊2",
+    intro: "特需心内科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:30.495Z"),
+    updateTime: ISODate("2022-02-01T10:44:30.495Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0e42318d4a24b1909c"),
+    hoscode: "1000_0",
+    depcode: "200042374",
+    depname: "特需消化内科门诊2",
+    intro: "特需消化内科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:30.522Z"),
+    updateTime: ISODate("2022-02-01T10:44:30.522Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0e42318d4a24b1909d"),
+    hoscode: "1000_0",
+    depcode: "200040886",
+    depname: "特需内分泌科门诊(西院)1",
+    intro: "特需内分泌科门诊(西院)1",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:30.551Z"),
+    updateTime: ISODate("2022-02-01T10:44:30.551Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0e42318d4a24b1909e"),
+    hoscode: "1000_0",
+    depcode: "200041246",
+    depname: "特需呼吸内科门诊2",
+    intro: "特需呼吸内科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:30.578Z"),
+    updateTime: ISODate("2022-02-01T10:44:30.578Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0e42318d4a24b1909f"),
+    hoscode: "1000_0",
+    depcode: "200041038",
+    depname: "特需肾内科门诊2",
+    intro: "特需肾内科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:30.605Z"),
+    updateTime: ISODate("2022-02-01T10:44:30.605Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0e42318d4a24b190a0"),
+    hoscode: "1000_0",
+    depcode: "200041244",
+    depname: "特需血液内科门诊2",
+    intro: "特需血液内科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:30.64Z"),
+    updateTime: ISODate("2022-02-01T10:44:30.64Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0e42318d4a24b190a1"),
+    hoscode: "1000_0",
+    depcode: "200044248",
+    depname: "特需老年医学科门诊2",
+    intro: "特需老年医学科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:30.668Z"),
+    updateTime: ISODate("2022-02-01T10:44:30.668Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0e42318d4a24b190a2"),
+    hoscode: "1000_0",
+    depcode: "200040166",
+    depname: "特需普通内科门诊1",
+    intro: "特需普通内科门诊1",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:30.694Z"),
+    updateTime: ISODate("2022-02-01T10:44:30.694Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0e42318d4a24b190a3"),
+    hoscode: "1000_0",
+    depcode: "200041666",
+    depname: "内科门诊(西院)",
+    intro: "内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:30.719Z"),
+    updateTime: ISODate("2022-02-01T10:44:30.719Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0e42318d4a24b190a4"),
+    hoscode: "1000_0",
+    depcode: "200043118",
+    depname: "普通内科全科门诊",
+    intro: "普通内科全科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:30.767Z"),
+    updateTime: ISODate("2022-02-01T10:44:30.767Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0e42318d4a24b190a5"),
+    hoscode: "1000_0",
+    depcode: "200045974",
+    depname: "普通内科疑难病症门诊",
+    intro: "普通内科疑难病症门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:30.793Z"),
+    updateTime: ISODate("2022-02-01T10:44:30.793Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0e42318d4a24b190a6"),
+    hoscode: "1000_0",
+    depcode: "200048285",
+    depname: "特需肿瘤内科门诊2",
+    intro: "特需肿瘤内科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:30.818Z"),
+    updateTime: ISODate("2022-02-01T10:44:30.818Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0e42318d4a24b190a7"),
+    hoscode: "1000_0",
+    depcode: "200048369",
+    depname: "特需普通内科门诊2",
+    intro: "特需普通内科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:30.846Z"),
+    updateTime: ISODate("2022-02-01T10:44:30.846Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0e42318d4a24b190a8"),
+    hoscode: "1000_0",
+    depcode: "200048378",
+    depname: "卫干门诊(内科)",
+    intro: "卫干门诊(内科)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:30.873Z"),
+    updateTime: ISODate("2022-02-01T10:44:30.873Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0e42318d4a24b190a9"),
+    hoscode: "1000_0",
+    depcode: "200048380",
+    depname: "特需免疫内科门诊2",
+    intro: "特需免疫内科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:30.904Z"),
+    updateTime: ISODate("2022-02-01T10:44:30.904Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0e42318d4a24b190aa"),
+    hoscode: "1000_0",
+    depcode: "200048440",
+    depname: "特需感染内科门诊2",
+    intro: "特需感染内科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:30.933Z"),
+    updateTime: ISODate("2022-02-01T10:44:30.933Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0e42318d4a24b190ab"),
+    hoscode: "1000_0",
+    depcode: "200004002",
+    depname: "内分泌科门诊(西院)",
+    intro: "内分泌科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:30.981Z"),
+    updateTime: ISODate("2022-02-01T10:44:30.981Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190ac"),
+    hoscode: "1000_0",
+    depcode: "200004004",
+    depname: "特需内分泌科门诊2",
+    intro: "特需内分泌科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.007Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.007Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190ad"),
+    hoscode: "1000_0",
+    depcode: "200004020",
+    depname: "特需普通内科门诊(西院)",
+    intro: "特需普通内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.034Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.034Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190ae"),
+    hoscode: "1000_0",
+    depcode: "200004014",
+    depname: "肿瘤内科门诊",
+    intro: "肿瘤内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.059Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.059Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190af"),
+    hoscode: "1000_0",
+    depcode: "200003975",
+    depname: "心内科门诊",
+    intro: "心内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.085Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.085Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190b0"),
+    hoscode: "1000_0",
+    depcode: "200003976",
+    depname: "心内科门诊(西院)",
+    intro: "心内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.111Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.111Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190b1"),
+    hoscode: "1000_0",
+    depcode: "200003977",
+    depname: "心内科高血压专科门诊",
+    intro: "心内科高血压专科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.136Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.136Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190b2"),
+    hoscode: "1000_0",
+    depcode: "200003978",
+    depname: "特需心内科门诊",
+    intro: "特需心内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.167Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.167Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190b3"),
+    hoscode: "1000_0",
+    depcode: "200004005",
+    depname: "神经科门诊",
+    intro: "神经科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.192Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.192Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190b4"),
+    hoscode: "1000_0",
+    depcode: "200004006",
+    depname: "神经科门诊(西院)",
+    intro: "神经科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.22Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.22Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190b5"),
+    hoscode: "1000_0",
+    depcode: "200004007",
+    depname: "神经内科癫痫门诊",
+    intro: "神经内科癫痫门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.245Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.245Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190b6"),
+    hoscode: "1000_0",
+    depcode: "200004010",
+    depname: "特需神经科门诊2",
+    intro: "特需神经科门诊2",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.271Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.271Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190b7"),
+    hoscode: "1000_0",
+    depcode: "200003997",
+    depname: "消化内科门诊",
+    intro: "消化内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.295Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.295Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190b8"),
+    hoscode: "1000_0",
+    depcode: "200003998",
+    depname: "消化内科门诊(西院)",
+    intro: "消化内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.322Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.322Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190b9"),
+    hoscode: "1000_0",
+    depcode: "200003999",
+    depname: "早期胃癌专科门诊",
+    intro: "早期胃癌专科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.347Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.347Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190ba"),
+    hoscode: "1000_0",
+    depcode: "200004000",
+    depname: "特需消化内科门诊",
+    intro: "特需消化内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.372Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.372Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190bb"),
+    hoscode: "1000_0",
+    depcode: "200004001",
+    depname: "内分泌科门诊",
+    intro: "内分泌科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.4Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.4Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190bc"),
+    hoscode: "1000_0",
+    depcode: "200004003",
+    depname: "特需内分泌科门诊",
+    intro: "特需内分泌科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.427Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.427Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190bd"),
+    hoscode: "1000_0",
+    depcode: "200003989",
+    depname: "免疫内科门诊",
+    intro: "免疫内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.46Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.46Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190be"),
+    hoscode: "1000_0",
+    depcode: "200003990",
+    depname: "免疫内科门诊(西院)",
+    intro: "免疫内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.487Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.487Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190bf"),
+    hoscode: "1000_0",
+    depcode: "200003991",
+    depname: "特需免疫内科门诊",
+    intro: "特需免疫内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.512Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.512Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190c0"),
+    hoscode: "1000_0",
+    depcode: "200003992",
+    depname: "特需免疫内科门诊(西院)",
+    intro: "特需免疫内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.536Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.536Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190c1"),
+    hoscode: "1000_0",
+    depcode: "200003993",
+    depname: "呼吸内科门诊",
+    intro: "呼吸内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.568Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.568Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190c2"),
+    hoscode: "1000_0",
+    depcode: "200003994",
+    depname: "呼吸内科门诊(西院)",
+    intro: "呼吸内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.593Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.593Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190c3"),
+    hoscode: "1000_0",
+    depcode: "200003995",
+    depname: "戒烟门诊",
+    intro: "戒烟门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.62Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.62Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190c4"),
+    hoscode: "1000_0",
+    depcode: "200003996",
+    depname: "特需呼吸内科门诊",
+    intro: "特需呼吸内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.65Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.65Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190c5"),
+    hoscode: "1000_0",
+    depcode: "200003979",
+    depname: "肾内科门诊",
+    intro: "肾内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.679Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.679Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190c6"),
+    hoscode: "1000_0",
+    depcode: "200003980",
+    depname: "肾内科门诊(西院)",
+    intro: "肾内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.704Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.704Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190c7"),
+    hoscode: "1000_0",
+    depcode: "200003981",
+    depname: "特需肾内科门诊",
+    intro: "特需肾内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.733Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.733Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190c8"),
+    hoscode: "1000_0",
+    depcode: "200003982",
+    depname: "血液科门诊",
+    intro: "血液科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.757Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.757Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190c9"),
+    hoscode: "1000_0",
+    depcode: "200003983",
+    depname: "血友病门诊(西院)",
+    intro: "血友病门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.781Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.781Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190ca"),
+    hoscode: "1000_0",
+    depcode: "200003984",
+    depname: "特需血液内科门诊",
+    intro: "特需血液内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.806Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.806Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190cb"),
+    hoscode: "1000_0",
+    depcode: "200003985",
+    depname: "感染内科门诊",
+    intro: "感染内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.83Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.83Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190cc"),
+    hoscode: "1000_0",
+    depcode: "200003986",
+    depname: "感染内科热病门诊",
+    intro: "感染内科热病门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.856Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.856Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190cd"),
+    hoscode: "1000_0",
+    depcode: "200003987",
+    depname: "感染内科免疫功能低下门诊",
+    intro: "感染内科免疫功能低下门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.895Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.895Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190ce"),
+    hoscode: "1000_0",
+    depcode: "200003988",
+    depname: "特需感染内科门诊",
+    intro: "特需感染内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.919Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.919Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f0f42318d4a24b190cf"),
+    hoscode: "1000_0",
+    depcode: "200003973",
+    depname: "老年综合门诊",
+    intro: "老年综合门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:31.943Z"),
+    updateTime: ISODate("2022-02-01T10:44:31.943Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190d0"),
+    hoscode: "1000_0",
+    depcode: "200003974",
+    depname: "特需老年综合门诊",
+    intro: "特需老年综合门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:32.007Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.007Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190d1"),
+    hoscode: "1000_0",
+    depcode: "200003972",
+    depname: "内科门诊",
+    intro: "内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:32.031Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.031Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190d2"),
+    hoscode: "1000_0",
+    depcode: "200004018",
+    depname: "普通内科门诊",
+    intro: "普通内科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:32.064Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.064Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190d3"),
+    hoscode: "1000_0",
+    depcode: "200004019",
+    depname: "普通内科门诊(西院)",
+    intro: "普通内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:32.091Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.091Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190d4"),
+    hoscode: "1000_0",
+    depcode: "200004015",
+    depname: "肿瘤内科门诊(西院)",
+    intro: "肿瘤内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:32.116Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.116Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190d5"),
+    hoscode: "1000_0",
+    depcode: "200004016",
+    depname: "特需肿瘤内科门诊1",
+    intro: "特需肿瘤内科门诊1",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:32.141Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.141Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190d6"),
+    hoscode: "1000_0",
+    depcode: "200004017",
+    depname: "特需肿瘤内科门诊(西院)",
+    intro: "特需肿瘤内科门诊(西院)",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:32.167Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.167Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190d7"),
+    hoscode: "1000_0",
+    depcode: "200004012",
+    depname: "重症肌无力专科门诊",
+    intro: "重症肌无力专科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:32.193Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.193Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190d8"),
+    hoscode: "1000_0",
+    depcode: "200004008",
+    depname: "头疼专科门诊",
+    intro: "头疼专科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:32.217Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.217Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190d9"),
+    hoscode: "1000_0",
+    depcode: "200004009",
+    depname: "脑血管病专科门诊",
+    intro: "脑血管病专科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:32.246Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.246Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190da"),
+    hoscode: "1000_0",
+    depcode: "200004011",
+    depname: "痴呆与脑白质病专科门诊",
+    intro: "痴呆与脑白质病专科门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:32.275Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.275Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190db"),
+    hoscode: "1000_0",
+    depcode: "200004134",
+    depname: "肝炎门诊",
+    intro: "肝炎门诊",
+    bigcode: "1c87253ca8aa8fc966a2443eeaac0fc1",
+    bigname: "内科",
+    createTime: ISODate("2022-02-01T10:44:32.305Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.305Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190dc"),
+    hoscode: "1000_0",
+    depcode: "200045976",
+    depname: "特需血管外科门诊2",
+    intro: "特需血管外科门诊2",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:32.328Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.328Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190dd"),
+    hoscode: "1000_0",
+    depcode: "200040164",
+    depname: "特需胸外科门诊2",
+    intro: "特需胸外科门诊2",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:32.353Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.353Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190de"),
+    hoscode: "1000_0",
+    depcode: "200048287",
+    depname: "乳腺外科乳癌化疗门诊(西院)",
+    intro: "乳腺外科乳癌化疗门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:32.38Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.38Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190df"),
+    hoscode: "1000_0",
+    depcode: "200048331",
+    depname: "乳腺外科乳癌随访门诊(西院)",
+    intro: "乳腺外科乳癌随访门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:32.421Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.421Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190e0"),
+    hoscode: "1000_0",
+    depcode: "200048412",
+    depname: "特需整形外科门诊2",
+    intro: "特需整形外科门诊2",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:32.448Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.448Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190e1"),
+    hoscode: "1000_0",
+    depcode: "200048490",
+    depname: "泌尿外科专项诊疗门诊",
+    intro: "泌尿外科专项诊疗门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:32.473Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.473Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190e2"),
+    hoscode: "1000_0",
+    depcode: "200048586",
+    depname: "胸外科化疗专病门诊",
+    intro: "胸外科化疗专病门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:32.498Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.498Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190e3"),
+    hoscode: "1000_0",
+    depcode: "200004041",
+    depname: "特需神经外科门诊2",
+    intro: "特需神经外科门诊2",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:32.522Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.522Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190e4"),
+    hoscode: "1000_0",
+    depcode: "200004051",
+    depname: "心外科门诊",
+    intro: "心外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:32.546Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.546Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190e5"),
+    hoscode: "1000_0",
+    depcode: "200004052",
+    depname: "心外科成人门诊",
+    intro: "心外科成人门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:32.572Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.572Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190e6"),
+    hoscode: "1000_0",
+    depcode: "200004053",
+    depname: "特需心外科门诊1",
+    intro: "特需心外科门诊1",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:32.601Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.601Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190e7"),
+    hoscode: "1000_0",
+    depcode: "200004054",
+    depname: "特需心外科门诊2",
+    intro: "特需心外科门诊2",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:32.626Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.626Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190e8"),
+    hoscode: "1000_0",
+    depcode: "200004049",
+    depname: "特需泌尿外科门诊2",
+    intro: "特需泌尿外科门诊2",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:32.653Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.653Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190e9"),
+    hoscode: "1000_0",
+    depcode: "200004072",
+    depname: "特需肝脏外科门诊2",
+    intro: "特需肝脏外科门诊2",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:32.679Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.679Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190ea"),
+    hoscode: "1000_0",
+    depcode: "200004027",
+    depname: "特需基本外科门诊2",
+    intro: "特需基本外科门诊2",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:32.704Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.704Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190eb"),
+    hoscode: "1000_0",
+    depcode: "200004031",
+    depname: "特需骨科门诊2",
+    intro: "特需骨科门诊2",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:32.728Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.728Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190ec"),
+    hoscode: "1000_0",
+    depcode: "200004046",
+    depname: "肾积水专科门诊",
+    intro: "肾积水专科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:32.756Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.756Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190ed"),
+    hoscode: "1000_0",
+    depcode: "200004034",
+    depname: "神经外科门诊",
+    intro: "神经外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:32.781Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.781Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190ee"),
+    hoscode: "1000_0",
+    depcode: "200004035",
+    depname: "神经外科门诊(西院)",
+    intro: "神经外科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:32.806Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.806Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190ef"),
+    hoscode: "1000_0",
+    depcode: "200004040",
+    depname: "特需神经外科门诊",
+    intro: "特需神经外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:32.83Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.83Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190f0"),
+    hoscode: "1000_0",
+    depcode: "200004059",
+    depname: "血管外科门诊",
+    intro: "血管外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:32.859Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.859Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190f1"),
+    hoscode: "1000_0",
+    depcode: "200004060",
+    depname: "血管外科门诊(西院)",
+    intro: "血管外科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:32.892Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.892Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190f2"),
+    hoscode: "1000_0",
+    depcode: "200004061",
+    depname: "动脉疾病专科门诊",
+    intro: "动脉疾病专科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:32.933Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.933Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190f3"),
+    hoscode: "1000_0",
+    depcode: "200004062",
+    depname: "特需血管外科门诊",
+    intro: "特需血管外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:32.957Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.957Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1042318d4a24b190f4"),
+    hoscode: "1000_0",
+    depcode: "200004063",
+    depname: "特需血管外科门诊(西院)",
+    intro: "特需血管外科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:32.982Z"),
+    updateTime: ISODate("2022-02-01T10:44:32.982Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b190f5"),
+    hoscode: "1000_0",
+    depcode: "200004032",
+    depname: "胸外科门诊",
+    intro: "胸外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:33.02Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.02Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b190f6"),
+    hoscode: "1000_0",
+    depcode: "200004033",
+    depname: "特需胸外科门诊",
+    intro: "特需胸外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:33.043Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.043Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b190f7"),
+    hoscode: "1000_0",
+    depcode: "200004066",
+    depname: "特需整形外科门诊(西院)",
+    intro: "特需整形外科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:33.07Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.07Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b190f8"),
+    hoscode: "1000_0",
+    depcode: "200004067",
+    depname: "乳腺外科门诊",
+    intro: "乳腺外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:33.096Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.096Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b190f9"),
+    hoscode: "1000_0",
+    depcode: "200004068",
+    depname: "乳腺外科门诊(西院)",
+    intro: "乳腺外科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:33.123Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.123Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b190fa"),
+    hoscode: "1000_0",
+    depcode: "200004069",
+    depname: "特需乳腺外科门诊(西院)1",
+    intro: "特需乳腺外科门诊(西院)1",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:33.148Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.148Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b190fb"),
+    hoscode: "1000_0",
+    depcode: "200004042",
+    depname: "泌尿外科门诊",
+    intro: "泌尿外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:33.172Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.172Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b190fc"),
+    hoscode: "1000_0",
+    depcode: "200004043",
+    depname: "泌尿外科男科门诊",
+    intro: "泌尿外科男科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:33.2Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.2Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b190fd"),
+    hoscode: "1000_0",
+    depcode: "200004044",
+    depname: "泌尿外科门诊(西院)",
+    intro: "泌尿外科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:33.224Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.224Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b190fe"),
+    hoscode: "1000_0",
+    depcode: "200004045",
+    depname: "泌尿外科男科门诊(西院)",
+    intro: "泌尿外科男科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:33.249Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.249Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b190ff"),
+    hoscode: "1000_0",
+    depcode: "200004047",
+    depname: "特需泌尿外科门诊",
+    intro: "特需泌尿外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:33.274Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.274Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b19100"),
+    hoscode: "1000_0",
+    depcode: "200004070",
+    depname: "肝脏外科门诊",
+    intro: "肝脏外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:33.302Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.302Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b19101"),
+    hoscode: "1000_0",
+    depcode: "200004071",
+    depname: "特需肝外科门诊",
+    intro: "特需肝外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:33.325Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.325Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b19102"),
+    hoscode: "1000_0",
+    depcode: "200004022",
+    depname: "外科门诊",
+    intro: "外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:33.351Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.351Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b19103"),
+    hoscode: "1000_0",
+    depcode: "200004023",
+    depname: "基本外科门诊",
+    intro: "基本外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:33.376Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.376Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b19104"),
+    hoscode: "1000_0",
+    depcode: "200004025",
+    depname: "基本外科门诊(西院)",
+    intro: "基本外科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:33.406Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.406Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b19105"),
+    hoscode: "1000_0",
+    depcode: "200004026",
+    depname: "特需基本外科门诊1",
+    intro: "特需基本外科门诊1",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:33.43Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.43Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b19106"),
+    hoscode: "1000_0",
+    depcode: "200004028",
+    depname: "骨科门诊",
+    intro: "骨科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:33.454Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.454Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b19107"),
+    hoscode: "1000_0",
+    depcode: "200004029",
+    depname: "骨科门诊(西院)",
+    intro: "骨科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:33.479Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.479Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b19108"),
+    hoscode: "1000_0",
+    depcode: "200004030",
+    depname: "特需骨科门诊",
+    intro: "特需骨科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:33.521Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.521Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b19109"),
+    hoscode: "1000_0",
+    depcode: "200004064",
+    depname: "整形美容外科门诊",
+    intro: "整形美容外科门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:33.545Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.545Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b1910a"),
+    hoscode: "1000_0",
+    depcode: "200004116",
+    depname: "急诊科",
+    intro: "急诊科",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:33.569Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.569Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b1910b"),
+    hoscode: "1000_0",
+    depcode: "200004065",
+    depname: "整形美容外科门诊(西院)",
+    intro: "整形美容外科门诊(西院)",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:33.594Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.594Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b1910c"),
+    hoscode: "1000_0",
+    depcode: "200039788",
+    depname: "泌尿外科肾癌靶向治疗专病门诊",
+    intro: "泌尿外科肾癌靶向治疗专病门诊",
+    bigcode: "cbc348c817edeffab9599ad12205fa78",
+    bigname: "外科",
+    createTime: ISODate("2022-02-01T10:44:33.622Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.622Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b1910d"),
+    hoscode: "1000_0",
+    depcode: "200046682",
+    depname: "特需综合妇科门诊",
+    intro: "特需综合妇科门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2022-02-01T10:44:33.646Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.646Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b1910e"),
+    hoscode: "1000_0",
+    depcode: "200046684",
+    depname: "特需妇科内分泌门诊2",
+    intro: "特需妇科内分泌门诊2",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2022-02-01T10:44:33.669Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.669Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b1910f"),
+    hoscode: "1000_0",
+    depcode: "200048276",
+    depname: "妇泌中心(西院)",
+    intro: "妇泌中心(西院)",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2022-02-01T10:44:33.698Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.698Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b19110"),
+    hoscode: "1000_0",
+    depcode: "200048413",
+    depname: "特需普通妇科门诊",
+    intro: "特需普通妇科门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2022-02-01T10:44:33.727Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.727Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b19111"),
+    hoscode: "1000_0",
+    depcode: "200048441",
+    depname: "特需肿瘤妇科门诊",
+    intro: "特需肿瘤妇科门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2022-02-01T10:44:33.753Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.753Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b19112"),
+    hoscode: "1000_0",
+    depcode: "200048447",
+    depname: "特需妇科计划生育门诊",
+    intro: "特需妇科计划生育门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2022-02-01T10:44:33.776Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.776Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b19113"),
+    hoscode: "1000_0",
+    depcode: "200048487",
+    depname: "特需产科门诊",
+    intro: "特需产科门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2022-02-01T10:44:33.804Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.804Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b19114"),
+    hoscode: "1000_0",
+    depcode: "200048521",
+    depname: "妇科计划生育门诊",
+    intro: "妇科计划生育门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2022-02-01T10:44:33.828Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.828Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b19115"),
+    hoscode: "1000_0",
+    depcode: "200048522",
+    depname: "综合妇科门诊",
+    intro: "综合妇科门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2022-02-01T10:44:33.852Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.852Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b19116"),
+    hoscode: "1000_0",
+    depcode: "200048523",
+    depname: "妇科肿瘤门诊",
+    intro: "妇科肿瘤门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2022-02-01T10:44:33.877Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.877Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b19117"),
+    hoscode: "1000_0",
+    depcode: "200004078",
+    depname: "妇产科辅助生育中心",
+    intro: "妇产科辅助生育中心",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2022-02-01T10:44:33.901Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.901Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b19118"),
+    hoscode: "1000_0",
+    depcode: "200004073",
+    depname: "妇科门诊",
+    intro: "妇科门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2022-02-01T10:44:33.928Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.928Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b19119"),
+    hoscode: "1000_0",
+    depcode: "200004074",
+    depname: "妇科门诊(西院)",
+    intro: "妇科门诊(西院)",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2022-02-01T10:44:33.952Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.952Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1142318d4a24b1911a"),
+    hoscode: "1000_0",
+    depcode: "200004075",
+    depname: "特需妇科门诊",
+    intro: "特需妇科门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2022-02-01T10:44:33.978Z"),
+    updateTime: ISODate("2022-02-01T10:44:33.978Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b1911b"),
+    hoscode: "1000_0",
+    depcode: "200004076",
+    depname: "特需妇科门诊(西院)1",
+    intro: "特需妇科门诊(西院)1",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2022-02-01T10:44:34.005Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.005Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b1911c"),
+    hoscode: "1000_0",
+    depcode: "200004080",
+    depname: "妇科内分泌门诊",
+    intro: "妇科内分泌门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2022-02-01T10:44:34.04Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.04Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b1911d"),
+    hoscode: "1000_0",
+    depcode: "200004081",
+    depname: "特需妇科内分泌门诊",
+    intro: "特需妇科内分泌门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2022-02-01T10:44:34.074Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.074Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b1911e"),
+    hoscode: "1000_0",
+    depcode: "200004082",
+    depname: "特需妇科内分泌门诊(西院)",
+    intro: "特需妇科内分泌门诊(西院)",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2022-02-01T10:44:34.1Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.1Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b1911f"),
+    hoscode: "1000_0",
+    depcode: "200004077",
+    depname: "产科门诊",
+    intro: "产科门诊",
+    bigcode: "17be7b5423b1782612f4a50608246fb4",
+    bigname: "妇产科",
+    createTime: ISODate("2022-02-01T10:44:34.122Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.122Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b19120"),
+    hoscode: "1000_0",
+    depcode: "200004084",
+    depname: "儿科门诊",
+    intro: "儿科门诊",
+    bigcode: "2543ade3aecd3f5a3e2329d068c1d367",
+    bigname: "儿科",
+    createTime: ISODate("2022-02-01T10:44:34.145Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.145Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b19121"),
+    hoscode: "1000_0",
+    depcode: "200004085",
+    depname: "特需儿科门诊",
+    intro: "特需儿科门诊",
+    bigcode: "2543ade3aecd3f5a3e2329d068c1d367",
+    bigname: "儿科",
+    createTime: ISODate("2022-02-01T10:44:34.171Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.171Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b19122"),
+    hoscode: "1000_0",
+    depcode: "200004094",
+    depname: "变态反应科门诊",
+    intro: "变态反应科门诊",
+    bigcode: "e7391935e2070acf94e87b5b6f104f68",
+    bigname: "变态反应科",
+    createTime: ISODate("2022-02-01T10:44:34.195Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.195Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b19123"),
+    hoscode: "1000_0",
+    depcode: "200004095",
+    depname: "特需变态反应科门诊",
+    intro: "特需变态反应科门诊",
+    bigcode: "e7391935e2070acf94e87b5b6f104f68",
+    bigname: "变态反应科",
+    createTime: ISODate("2022-02-01T10:44:34.233Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.233Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b19124"),
+    hoscode: "1000_0",
+    depcode: "200048325",
+    depname: "特需皮肤科门诊2",
+    intro: "特需皮肤科门诊2",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2022-02-01T10:44:34.255Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.255Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b19125"),
+    hoscode: "1000_0",
+    depcode: "200048377",
+    depname: "皮科激光中心",
+    intro: "皮科激光中心",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2022-02-01T10:44:34.283Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.283Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b19126"),
+    hoscode: "1000_0",
+    depcode: "200048468",
+    depname: "普通皮科复诊",
+    intro: "普通皮科复诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2022-02-01T10:44:34.309Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.309Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b19127"),
+    hoscode: "1000_0",
+    depcode: "200048529",
+    depname: "特需口腔科门诊2",
+    intro: "特需口腔科门诊2",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2022-02-01T10:44:34.335Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.335Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b19128"),
+    hoscode: "1000_0",
+    depcode: "200004107",
+    depname: "皮肤科白癜风副教授门诊",
+    intro: "皮肤科白癜风副教授门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2022-02-01T10:44:34.375Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.375Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b19129"),
+    hoscode: "1000_0",
+    depcode: "200004108",
+    depname: "皮肤科普通皮科门诊",
+    intro: "皮肤科普通皮科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2022-02-01T10:44:34.404Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.404Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b1912a"),
+    hoscode: "1000_0",
+    depcode: "200004119",
+    depname: "美容皮肤科门诊",
+    intro: "美容皮肤科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2022-02-01T10:44:34.428Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.428Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b1912b"),
+    hoscode: "1000_0",
+    depcode: "200004086",
+    depname: "眼科门诊",
+    intro: "眼科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2022-02-01T10:44:34.452Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.452Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b1912c"),
+    hoscode: "1000_0",
+    depcode: "200004087",
+    depname: "眼科门诊(西院)",
+    intro: "眼科门诊(西院)",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2022-02-01T10:44:34.474Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.474Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b1912d"),
+    hoscode: "1000_0",
+    depcode: "200004088",
+    depname: "特需眼科门诊",
+    intro: "特需眼科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2022-02-01T10:44:34.503Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.503Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b1912e"),
+    hoscode: "1000_0",
+    depcode: "200004089",
+    depname: "眼科糖尿病视网膜病专科",
+    intro: "眼科糖尿病视网膜病专科",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2022-02-01T10:44:34.53Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.53Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b1912f"),
+    hoscode: "1000_0",
+    depcode: "200004096",
+    depname: "口腔科门诊",
+    intro: "口腔科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2022-02-01T10:44:34.554Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.554Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b19130"),
+    hoscode: "1000_0",
+    depcode: "200004097",
+    depname: "口腔科门诊(西院)",
+    intro: "口腔科门诊(西院)",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2022-02-01T10:44:34.577Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.577Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b19131"),
+    hoscode: "1000_0",
+    depcode: "200004101",
+    depname: "口腔科住院医门诊",
+    intro: "口腔科住院医门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2022-02-01T10:44:34.602Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.602Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b19132"),
+    hoscode: "1000_0",
+    depcode: "200004098",
+    depname: "口腔科洁牙门诊",
+    intro: "口腔科洁牙门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2022-02-01T10:44:34.625Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.625Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b19133"),
+    hoscode: "1000_0",
+    depcode: "200004099",
+    depname: "特需口腔外科门诊",
+    intro: "特需口腔外科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2022-02-01T10:44:34.648Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.648Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b19134"),
+    hoscode: "1000_0",
+    depcode: "200004100",
+    depname: "口腔科特需门诊(西院)",
+    intro: "口腔科特需门诊(西院)",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2022-02-01T10:44:34.672Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.672Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b19135"),
+    hoscode: "1000_0",
+    depcode: "200004090",
+    depname: "耳鼻喉科门诊",
+    intro: "耳鼻喉科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2022-02-01T10:44:34.695Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.695Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b19136"),
+    hoscode: "1000_0",
+    depcode: "200004091",
+    depname: "耳鼻喉科门诊(西院)",
+    intro: "耳鼻喉科门诊(西院)",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2022-02-01T10:44:34.719Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.719Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b19137"),
+    hoscode: "1000_0",
+    depcode: "200004093",
+    depname: "特需耳鼻喉科门诊",
+    intro: "特需耳鼻喉科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2022-02-01T10:44:34.75Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.75Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b19138"),
+    hoscode: "1000_0",
+    depcode: "200004102",
+    depname: "皮科门诊",
+    intro: "皮科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2022-02-01T10:44:34.774Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.774Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b19139"),
+    hoscode: "1000_0",
+    depcode: "200004103",
+    depname: "皮科门诊(西院)",
+    intro: "皮科门诊(西院)",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2022-02-01T10:44:34.799Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.799Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b1913a"),
+    hoscode: "1000_0",
+    depcode: "200004104",
+    depname: "皮肤科性病门诊",
+    intro: "皮肤科性病门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2022-02-01T10:44:34.822Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.822Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b1913b"),
+    hoscode: "1000_0",
+    depcode: "200004106",
+    depname: "特需皮肤科门诊",
+    intro: "特需皮肤科门诊",
+    bigcode: "2feb85b952a4dcd6dbf832100f6ef595",
+    bigname: "五官",
+    createTime: ISODate("2022-02-01T10:44:34.847Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.847Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b1913c"),
+    hoscode: "1000_0",
+    depcode: "200041040",
+    depname: "特需中医科门诊2",
+    intro: "特需中医科门诊2",
+    bigcode: "7dafa91626a45481feefb3d1a84c7984",
+    bigname: "中医科",
+    createTime: ISODate("2022-02-01T10:44:34.87Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.87Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b1913d"),
+    hoscode: "1000_0",
+    depcode: "200048480",
+    depname: "卫干门诊(中医科)",
+    intro: "卫干门诊(中医科)",
+    bigcode: "7dafa91626a45481feefb3d1a84c7984",
+    bigname: "中医科",
+    createTime: ISODate("2022-02-01T10:44:34.898Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.898Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b1913e"),
+    hoscode: "1000_0",
+    depcode: "200004112",
+    depname: "中医科针灸室(西院)",
+    intro: "中医科针灸室(西院)",
+    bigcode: "7dafa91626a45481feefb3d1a84c7984",
+    bigname: "中医科",
+    createTime: ISODate("2022-02-01T10:44:34.924Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.924Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b1913f"),
+    hoscode: "1000_0",
+    depcode: "200004110",
+    depname: "中医科针灸室",
+    intro: "中医科针灸室",
+    bigcode: "7dafa91626a45481feefb3d1a84c7984",
+    bigname: "中医科",
+    createTime: ISODate("2022-02-01T10:44:34.948Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.948Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1242318d4a24b19140"),
+    hoscode: "1000_0",
+    depcode: "200004109",
+    depname: "中医科门诊",
+    intro: "中医科门诊",
+    bigcode: "7dafa91626a45481feefb3d1a84c7984",
+    bigname: "中医科",
+    createTime: ISODate("2022-02-01T10:44:34.971Z"),
+    updateTime: ISODate("2022-02-01T10:44:34.971Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b19141"),
+    hoscode: "1000_0",
+    depcode: "200004111",
+    depname: "中医科门诊(西院)",
+    intro: "中医科门诊(西院)",
+    bigcode: "7dafa91626a45481feefb3d1a84c7984",
+    bigname: "中医科",
+    createTime: ISODate("2022-02-01T10:44:35.000Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.000Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b19142"),
+    hoscode: "1000_0",
+    depcode: "200004113",
+    depname: "特需中医科门诊1",
+    intro: "特需中医科门诊1",
+    bigcode: "7dafa91626a45481feefb3d1a84c7984",
+    bigname: "中医科",
+    createTime: ISODate("2022-02-01T10:44:35.028Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.028Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b19143"),
+    hoscode: "1000_0",
+    depcode: "200048262",
+    depname: "临床营养科西院门诊",
+    intro: "临床营养科西院门诊",
+    bigcode: "4dcb42d3a6ca39589f20bcd160903ae9",
+    bigname: "营养科",
+    createTime: ISODate("2022-02-01T10:44:35.067Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.067Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b19144"),
+    hoscode: "1000_0",
+    depcode: "200047302",
+    depname: "特需营养科门诊1",
+    intro: "特需营养科门诊1",
+    bigcode: "4dcb42d3a6ca39589f20bcd160903ae9",
+    bigname: "营养科",
+    createTime: ISODate("2022-02-01T10:44:35.092Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.092Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b19145"),
+    hoscode: "1000_0",
+    depcode: "200004133",
+    depname: "营养科咨询门诊",
+    intro: "营养科咨询门诊",
+    bigcode: "4dcb42d3a6ca39589f20bcd160903ae9",
+    bigname: "营养科",
+    createTime: ISODate("2022-02-01T10:44:35.137Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.137Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b19146"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    depname: "多发性硬化专科门诊",
+    intro: "多发性硬化专科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2022-02-01T10:44:35.177Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.177Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b19147"),
+    hoscode: "1000_0",
+    depcode: "200040182",
+    depname: "运动障碍病专科门诊",
+    intro: "运动障碍病专科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2022-02-01T10:44:35.206Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.206Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b19148"),
+    hoscode: "1000_0",
+    depcode: "200048482",
+    depname: "特需病理科门诊",
+    intro: "特需病理科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2022-02-01T10:44:35.233Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.233Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b19149"),
+    hoscode: "1000_0",
+    depcode: "200048483",
+    depname: "病理科门诊",
+    intro: "病理科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2022-02-01T10:44:35.261Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.261Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b1914a"),
+    hoscode: "1000_0",
+    depcode: "200004057",
+    depname: "麻醉科门诊",
+    intro: "麻醉科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2022-02-01T10:44:35.284Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.284Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b1914b"),
+    hoscode: "1000_0",
+    depcode: "200004124",
+    depname: "放疗科门诊",
+    intro: "放疗科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2022-02-01T10:44:35.307Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.307Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b1914c"),
+    hoscode: "1000_0",
+    depcode: "200004125",
+    depname: "放疗科门诊(西院)",
+    intro: "放疗科门诊(西院)",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2022-02-01T10:44:35.33Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.33Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b1914d"),
+    hoscode: "1000_0",
+    depcode: "200004126",
+    depname: "特需放疗科门诊",
+    intro: "特需放疗科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2022-02-01T10:44:35.357Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.357Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b1914e"),
+    hoscode: "1000_0",
+    depcode: "200004117",
+    depname: "心理医学科门诊",
+    intro: "心理医学科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2022-02-01T10:44:35.38Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.38Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b1914f"),
+    hoscode: "1000_0",
+    depcode: "200004118",
+    depname: "特需心理医学科门诊1",
+    intro: "特需心理医学科门诊1",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2022-02-01T10:44:35.404Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.404Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b19150"),
+    hoscode: "1000_0",
+    depcode: "200004123",
+    depname: "介入治疗门诊(放射科)",
+    intro: "介入治疗门诊(放射科)",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2022-02-01T10:44:35.428Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.428Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b19151"),
+    hoscode: "1000_0",
+    depcode: "200004130",
+    depname: "超声介入门诊",
+    intro: "超声介入门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2022-02-01T10:44:35.458Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.458Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b19152"),
+    hoscode: "1000_0",
+    depcode: "200004129",
+    depname: "物理医学康复科门诊",
+    intro: "物理医学康复科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2022-02-01T10:44:35.482Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.482Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b19153"),
+    hoscode: "1000_0",
+    depcode: "200004127",
+    depname: "物理医学康复科门诊(西院)",
+    intro: "物理医学康复科门诊(西院)",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2022-02-01T10:44:35.507Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.507Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b19154"),
+    hoscode: "1000_0",
+    depcode: "200004120",
+    depname: "肠外肠内营养科门诊",
+    intro: "肠外肠内营养科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2022-02-01T10:44:35.532Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.532Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b19155"),
+    hoscode: "1000_0",
+    depcode: "200004122",
+    depname: "特需肠外肠内营养科门诊",
+    intro: "特需肠外肠内营养科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2022-02-01T10:44:35.561Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.561Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b19156"),
+    hoscode: "1000_0",
+    depcode: "200004131",
+    depname: "核医学科门诊",
+    intro: "核医学科门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2022-02-01T10:44:35.586Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.586Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b19157"),
+    hoscode: "1000_0",
+    depcode: "200004132",
+    depname: "特需核医学门诊",
+    intro: "特需核医学门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2022-02-01T10:44:35.61Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.61Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b19158"),
+    hoscode: "1000_0",
+    depcode: "200004055",
+    depname: "麻醉科",
+    intro: "麻醉科",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2022-02-01T10:44:35.634Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.634Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b19159"),
+    hoscode: "1000_0",
+    depcode: "200004056",
+    depname: "麻醉科疼痛门诊",
+    intro: "麻醉科疼痛门诊",
+    bigcode: "a4e171f4cf9b6816acdfb9ae62c414d7",
+    bigname: "专科",
+    createTime: ISODate("2022-02-01T10:44:35.666Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.666Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b1915a"),
+    hoscode: "1000_0",
+    depcode: "200040142",
+    depname: "肾内科IGA肾病专病门诊",
+    intro: "肾内科IGA肾病专病门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2022-02-01T10:44:35.688Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.688Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b1915b"),
+    hoscode: "1000_0",
+    depcode: "200048338",
+    depname: "检验科门诊",
+    intro: "检验科门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2022-02-01T10:44:35.713Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.713Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b1915c"),
+    hoscode: "1000_0",
+    depcode: "200048491",
+    depname: "门诊部疑难病会诊中心(东院)",
+    intro: "门诊部疑难病会诊中心(东院)",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2022-02-01T10:44:35.735Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.735Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b1915d"),
+    hoscode: "1000_0",
+    depcode: "200048571",
+    depname: "加速器治疗室(放疗科)(西院)",
+    intro: "加速器治疗室(放疗科)(西院)",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2022-02-01T10:44:35.761Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.761Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b1915e"),
+    hoscode: "1000_0",
+    depcode: "200048575",
+    depname: "生殖中心门诊(西院)",
+    intro: "生殖中心门诊(西院)",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2022-02-01T10:44:35.784Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.784Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b1915f"),
+    hoscode: "1000_0",
+    depcode: "200004013",
+    depname: "帕金森专病门诊",
+    intro: "帕金森专病门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2022-02-01T10:44:35.806Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.806Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b19160"),
+    hoscode: "1000_0",
+    depcode: "200004037",
+    depname: "癫痫门诊",
+    intro: "癫痫门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2022-02-01T10:44:35.829Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.829Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b19161"),
+    hoscode: "1000_0",
+    depcode: "200004021",
+    depname: "老年医学科门诊",
+    intro: "老年医学科门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2022-02-01T10:44:35.853Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.853Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b19162"),
+    hoscode: "1000_0",
+    depcode: "200004038",
+    depname: "神经外科垂体专病门诊",
+    intro: "神经外科垂体专病门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2022-02-01T10:44:35.875Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.875Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b19163"),
+    hoscode: "1000_0",
+    depcode: "200004039",
+    depname: "神经外科脊髓疾病专科门诊",
+    intro: "神经外科脊髓疾病专科门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2022-02-01T10:44:35.898Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.898Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b19164"),
+    hoscode: "1000_0",
+    depcode: "200004048",
+    depname: "泌尿外科泌尿结石门诊",
+    intro: "泌尿外科泌尿结石门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2022-02-01T10:44:35.922Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.922Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b19165"),
+    hoscode: "1000_0",
+    depcode: "200004050",
+    depname: "泌尿外科膀胱癌专科门诊",
+    intro: "泌尿外科膀胱癌专科门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2022-02-01T10:44:35.95Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.95Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1342318d4a24b19166"),
+    hoscode: "1000_0",
+    depcode: "200004024",
+    depname: "基本外科肠造口门诊",
+    intro: "基本外科肠造口门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2022-02-01T10:44:35.975Z"),
+    updateTime: ISODate("2022-02-01T10:44:35.975Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b19167"),
+    hoscode: "1000_0",
+    depcode: "200004092",
+    depname: "耳聋基因筛查遗传门诊",
+    intro: "耳聋基因筛查遗传门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2022-02-01T10:44:36.000Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.000Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b19168"),
+    hoscode: "1000_0",
+    depcode: "200004128",
+    depname: "特需康复理疗门诊2",
+    intro: "特需康复理疗门诊2",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2022-02-01T10:44:36.024Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.024Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b19169"),
+    hoscode: "1000_0",
+    depcode: "200004036",
+    depname: "疼痛门诊",
+    intro: "疼痛门诊",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2022-02-01T10:44:36.052Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.052Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b1916a"),
+    hoscode: "1000_0",
+    depcode: "200004058",
+    depname: "特需麻醉科门诊2",
+    intro: "特需麻醉科门诊2",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2022-02-01T10:44:36.08Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.08Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b1916b"),
+    hoscode: "1000_0",
+    depcode: "200004135",
+    depname: "针灸按摩室(西院)",
+    intro: "针灸按摩室(西院)",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2022-02-01T10:44:36.103Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.103Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b1916c"),
+    hoscode: "1000_0",
+    depcode: "200004121",
+    depname: "肠外肠内营养科门诊(西院)",
+    intro: "肠外肠内营养科门诊(西院)",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2022-02-01T10:44:36.127Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.127Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b1916d"),
+    hoscode: "1000_0",
+    depcode: "200041160",
+    depname: "特需放射科门诊1",
+    intro: "特需放射科门诊1",
+    bigcode: "0551a547cc19d3d09f2e57bd2931b7d0",
+    bigname: "其它",
+    createTime: ISODate("2022-02-01T10:44:36.155Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.155Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b1916e"),
+    hoscode: "1000_0",
+    depcode: "200048271",
+    depname: "国际医疗(儿科)",
+    intro: "国际医疗(儿科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.186Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.186Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b1916f"),
+    hoscode: "1000_0",
+    depcode: "200048272",
+    depname: "国际医疗(预防接种)",
+    intro: "国际医疗(预防接种)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.209Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.209Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b19170"),
+    hoscode: "1000_0",
+    depcode: "200048273",
+    depname: "国际医疗(神经科)",
+    intro: "国际医疗(神经科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.231Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.231Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b19171"),
+    hoscode: "1000_0",
+    depcode: "200048274",
+    depname: "国际医疗(胸外科)",
+    intro: "国际医疗(胸外科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.253Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.253Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b19172"),
+    hoscode: "1000_0",
+    depcode: "200048278",
+    depname: "国际医疗(内分泌科)",
+    intro: "国际医疗(内分泌科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.286Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.286Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b19173"),
+    hoscode: "1000_0",
+    depcode: "200048279",
+    depname: "基本外科门诊(西院国际医疗)",
+    intro: "基本外科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.308Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.308Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b19174"),
+    hoscode: "1000_0",
+    depcode: "200048280",
+    depname: "内分泌科门诊(西院国际医疗)",
+    intro: "内分泌科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.332Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.332Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b19175"),
+    hoscode: "1000_0",
+    depcode: "200048281",
+    depname: "国际医疗(消化内科)",
+    intro: "国际医疗(消化内科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.353Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.353Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b19176"),
+    hoscode: "1000_0",
+    depcode: "200048282",
+    depname: "国际医疗(普通内科)",
+    intro: "国际医疗(普通内科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.389Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.389Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b19177"),
+    hoscode: "1000_0",
+    depcode: "200048283",
+    depname: "国际医疗(皮肤科)",
+    intro: "国际医疗(皮肤科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.414Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.414Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b19178"),
+    hoscode: "1000_0",
+    depcode: "200048286",
+    depname: "消化内科门诊(西院国际医疗)",
+    intro: "消化内科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.438Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.438Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b19179"),
+    hoscode: "1000_0",
+    depcode: "200048288",
+    depname: "国际医疗(感染内科)",
+    intro: "国际医疗(感染内科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.467Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.467Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b1917a"),
+    hoscode: "1000_0",
+    depcode: "200048289",
+    depname: "国际医疗(变态反应科)",
+    intro: "国际医疗(变态反应科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.49Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.49Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b1917b"),
+    hoscode: "1000_0",
+    depcode: "200048290",
+    depname: "国际医疗(免疫内科)",
+    intro: "国际医疗(免疫内科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.512Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.512Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b1917c"),
+    hoscode: "1000_0",
+    depcode: "200048293",
+    depname: "国际医疗(中医科)",
+    intro: "国际医疗(中医科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.538Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.538Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b1917d"),
+    hoscode: "1000_0",
+    depcode: "200048294",
+    depname: "国际医疗(呼吸内科)",
+    intro: "国际医疗(呼吸内科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.566Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.566Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b1917e"),
+    hoscode: "1000_0",
+    depcode: "200048297",
+    depname: "国际医疗(美容外科)",
+    intro: "国际医疗(美容外科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.592Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.592Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b1917f"),
+    hoscode: "1000_0",
+    depcode: "200048298",
+    depname: "国际医疗(产科)",
+    intro: "国际医疗(产科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.614Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.614Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b19180"),
+    hoscode: "1000_0",
+    depcode: "200048299",
+    depname: "医学美容中心外科门诊(西院国际医疗)",
+    intro: "医学美容中心外科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.636Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.636Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b19181"),
+    hoscode: "1000_0",
+    depcode: "200048300",
+    depname: "国际医疗(血管外科)",
+    intro: "国际医疗(血管外科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.672Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.672Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b19182"),
+    hoscode: "1000_0",
+    depcode: "200048301",
+    depname: "核医学科(西院国际医疗)",
+    intro: "核医学科(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.693Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.693Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b19183"),
+    hoscode: "1000_0",
+    depcode: "200048304",
+    depname: "国际医疗(妇科内分泌)",
+    intro: "国际医疗(妇科内分泌)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.717Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.717Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b19184"),
+    hoscode: "1000_0",
+    depcode: "200048308",
+    depname: "变态（过敏）反应科门诊(西院国际医疗)",
+    intro: "变态（过敏）反应科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.744Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.744Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b19185"),
+    hoscode: "1000_0",
+    depcode: "200048309",
+    depname: "免疫内科门诊(西院国际医疗)",
+    intro: "免疫内科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.768Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.768Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b19186"),
+    hoscode: "1000_0",
+    depcode: "200048310",
+    depname: "国际医疗(骨科)",
+    intro: "国际医疗(骨科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.791Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.791Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b19187"),
+    hoscode: "1000_0",
+    depcode: "200048311",
+    depname: "口腔科门诊(西院国际医疗)",
+    intro: "口腔科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.814Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.814Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b19188"),
+    hoscode: "1000_0",
+    depcode: "200048312",
+    depname: "国际医疗(泌尿外科)",
+    intro: "国际医疗(泌尿外科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.838Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.838Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b19189"),
+    hoscode: "1000_0",
+    depcode: "200048313",
+    depname: "国际医疗(核医学科)",
+    intro: "国际医疗(核医学科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.859Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.859Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b1918a"),
+    hoscode: "1000_0",
+    depcode: "200048314",
+    depname: "内分泌与生殖妇科中心门诊(西院国际医疗)",
+    intro: "内分泌与生殖妇科中心门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.885Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.885Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b1918b"),
+    hoscode: "1000_0",
+    depcode: "200048315",
+    depname: "国际医疗(血液科)",
+    intro: "国际医疗(血液科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.908Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.908Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b1918c"),
+    hoscode: "1000_0",
+    depcode: "200048316",
+    depname: "国际医疗(美容皮肤科)",
+    intro: "国际医疗(美容皮肤科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.932Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.932Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b1918d"),
+    hoscode: "1000_0",
+    depcode: "200048317",
+    depname: "国际医疗(耳鼻喉科)",
+    intro: "国际医疗(耳鼻喉科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.956Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.956Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1442318d4a24b1918e"),
+    hoscode: "1000_0",
+    depcode: "200048318",
+    depname: "国际医疗(神经外科)",
+    intro: "国际医疗(神经外科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:36.979Z"),
+    updateTime: ISODate("2022-02-01T10:44:36.979Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b1918f"),
+    hoscode: "1000_0",
+    depcode: "200048319",
+    depname: "肿瘤内科门诊(西院国际医疗)",
+    intro: "肿瘤内科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.036Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.036Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b19190"),
+    hoscode: "1000_0",
+    depcode: "200048320",
+    depname: "耳鼻喉科门诊(西院国际医疗)",
+    intro: "耳鼻喉科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.063Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.063Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b19191"),
+    hoscode: "1000_0",
+    depcode: "200048326",
+    depname: "国际医疗(针灸按摩室)",
+    intro: "国际医疗(针灸按摩室)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.097Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.097Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b19192"),
+    hoscode: "1000_0",
+    depcode: "200048327",
+    depname: "国际医疗(心内科)",
+    intro: "国际医疗(心内科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.12Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.12Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b19193"),
+    hoscode: "1000_0",
+    depcode: "200048328",
+    depname: "国际医疗(口腔科)",
+    intro: "国际医疗(口腔科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.15Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.15Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b19194"),
+    hoscode: "1000_0",
+    depcode: "200048329",
+    depname: "国际医疗(麻醉科)",
+    intro: "国际医疗(麻醉科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.176Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.176Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b19195"),
+    hoscode: "1000_0",
+    depcode: "200048330",
+    depname: "神经科门诊(西院国际医疗)",
+    intro: "神经科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.201Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.201Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b19196"),
+    hoscode: "1000_0",
+    depcode: "200048332",
+    depname: "呼吸内科门诊(西院国际医疗)",
+    intro: "呼吸内科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.232Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.232Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b19197"),
+    hoscode: "1000_0",
+    depcode: "200048333",
+    depname: "国际医疗(物理医学康复科)",
+    intro: "国际医疗(物理医学康复科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.255Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.255Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b19198"),
+    hoscode: "1000_0",
+    depcode: "200048334",
+    depname: "心内科门诊(西院国际医疗)",
+    intro: "心内科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.281Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.281Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b19199"),
+    hoscode: "1000_0",
+    depcode: "200048335",
+    depname: "肾内科门诊(西院国际医疗)",
+    intro: "肾内科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.304Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.304Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b1919a"),
+    hoscode: "1000_0",
+    depcode: "200048346",
+    depname: "国际医疗(基本外科)",
+    intro: "国际医疗(基本外科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.327Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.327Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b1919b"),
+    hoscode: "1000_0",
+    depcode: "200048347",
+    depname: "乳腺外科门诊(西院国际医疗)",
+    intro: "乳腺外科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.349Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.349Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b1919c"),
+    hoscode: "1000_0",
+    depcode: "200048348",
+    depname: "国际医疗(肾内科)",
+    intro: "国际医疗(肾内科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.374Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.374Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b1919d"),
+    hoscode: "1000_0",
+    depcode: "200048349",
+    depname: "皮肤科门诊(西院国际医疗)",
+    intro: "皮肤科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.396Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.396Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b1919e"),
+    hoscode: "1000_0",
+    depcode: "200048350",
+    depname: "国际医疗(眼科)",
+    intro: "国际医疗(眼科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.418Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.418Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b1919f"),
+    hoscode: "1000_0",
+    depcode: "200048352",
+    depname: "国际医疗(肝脏外科)",
+    intro: "国际医疗(肝脏外科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.495Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.495Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b191a0"),
+    hoscode: "1000_0",
+    depcode: "200048353",
+    depname: "眼科门诊(西院国际医疗)",
+    intro: "眼科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.518Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.518Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b191a1"),
+    hoscode: "1000_0",
+    depcode: "200048355",
+    depname: "麻醉科(西院国际医疗)",
+    intro: "麻醉科(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.541Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.541Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b191a2"),
+    hoscode: "1000_0",
+    depcode: "200048356",
+    depname: "国际医疗(肿瘤内科)",
+    intro: "国际医疗(肿瘤内科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.562Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.562Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b191a3"),
+    hoscode: "1000_0",
+    depcode: "200048366",
+    depname: "国际医疗(营养科)",
+    intro: "国际医疗(营养科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.589Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.589Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b191a4"),
+    hoscode: "1000_0",
+    depcode: "200048368",
+    depname: "国际医疗(放射治疗科)",
+    intro: "国际医疗(放射治疗科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.618Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.618Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b191a5"),
+    hoscode: "1000_0",
+    depcode: "200048379",
+    depname: "国际医疗部特约门诊",
+    intro: "国际医疗部特约门诊",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.638Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.638Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b191a6"),
+    hoscode: "1000_0",
+    depcode: "200048465",
+    depname: "物理医学康复科(西院国际医疗)",
+    intro: "物理医学康复科(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.662Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.662Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b191a7"),
+    hoscode: "1000_0",
+    depcode: "200048467",
+    depname: "泌尿外科门诊(西院国际医疗)",
+    intro: "泌尿外科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.686Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.686Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b191a8"),
+    hoscode: "1000_0",
+    depcode: "200048470",
+    depname: "国际医疗(肠外肠内营养科)",
+    intro: "国际医疗(肠外肠内营养科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.712Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.712Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b191a9"),
+    hoscode: "1000_0",
+    depcode: "200048485",
+    depname: "国际医疗(老年医学科)",
+    intro: "国际医疗(老年医学科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.738Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.738Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b191aa"),
+    hoscode: "1000_0",
+    depcode: "200048486",
+    depname: "普通内科门诊(西院国际医疗)",
+    intro: "普通内科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.76Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.76Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b191ab"),
+    hoscode: "1000_0",
+    depcode: "200048513",
+    depname: "医学美容中心门诊(西院国际医疗)",
+    intro: "医学美容中心门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.783Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.783Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b191ac"),
+    hoscode: "1000_0",
+    depcode: "200048524",
+    depname: "国际医疗(妇科肿瘤)",
+    intro: "国际医疗(妇科肿瘤)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.822Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.822Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b191ad"),
+    hoscode: "1000_0",
+    depcode: "200048525",
+    depname: "国际医疗(综合妇科)",
+    intro: "国际医疗(综合妇科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.845Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.845Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b191ae"),
+    hoscode: "1000_0",
+    depcode: "200048526",
+    depname: "国际医疗(妇科计划生育)",
+    intro: "国际医疗(妇科计划生育)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.868Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.868Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b191af"),
+    hoscode: "1000_0",
+    depcode: "200048536",
+    depname: "骨科门诊(西院国际医疗)",
+    intro: "骨科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.894Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.894Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b191b0"),
+    hoscode: "1000_0",
+    depcode: "200048559",
+    depname: "国际医疗(放射科)",
+    intro: "国际医疗(放射科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.917Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.917Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b191b1"),
+    hoscode: "1000_0",
+    depcode: "200048585",
+    depname: "老年医学门诊(西院国际医疗)",
+    intro: "老年医学门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.939Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.939Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b191b2"),
+    hoscode: "1000_0",
+    depcode: "200048644",
+    depname: "儿科门诊(西院国际医疗)",
+    intro: "儿科门诊(西院国际医疗)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.963Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.963Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1542318d4a24b191b3"),
+    hoscode: "1000_0",
+    depcode: "200004114",
+    depname: "国际医疗(妇科)",
+    intro: "国际医疗(妇科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:37.986Z"),
+    updateTime: ISODate("2022-02-01T10:44:37.986Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+db.getCollection("Department").insert([ {
+    _id: ObjectId("61f90f1642318d4a24b191b4"),
+    hoscode: "1000_0",
+    depcode: "200004115",
+    depname: "国际医疗(心理医学科)",
+    intro: "国际医疗(心理医学科)",
+    bigcode: "1e452d84823e025229c72c23d100a464",
+    bigname: "国际医疗部",
+    createTime: ISODate("2022-02-01T10:44:38.013Z"),
+    updateTime: ISODate("2022-02-01T10:44:38.013Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Department"
+} ]);
+
+// ----------------------------
+// Collection structure for Hospital
+// ----------------------------
+db.getCollection("Hospital").drop();
+db.createCollection("Hospital");
+db.getCollection("Hospital").createIndex({
+    hoscode: NumberInt("1")
+}, {
+    name: "hoscode",
+    unique: true
+});
+db.getCollection("Hospital").createIndex({
+    hosname: NumberInt("1")
+}, {
+    name: "hosname"
+});
+
+// ----------------------------
+// Documents of Hospital
+// ----------------------------
+db.getCollection("Hospital").insert([ {
+    _id: ObjectId("61f211f18a5c7755a3ce8fb3"),
+    hoscode: "1000_0",
+    hosname: "北京协和医院",
+    hostype: "1",
+    provinceCode: "110000",
+    cityCode: "110100",
+    districtCode: "110102",
+    address: "大望路",
+    logoData: "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",
+    intro: "北京协和医院是集医疗、教学、科研于一体的大型三级甲等综合医院，是国家卫生计生委指定的全国疑难重症诊治指导中心，也是最早承担高干保健和外宾医疗任务的医院之一，以学科齐全、技术力量雄厚、特色专科突出、多学科综合优势强大享誉海内外。在2010、2011、2012、2013、2014年复旦大学医院管理研究所公布的“中国最佳医院排行榜”中连续五年名列榜首。\n\n医院建成于1921年，由洛克菲勒基金会创办。建院之初，就志在“建成亚洲最好的医学中心”。90余年来，医院形成了“严谨、求精、勤奋、奉献”的协和精神和兼容并蓄的特色文化风格，创立了“三基”、“三严”的现代医学教育理念，形成了以“教授、病案、图书馆”著称的协和“三宝”，培养造就了张孝骞、林巧稚等一代医学大师和多位中国现代医学的领军人物，并向全国输送了大批的医学管理人才，创建了当今知名的10余家大型综合及专科医院。2011年在总结90年发展经验的基础上，创新性提出了“待病人如亲人，提高病人满意度；待同事如家人，提高员工幸福感”新办院理念。\n\n目前，医院共有2个院区、总建筑面积53万平方米，在职职工4000余名、两院院士5人、临床和医技科室53个、国家级重点学科20个、国家临床重点专科29个、博士点16个、硕士点29个、国家级继续医学教育基地6个、二级学科住院医师培养基地18个、三级学科专科医师培养基地15个。开放住院床位2000余张，单日最高门诊量约1.5万人次、年出院病人约8万余人次。被评为“全国文明单位”、“全国创先争优先进基层党组织”、“全国卫生系统先进集体”、“首都卫生系统文明单位”、“最受欢迎三甲医院”，荣获全国五一劳动奖章。同时，医院还承担着支援老少边穷地区、国家重要活动和突发事件主力医疗队的重任，在2008年北京奥运工作中荣获“特别贡献奖”。\n\n90多年来，协和人以执着的医志、高尚的医德、精湛的医术和严谨的学风书写了辉煌的历史，今天的协和人正为打造“国际知名、国内一流”医院的目标而继续努力。",
+    route: "东院区乘车路线：106、108、110、111、116、684、685路到东单路口北；41、104快、814路到东单路口南；1、52、802路到东单路口西；20、25、37、39路到东单路口东；103、104、420、803路到新东安市场；地铁1、5号线到东单。\n西院区乘车路线：68路到辟才胡同东口；更多乘车路线详见须知。",
+    status: NumberInt("0"),
+    bookingRule: {
+        cycle: NumberInt("10"),
+        releaseTime: "08:30",
+        stopTime: "11:30",
+        quitDay: NumberInt("-1"),
+        quitTime: "15:30",
+        rule: [
+            "西院区预约号取号地点：西院区门诊楼一层大厅挂号窗口取号",
+            "东院区预约号取号地点：东院区老门诊楼一层大厅挂号窗口或新门诊楼各楼层挂号/收费窗口取号"
+        ]
+    },
+    createTime: ISODate("2022-01-27T03:30:57.38Z"),
+    updateTime: ISODate("2022-01-28T06:23:22.929Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Hospital"
+} ]);
+
+// ----------------------------
+// Collection structure for Schedule
+// ----------------------------
+db.getCollection("Schedule").drop();
+db.createCollection("Schedule");
+db.getCollection("Schedule").createIndex({
+    hoscode: NumberInt("1")
+}, {
+    name: "hoscode"
+});
+db.getCollection("Schedule").createIndex({
+    depcode: NumberInt("1")
+}, {
+    name: "depcode"
+});
+db.getCollection("Schedule").createIndex({
+    hosScheduleId: NumberInt("1")
+}, {
+    name: "hosScheduleId"
+});
+
+// ----------------------------
+// Documents of Schedule
+// ----------------------------
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c786d34a7e49b56a11"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "1",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2020-12-12T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:35.934Z"),
+    updateTime: ISODate("2022-01-27T09:11:35.934Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c786d34a7e49b56a12"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "2",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2020-12-21T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:35.979Z"),
+    updateTime: ISODate("2022-01-27T09:11:35.979Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a13"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "3",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2020-12-21T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.012Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.012Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a14"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "4",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2020-12-13T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.045Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.045Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a15"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "5",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2020-12-22T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.079Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.079Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a16"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "6",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2020-12-22T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.11Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.11Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a17"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "7",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2020-12-14T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.14Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.14Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a18"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "8",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2020-12-23T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.171Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.171Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a19"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "9",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2020-12-23T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.199Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.199Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a1a"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "10",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2020-12-15T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.229Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.229Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a1b"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "11",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2020-12-24T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.259Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.259Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a1c"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "12",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2020-12-24T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.29Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.29Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a1d"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "13",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2020-12-16T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.32Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.32Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a1e"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "14",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2020-12-25T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.35Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.35Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a1f"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "15",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2020-12-25T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.382Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.382Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a20"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "16",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2020-12-17T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.412Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.412Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a21"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "17",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2020-12-26T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.444Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.444Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a22"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "18",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2020-12-26T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.473Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.473Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a23"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "19",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2020-12-18T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.503Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.503Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a24"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "20",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2020-12-27T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.533Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.533Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a25"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "21",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2020-12-27T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.561Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.561Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a26"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "22",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2020-12-19T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.589Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.589Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a27"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "23",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2020-12-28T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.617Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.617Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a28"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "24",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2020-12-28T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.646Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.646Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a29"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "25",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2020-12-20T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.675Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.675Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a2a"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "26",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2020-12-29T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.703Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.703Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a2b"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "27",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2020-12-29T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.732Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.732Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a2c"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "29",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2020-12-29T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.761Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.761Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a2d"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "30",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2020-12-29T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.789Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.789Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a2e"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "31",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2022-02-05T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.817Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.817Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c886d34a7e49b56a2f"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "32",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2022-02-05T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:36.849Z"),
+    updateTime: ISODate("2022-01-27T09:11:36.849Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a30"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "33",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2022-02-05T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.005Z"),
+    updateTime: ISODate("2022-01-27T09:11:37.005Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a31"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "34",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2022-02-06T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.035Z"),
+    updateTime: ISODate("2022-01-27T09:11:37.035Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a32"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "35",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2022-02-06T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.136Z"),
+    updateTime: ISODate("2022-01-27T09:11:37.136Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a33"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "36",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2022-02-06T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.163Z"),
+    updateTime: ISODate("2022-01-27T09:11:37.163Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a34"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "37",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2022-02-07T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("21"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.192Z"),
+    updateTime: ISODate("2022-02-07T06:55:17.772Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a35"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "38",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2022-02-07T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("20"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.222Z"),
+    updateTime: ISODate("2022-02-07T07:00:25.796Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a36"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "39",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2022-02-07T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("19"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.25Z"),
+    updateTime: ISODate("2022-02-07T07:03:21.659Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a37"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "40",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2022-02-08T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("18"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.28Z"),
+    updateTime: ISODate("2022-02-08T05:44:01.759Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a38"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "41",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2022-02-08T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.307Z"),
+    updateTime: ISODate("2022-01-27T09:11:37.307Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a39"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "42",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2022-02-08T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.334Z"),
+    updateTime: ISODate("2022-01-27T09:11:37.334Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a3a"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "43",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "腰间盘突出科常见病。",
+    workDate: ISODate("2022-02-09T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("18"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.363Z"),
+    updateTime: ISODate("2022-02-09T01:43:58.8Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a3b"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "44",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2022-02-09T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("17"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.391Z"),
+    updateTime: ISODate("2022-02-09T01:59:21.802Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a3c"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "45",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2022-02-09T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.42Z"),
+    updateTime: ISODate("2022-01-27T09:11:37.42Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a3d"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "46",
+    title: "医师",
+    docname: "邵迎红",
+    skill: "腰间盘突出科常见病。",
+    workDate: ISODate("2021-01-05T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.453Z"),
+    updateTime: ISODate("2022-01-27T09:11:37.453Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a3e"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "47",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-05T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.488Z"),
+    updateTime: ISODate("2022-01-27T09:11:37.488Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a3f"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "48",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-05T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.521Z"),
+    updateTime: ISODate("2022-01-27T09:11:37.521Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a40"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "49",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-06T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.55Z"),
+    updateTime: ISODate("2022-01-27T09:11:37.55Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a41"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "50",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-06T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.577Z"),
+    updateTime: ISODate("2022-01-27T09:11:37.577Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a42"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "51",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-06T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.605Z"),
+    updateTime: ISODate("2022-01-27T09:11:37.605Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a43"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "52",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-07T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.634Z"),
+    updateTime: ISODate("2022-01-27T09:11:37.634Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a44"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "53",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-07T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.665Z"),
+    updateTime: ISODate("2022-01-27T09:11:37.665Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a45"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "54",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-07T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.699Z"),
+    updateTime: ISODate("2022-01-27T09:11:37.699Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a46"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "55",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-08T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.727Z"),
+    updateTime: ISODate("2022-01-27T09:11:37.727Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a47"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "56",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-08T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.761Z"),
+    updateTime: ISODate("2022-01-27T09:11:37.761Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a48"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "57",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-08T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.79Z"),
+    updateTime: ISODate("2022-01-27T09:11:37.79Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a49"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "58",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-09T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.82Z"),
+    updateTime: ISODate("2022-01-27T09:11:37.82Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a4a"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "59",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-09T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.848Z"),
+    updateTime: ISODate("2022-01-27T09:11:37.848Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a4b"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "60",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-09T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.876Z"),
+    updateTime: ISODate("2022-01-27T09:11:37.876Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a4c"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "61",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-10T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.903Z"),
+    updateTime: ISODate("2022-01-27T09:11:37.903Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a4d"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "62",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-10T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.933Z"),
+    updateTime: ISODate("2022-01-27T09:11:37.933Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a4e"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "63",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-10T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.96Z"),
+    updateTime: ISODate("2022-01-27T09:11:37.96Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261c986d34a7e49b56a4f"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "64",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-11T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:37.987Z"),
+    updateTime: ISODate("2022-01-27T09:11:37.987Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a50"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "65",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-11T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.015Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.015Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a51"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "66",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-11T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.043Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.043Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a52"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "67",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-12T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.07Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.07Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a53"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "68",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-12T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.098Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.098Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a54"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "69",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-12T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.125Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.125Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a55"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "70",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-13T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.152Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.152Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a56"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "71",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-13T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.179Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.179Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a57"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "72",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-13T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.205Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.205Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a58"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "73",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-14T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.231Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.231Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a59"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "74",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-14T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.259Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.259Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a5a"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "75",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-14T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.287Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.287Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a5b"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "76",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-15T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.314Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.314Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a5c"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "77",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-15T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.343Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.343Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a5d"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "78",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-15T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.37Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.37Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a5e"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "79",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-16T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.398Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.398Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a5f"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "80",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-16T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.45Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.45Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a60"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "81",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-16T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.478Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.478Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a61"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "82",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-17T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.504Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.504Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a62"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "83",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-17T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.533Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.533Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a63"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "84",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-17T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.563Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.563Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a64"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "85",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-18T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.591Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.591Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a65"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "86",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-18T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.618Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.618Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a66"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "87",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-18T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.646Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.646Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a67"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "88",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-19T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.672Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.672Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a68"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "89",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-19T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.699Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.699Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a69"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "90",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-19T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.726Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.726Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a6a"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "91",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-20T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.754Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.754Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a6b"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "92",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-20T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.792Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.792Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a6c"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "93",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-20T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.843Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.843Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a6d"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "94",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-21T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.872Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.872Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a6e"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "95",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-21T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.9Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.9Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a6f"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "96",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-21T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.927Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.927Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a70"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "97",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-22T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.953Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.953Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261ca86d34a7e49b56a71"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "98",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-22T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:38.981Z"),
+    updateTime: ISODate("2022-01-27T09:11:38.981Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261cb86d34a7e49b56a72"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "99",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-22T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:39.006Z"),
+    updateTime: ISODate("2022-01-27T09:11:39.006Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261cb86d34a7e49b56a73"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "100",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-23T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:39.045Z"),
+    updateTime: ISODate("2022-01-27T09:11:39.045Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261cb86d34a7e49b56a74"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "101",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-23T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:39.082Z"),
+    updateTime: ISODate("2022-01-27T09:11:39.082Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261cb86d34a7e49b56a75"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "102",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-23T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:39.114Z"),
+    updateTime: ISODate("2022-01-27T09:11:39.114Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261cb86d34a7e49b56a76"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "103",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-24T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:39.144Z"),
+    updateTime: ISODate("2022-01-27T09:11:39.144Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261cb86d34a7e49b56a77"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "104",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-24T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:39.176Z"),
+    updateTime: ISODate("2022-01-27T09:11:39.176Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261cb86d34a7e49b56a78"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "105",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-24T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:39.203Z"),
+    updateTime: ISODate("2022-01-27T09:11:39.203Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261cb86d34a7e49b56a79"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "106",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-25T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:39.231Z"),
+    updateTime: ISODate("2022-01-27T09:11:39.231Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261cb86d34a7e49b56a7a"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "107",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-25T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:39.257Z"),
+    updateTime: ISODate("2022-01-27T09:11:39.257Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261cb86d34a7e49b56a7b"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "108",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-25T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:39.282Z"),
+    updateTime: ISODate("2022-01-27T09:11:39.282Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261cb86d34a7e49b56a7c"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "109",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-26T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:39.308Z"),
+    updateTime: ISODate("2022-01-27T09:11:39.308Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261cb86d34a7e49b56a7d"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "110",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-26T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:39.334Z"),
+    updateTime: ISODate("2022-01-27T09:11:39.334Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261cb86d34a7e49b56a7e"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "111",
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: ISODate("2021-01-26T16:00:00.000Z"),
+    workTime: NumberInt("1"),
+    reservedNumber: NumberInt("27"),
+    availableNumber: NumberInt("10"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:39.361Z"),
+    updateTime: ISODate("2022-01-27T09:11:39.361Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261cb86d34a7e49b56a7f"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "112",
+    title: "医师",
+    docname: "",
+    skill: "内分泌科常见病。",
+    workDate: ISODate("2021-01-27T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("33"),
+    availableNumber: NumberInt("22"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:39.387Z"),
+    updateTime: ISODate("2022-01-27T09:11:39.387Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: ObjectId("61f261cb86d34a7e49b56a80"),
+    hoscode: "1000_0",
+    depcode: "200040878",
+    hosScheduleId: "113",
+    title: "副主任医师",
+    docname: "裴育",
+    skill: "骨质疏松和骨代谢疾病、糖尿病、甲状腺疾病。",
+    workDate: ISODate("2021-01-27T16:00:00.000Z"),
+    workTime: NumberInt("0"),
+    reservedNumber: NumberInt("40"),
+    availableNumber: NumberInt("6"),
+    amount: "100",
+    status: NumberInt("1"),
+    createTime: ISODate("2022-01-27T09:11:39.413Z"),
+    updateTime: ISODate("2022-01-27T09:11:39.413Z"),
+    isDeleted: NumberInt("0"),
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
+db.getCollection("Schedule").insert([ {
+    _id: "61f261cb86d34a7e49b56a81",
+    hoscode: "1000_0",
+    depcode: 200040878,
+    title: "副主任医师",
+    docname: "邵迎红",
+    skill: "内分泌与代谢性疾病。",
+    workDate: "2021-01-27 16:00:00.000",
+    workTime: 1,
+    reservedNumber: 27,
+    availableNumber: 10,
+    amount: 100,
+    status: 1,
+    hosScheduleId: 114,
+    createTime: "2022-01-27 09:11:39.438",
+    updateTime: "2022-01-27 09:11:39.438",
+    isDeleted: 0,
+    _class: "com.siro.yyds.model.hosp.Schedule"
+} ]);
