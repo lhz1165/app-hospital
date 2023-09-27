@@ -17,7 +17,7 @@ import org.springframework.context.annotation.ComponentScan;
 /**
  * 医院api接口服务
  *
- * @author starsea
+ * @author docker
  * @date 2022-01-21
  */
 @SpringBootApplication

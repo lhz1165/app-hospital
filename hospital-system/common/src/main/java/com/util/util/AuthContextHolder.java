@@ -4,7 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * 获取当前用户信息工具类
- * @author starsea
+ * @author docker
  * @date 2022-02-05
  */
 public class AuthContextHolder {

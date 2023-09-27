@@ -5,7 +5,7 @@ import com.util.pojo.model.user.Patient;
 
 
 /**
- * @author starsea
+ * @author docker
  * @date 2022-02-05
  */
 public interface PatientMapper extends BaseMapper<Patient> {

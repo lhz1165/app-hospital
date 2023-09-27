@@ -19,7 +19,7 @@ package com.siro.yyds.hosp.receiver;//package com.siro.yyds.hosp.receiver;
 //
 ///**
 // * mq监听器
-// * @author starsea
+// * @author docker
 // * @date 2022-02-06
 // */
 //@Component

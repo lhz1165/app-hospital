@@ -1,7 +1,7 @@
 package com.util.pojo.enums;
 
 /**
- * @author starsea
+ * @author docker
  * @date 2022-01-28
  */
 public enum DictEnum {

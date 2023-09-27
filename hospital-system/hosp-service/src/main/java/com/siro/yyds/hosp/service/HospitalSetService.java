@@ -6,7 +6,7 @@ import com.util.pojo.model.hosp.HospitalSet;
 import com.util.pojo.vo.order.SignInfoVo;
 
 /**
- * @author starsea
+ * @author docker
  * @date 2022-01-21
  */
 public interface HospitalSetService extends IService<HospitalSet> {

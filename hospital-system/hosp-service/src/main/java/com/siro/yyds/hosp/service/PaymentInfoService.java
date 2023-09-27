@@ -7,7 +7,7 @@ import com.util.pojo.model.order.PaymentInfo;
 import java.util.Map;
 
 /**
- * @author starsea
+ * @author docker
  * @date 2022-02-08
  */
 public interface PaymentInfoService extends IService<PaymentInfo> {

@@ -11,7 +11,7 @@ import com.util.pojo.vo.user.UserInfoQueryVo;
 import java.util.Map;
 
 /**
- * @author starsea
+ * @author docker
  * @date 2022-02-03
  */
 public interface UserInfoService extends IService<UserInfo> {

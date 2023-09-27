@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.util.pojo.model.user.UserInfo;
 
 /**
- * @author starsea
+ * @author docker
  * @date 2022-02-03
  */
 public interface UserInfoMapper extends BaseMapper<UserInfo> {

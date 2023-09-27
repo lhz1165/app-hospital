@@ -12,7 +12,7 @@ import java.util.Date;
  *  JWT最重要的作用就是对 token信息的防伪作用。
  *  JWT的原理：一个JWT由三个部分组成：公共部分、私有部分、签名部分。最后由这三者组合进行base64编码得到JWT。
  *
- * @author starsea
+ * @author docker
  * @date 2022-02-03
  */
 public class JwtHelper {

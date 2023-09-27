@@ -7,7 +7,7 @@ import lombok.Data;
 
 /**
  * 自定义全局异常
- * @author starsea
+ * @author docker
  * @date 2022-01-19
  */
 @Data

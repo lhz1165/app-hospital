@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author starsea
+ * @author docker
  * @date 2022-01-26
  */
 public interface HospitalService {

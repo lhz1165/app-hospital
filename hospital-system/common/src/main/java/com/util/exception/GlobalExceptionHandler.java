@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * 全局异常处理
- * @author starsea
+ * @author docker
  * @date 2022-01-20
  */
 @ControllerAdvice //是Spring3.2提供的新注解,它是一个Controller增强器,可对controller中被 @RequestMapping注解的方法加一些逻辑处理

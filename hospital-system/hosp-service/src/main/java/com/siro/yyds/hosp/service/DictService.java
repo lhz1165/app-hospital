@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
- * @author starsea
+ * @author docker
  * @date 2022-01-24
  */
 public interface DictService extends IService<Dict> {

@@ -8,7 +8,7 @@ import com.util.pojo.vo.cmn.DictEeVo;
 import org.springframework.beans.BeanUtils;
 
 /**
- * @author starsea
+ * @author docker
  * @date 2022-01-25
  */
 public class DictListener extends AnalysisEventListener<DictEeVo> {

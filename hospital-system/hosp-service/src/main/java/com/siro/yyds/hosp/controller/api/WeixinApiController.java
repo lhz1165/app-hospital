@@ -28,7 +28,7 @@ package com.siro.yyds.hosp.controller.api;//package com.siro.yyds.hosp.controlle
 // * 微信登录官网说明：
 // * https://developers.weixin.qq.com/doc/oplatform/Website_App/WeChat_Login/Wechat_Login.html
 // *
-// * @author starsea
+// * @author docker
 // * @date 2022-02-03
 // */
 //@Api(tags = "微信登录")

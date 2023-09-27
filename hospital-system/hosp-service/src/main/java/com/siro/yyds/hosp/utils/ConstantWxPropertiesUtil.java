@@ -6,7 +6,7 @@
 //
 ///**
 // * 微信登录参数类
-// * @author starsea
+// * @author docker
 // * @date 2022-02-03
 // */
 //@Component
