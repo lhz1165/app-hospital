@@ -5982,3 +5982,6 @@ db.getCollection("Schedule").insert([ {
     isDeleted: 0,
     _class: "com.siro.yyds.model.hosp.Schedule"
 } ]);
+db.getCollection("Department").updateMany({}, { $set: { "_class": "com.util.pojo.model.hosp.Department" } })
+db.getCollection("Hospital").updateMany({}, { $set: { "_class": "com.util.pojo.model.hosp.Hospital" } })
+db.getCollection("Schedule").updateMany({}, { $set: { "_class": "com.util.pojo.model.hosp.Schedule" } })

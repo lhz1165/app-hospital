@@ -97,7 +97,7 @@ public class DepartmentServiceImpl implements DepartmentService {
         // 根据医院编号，查询医院所有科室信息
         Department departmentQuery = new Department();
         departmentQuery.setHoscode(hoscode);
-        Example example = Example.of(departmentQuery);
+        Example<Department> example = Example.of(departmentQuery);
 //      // 所有科室列表
         List<Department> departmentList = departmentRepository.findAll(example);
 
