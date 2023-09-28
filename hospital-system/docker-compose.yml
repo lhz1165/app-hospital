@@ -37,7 +37,7 @@ services:
       - SPRING_DATASOURCE_PASSWORD=root
       - SPRING_DATA_MONGODB_HOST= mongo
     ports:
-      - 8201:8201
+      - 8088:8088
       - 5005:5005
     depends_on:
       - mongo

@@ -51,14 +51,17 @@ public class HospitalSetController {
                                   @RequestBody(required = false) HospitalSetQueryVo hospitalSetQueryVo) {
         Page<HospitalSet> page = new Page<>(current,limit);
         QueryWrapper<HospitalSet> wrapper = new QueryWrapper<>();
-        String hosname = hospitalSetQueryVo.getHosname();
-        String hoscode = hospitalSetQueryVo.getHoscode();
-        if (!StringUtils.isEmpty(hosname)) {
-            wrapper.like("hosname",hosname);
+        if (hospitalSetQueryVo!=null){
+            String hosname = hospitalSetQueryVo.getHosname();
+            String hoscode = hospitalSetQueryVo.getHoscode();
+            if (!StringUtils.isEmpty(hosname)) {
+                wrapper.like("hosname",hosname);
+            }
+            if (!StringUtils.isEmpty(hoscode)) {
+                wrapper.eq("hoscode",hoscode);
+            }
         }
-        if (!StringUtils.isEmpty(hoscode)) {
-            wrapper.eq("hoscode",hoscode);
-        }
+
         Page<HospitalSet> hospitalSetPage = hospitalSetService.page(page, wrapper);
         return Result.ok(hospitalSetPage);
     }

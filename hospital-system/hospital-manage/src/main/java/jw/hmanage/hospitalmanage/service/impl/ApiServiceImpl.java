@@ -83,7 +83,8 @@ public class ApiServiceImpl implements ApiService {
         JSONObject jsonObject = JSONObject.parseObject(data);
 
         Map<String, Object> paramMap = new HashMap<>();
-        paramMap.put("hoscode",this.getHoscode());
+        //paramMap.put("hoscode",this.getHoscode());
+        paramMap.put("hoscode",jsonObject.getString("hoscode"));
         paramMap.put("hosname",jsonObject.getString("hosname"));
         paramMap.put("hostype",jsonObject.getString("hostype"));
         paramMap.put("provinceCode",jsonObject.getString("provinceCode"));
@@ -122,7 +123,8 @@ public class ApiServiceImpl implements ApiService {
         paramMap.put("page",pageNum);
         paramMap.put("limit",pageSize);
         paramMap.put("timestamp", HttpRequestHelper.getTimestamp());
-        paramMap.put("sign", HttpRequestHelper.getSign(paramMap, this.getSignKey()));
+        //paramMap.put("sign", HttpRequestHelper.getSign(paramMap, this.getSignKey()));
+        paramMap.put("sign", MD5.encrypt(getSignKey()));
         JSONObject respone = HttpRequestHelper.sendRequest(paramMap,this.getApiUrl()+"/api/hosp/department/list");
         if(null != respone && 200 == respone.getIntValue("code")) {
             JSONObject jsonObject = respone.getJSONObject("data");
@@ -194,7 +196,8 @@ public class ApiServiceImpl implements ApiService {
         paramMap.put("page",pageNum);
         paramMap.put("limit",pageSize);
         paramMap.put("timestamp", HttpRequestHelper.getTimestamp());
-        paramMap.put("sign", HttpRequestHelper.getSign(paramMap, this.getSignKey()));
+        //paramMap.put("sign", HttpRequestHelper.getSign(paramMap, this.getSignKey()));
+        paramMap.put("sign",MD5.encrypt(getSignKey()));
         JSONObject respone = HttpRequestHelper.sendRequest(paramMap,this.getApiUrl()+"/api/hosp/schedule/list");
         System.out.println(respone.toJSONString());
         if(null != respone && 200 == respone.getIntValue("code")) {
