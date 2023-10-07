@@ -40,6 +40,15 @@ public class HospitalController {
         Page<Hospital> hospitalPage = hospitalService.selectHospPage(page, limit, hospitalQueryVo);
         return Result.ok(hospitalPage);
     }
+    @ApiOperation(value = "条件查询带分页")
+    @GetMapping("/list/{page}/{limit}")
+    public Result list(@PathVariable("page") Integer page,
+                                   @PathVariable("limit") Integer limit,
+                                   @RequestBody(required = false) HospitalQueryVo hospitalQueryVo) {
+        Page<Hospital> hospitalPage = hospitalService.selectHospPage(page, limit, hospitalQueryVo);
+        return Result.ok(hospitalPage);
+    }
+
 
     /**
      * 更新上线状态
