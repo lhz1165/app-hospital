@@ -14,7 +14,7 @@ services:
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
       - ~/mysql/data:/var/lib/mysql
-    restart: always
+    restart: no
 
   mongo:
     container_name: mongo_4
@@ -24,13 +24,14 @@ services:
       - ~/mongodb/data:/data/db
     ports:
       - "27017:27017"
-    restart: always
+    restart: no
     command: mongod
 
   hospital-service:
     build: ./hosp-service
     image: hosp-service:0.0.1
     container_name: hosp-service
+    restart: no
     environment:
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/yygh_hosp?characterEncoding=utf-8&useSSL=false
       - SPRING_DATASOURCE_USERNAME=root
