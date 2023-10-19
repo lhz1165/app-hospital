@@ -27,7 +27,7 @@ import org.springframework.context.annotation.ComponentScan;
 public class ServiceHospApplication implements ApplicationListener<ApplicationStartedEvent> {
     @Override
     public void onApplicationEvent(ApplicationStartedEvent event) {
-        log.info("start success,{}","http://localhost:8201/swagger-ui.html");
+        log.info("start success,{}","http://localhost:8088/swagger-ui.html");
     }
 
     public static void main(String[] args) {

@@ -26,7 +26,10 @@ services:
       - "27017:27017"
     restart: no
     command: mongod
-
+  front:
+    build: ./front
+    container_name: front-web
+    image: front-web:0.0.1
   hospital-service:
     build: ./hosp-service
     image: hosp-service:0.0.1
