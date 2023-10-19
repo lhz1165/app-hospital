@@ -9,27 +9,24 @@ import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 
 import javax.annotation.Resource;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.List;
 
 /**
  * @author laihz
  * @date 2023/9/27 16:35
  */
-@SpringBootTest(classes = ServiceHospApplication.class,webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+//@SpringBootTest(classes = ServiceHospApplication.class,webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class MyTest {
-    @Resource
-    private DepartmentRepository departmentRepository;
     @Test
-    void test(){
-        Department d = new Department();
-        d.setHoscode("1000_0");
+    void test() throws SQLException, ClassNotFoundException {
 
-
-        Example<Department> of = Example.of(d);
-        List<Department> all = departmentRepository.findAll(of);
-        System.out.println(all.size());
 
     }
+
 
 }
 
