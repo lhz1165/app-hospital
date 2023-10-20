@@ -21,6 +21,7 @@ services:
     image: mongo:4.4
     volumes:
       - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      #这是c盘用户地址
       - ~/mongodb/data:/data/db
     ports:
       - "27017:27017"
