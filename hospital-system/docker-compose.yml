@@ -31,6 +31,8 @@ services:
     build: ./front
     container_name: front-web
     image: front-web:0.0.1
+    ports:
+      - 9528:9528
   hospital-service:
     build: ./hosp-service
     image: hosp-service:0.0.1
