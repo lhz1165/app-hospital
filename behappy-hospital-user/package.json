@@ -1,8 +1,8 @@
 {
   "name": "behappy-hospital-user",
   "version": "1.0.0",
-  "description": "尚医通项目平台(改)",
-  "author": "xiaowu",
+  "description": "医院挂号系统",
+  "author": "docker",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
-    "element-ui": "^2.15.1",
+    "element-ui": "^2.15.14",
     "js-cookie": "^2.2.1",
     "nuxt": "^2.0.0",
     "vue-qriously": "^1.1.1"

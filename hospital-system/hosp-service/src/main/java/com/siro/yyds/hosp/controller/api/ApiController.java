@@ -10,6 +10,7 @@ import com.util.pojo.model.hosp.Department;
 import com.util.pojo.model.hosp.Hospital;
 import com.util.pojo.model.hosp.Schedule;
 import com.util.pojo.vo.hosp.DepartmentQueryVo;
+import com.util.pojo.vo.hosp.HospitalQueryVo;
 import com.util.pojo.vo.hosp.ScheduleQueryVo;
 import com.util.result.Result;
 import com.util.result.ResultCodeEnum;
@@ -20,9 +21,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
@@ -128,7 +127,14 @@ public class ApiController {
         departmentService.save(paramMap);
         return Result.ok();
     }
-
+    @ApiOperation(value = "条件查询带分页")
+    @GetMapping("hospital/{page}/{limit}")
+    public Result list(@PathVariable("page") Integer page,
+                       @PathVariable("limit") Integer limit,
+                       @RequestBody(required = false) HospitalQueryVo hospitalQueryVo) {
+        Page<Hospital> hospitalPage = hospitalService.selectHospPage(page, limit, hospitalQueryVo);
+        return Result.ok(hospitalPage);
+    }
     /**
      * 查询科室信息（带分页）
      * @param request
