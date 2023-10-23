@@ -13,7 +13,7 @@ EXPOSE 3000
 #9、配置npm的远程仓库
 #RUN npm install cnpm -g --registry=https://registry.npm.taobao.org
 #10、清除缓存
-RUN npm cache clean --force
+#RUN npm cache clean --force
 #11、安装依赖
 RUN npm install
 #12、构建，生成dist文件

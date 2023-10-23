@@ -6,7 +6,6 @@ import cookie from 'js-cookie'
 const service = axios.create({
   //todo 本地修改了localhost
   baseURL: 'http://localhost:8088',
-  //baseURL: 'http://172.22.0.5:8088',
     timeout: 15000 // 请求超时时间
 })
 // http request 拦截器

@@ -194,15 +194,15 @@ import dictApi from "@/api/dict";
 
 export default {
   //服务端渲染异步，显示医院列表
-  asyncData({ params, error }) {
-    //调用
-    return hospApi.getPageList(1, 10, null).then((response) => {
-      return {
-        list: response.data.content,
-        pages: response.data.totalPages,
-      };
-    });
-  },
+  // asyncData({ params, error }) {
+  //   //调用
+  //   return hospApi.getPageList(1, 10, null).then((response) => {
+  //     return {
+  //       list: response.data.content,
+  //       pages: response.data.totalPages,
+  //     };
+  //   });
+  // },
   data() {
     return {
       searchObj: {},
