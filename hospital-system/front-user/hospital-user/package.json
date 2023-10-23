@@ -11,7 +11,8 @@
     "element-ui": "^2.15.14",
     "js-cookie": "^2.2.1",
     "vue": "^2.6.14",
-    "vue-router": "^3.5.2"
+    "vue-router": "^3.5.2",
+    "vue-qriously": "^1.1.1"
   },
   "devDependencies": {
     "@vue/cli-service": "~5.0.0",

@@ -1,56 +1,82 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+  <div class="VueToNuxtLogo">
+    <div class="Triangle Triangle--two"/>
+    <div class="Triangle Triangle--one"/>
+    <div class="Triangle Triangle--three"/>
+    <div class="Triangle Triangle--four"/>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+<style>
+.VueToNuxtLogo {
+  display: inline-block;
+  animation: turn 2s linear forwards 1s;
+  transform: rotateX(180deg);
+  position: relative;
+  overflow: hidden;
+  height: 180px;
+  width: 245px;
+}
+
+.Triangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+
+.Triangle--one {
+  border-left: 105px solid transparent;
+  border-right: 105px solid transparent;
+  border-bottom: 180px solid #41B883;
+}
+
+.Triangle--two {
+  top: 30px;
+  left: 35px;
+  animation: goright 0.5s linear forwards 3.5s;
+  border-left: 87.5px solid transparent;
+  border-right: 87.5px solid transparent;
+  border-bottom: 150px solid #3B8070;
+}
+
+.Triangle--three {
+  top: 60px;
+  left: 35px;
+  animation: goright 0.5s linear forwards 3.5s;
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  border-bottom: 120px solid #35495E;
+}
+
+.Triangle--four {
+  top: 120px;
+  left: 70px;
+  animation: godown 0.5s linear forwards 3s;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-bottom: 60px solid #fff;
+}
+
+@keyframes turn {
+  100% {
+    transform: rotateX(0deg);
   }
 }
-</script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
+@keyframes godown {
+  100% {
+    top: 180px;
+  }
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+
+@keyframes goright {
+  100% {
+    left: 70px;
+  }
 }
 </style>
+
+<script setup>
+</script>
