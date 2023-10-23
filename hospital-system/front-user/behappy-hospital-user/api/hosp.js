@@ -18,7 +18,7 @@ export default {
   // 医院详情
   show(hoscode) {
     return request({
-      url: `${api_name}/${hoscode}`,
+      url: `${api_name}/findHospDetail/${hoscode}`,
       method: 'get'
     })
   },

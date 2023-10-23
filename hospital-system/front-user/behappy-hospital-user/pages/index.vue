@@ -60,6 +60,7 @@
             </div>
           </div>
         </div>
+
         <div class="v-scroll-list hospital-list">
           <div
             class="v-card clickable list-item"
@@ -208,12 +209,12 @@ export default {
       searchObj: {},
       page: 1,
       limit: 10,
-
+      list:[],
+      pages:0,
       state:"",
       hosname: "", //医院名称
       hostypeList: [], //医院等级集合
       districtList: [], //地区集合
-
       hostypeActiveIndex: 0,
       provinceActiveIndex: 0,
     };
@@ -243,6 +244,11 @@ export default {
         for (let i in response.data) {
           this.districtList.push(response.data[i]);
         }
+      });
+
+      hospApi.getPageList(1, 10, null).then((response) => {
+        this.list= response.data.content
+        this.pages=response.data.totalPages
       });
     },
 

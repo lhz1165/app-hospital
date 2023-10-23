@@ -129,7 +129,7 @@ public class ApiController {
     }
     @ApiOperation(value = "条件查询带分页")
     @GetMapping("hospital/{page}/{limit}")
-    public Result list(@PathVariable("page") Integer page,
+    public Result<Page<Hospital>> list(@PathVariable("page") Integer page,
                        @PathVariable("limit") Integer limit,
                        @RequestBody(required = false) HospitalQueryVo hospitalQueryVo) {
         Page<Hospital> hospitalPage = hospitalService.selectHospPage(page, limit, hospitalQueryVo);
