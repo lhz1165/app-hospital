@@ -1,4 +1,11 @@
 version: '3'
+networks:
+  loki:
+    ipam:
+      driver: default
+      config:
+        - subnet: "172.22.0.0/24"
+          gateway: 172.22.0.1
 services:
   mysql:
     image: mysql:5.7
@@ -15,6 +22,9 @@ services:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
       - ~/mysql/data:/var/lib/mysql
     restart: no
+    networks:
+      loki:
+        ipv4_address: 172.22.0.2
 
   mongo:
     container_name: mongo_4
@@ -27,12 +37,29 @@ services:
       - "27017:27017"
     restart: no
     command: mongod
-  front:
+    networks:
+      loki:
+        ipv4_address: 172.22.0.3
+  front-admin:
     build: ./front
-    container_name: front-web
-    image: front-web:0.0.1
+    container_name: front-admin
+    image: front-admin:0.0.1
     ports:
       - 9528:9528
+    networks:
+      loki:
+        ipv4_address: 172.22.0.4
+  front-user:
+    build: front-user
+    container_name: front-user
+    image: front-user:0.0.1
+    ports:
+      - 3000:3000
+    depends_on:
+      - hospital-service
+    networks:
+      loki:
+        ipv4_address: 172.22.0.6
   hospital-service:
     build: ./hosp-service
     image: hosp-service:0.0.1
@@ -49,3 +76,6 @@ services:
     depends_on:
       - mongo
       - mysql
+    networks:
+      loki:
+        ipv4_address: 172.22.0.5
