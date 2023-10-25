@@ -17,8 +17,8 @@ EXPOSE 3000
 #11、安装依赖
 RUN npm install
 #12、构建，生成dist文件
-#RUN npm run build
+RUN npm run build
 #13、start
-CMD ["npm","run","dev"]
+CMD ["npm","start"]
 #2、作者
 MAINTAINER docker
