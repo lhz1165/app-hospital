@@ -1,0 +1,73 @@
+version: '3'
+networks:
+  loki:
+    ipam:
+      driver: default
+      config:
+        - subnet: "172.22.0.0/24"
+          gateway: 172.22.0.1
+services:
+  mysql:
+    image: mysql:8.0.32
+    container_name: mysql8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_PASSWORD: root
+      MYSQL_DATABASE: hospital
+      TZ: Asia/Shanghai #时区
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ~/mysql8/data2:/var/lib/mysql
+      - ~/mysql8/config:/etc/mysql/conf.d
+    restart: no
+    networks:
+      loki:
+        ipv4_address: 172.22.0.2
+
+  redis:
+    container_name: redis
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    restart: no
+    networks:
+      loki:
+        ipv4_address: 172.22.0.3
+  hospital-backend:
+    build: ./hospital
+    image: hosp-backend:0.0.1
+    container_name: hosp-backend
+    restart: no
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://localhost:3306/hospital?characterEncoding=UTF-8&useSSL=false&useUnicode=true&serverTimezone=UTC
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+    ports:
+      - "8080:8080"
+      - "5005:5005"
+    depends_on:
+      - redis
+      - mysql
+    networks:
+      loki:
+        ipv4_address: 172.22.0.5
+  hospital-front-h5:
+    build: ./hospital-wxapp
+    container_name: hospital-front-h5
+    image: hospital-front-h5:0.0.1
+    ports:
+      - "8081:8081"
+    networks:
+      loki:
+        ipv4_address: 172.22.0.4
+  hospital-front-admin:
+    build: ./hospital-web
+    container_name: hospital-front-admin
+    image: hospital-front-admin:0.0.1
+    ports:
+      - "8082:8082"
+    networks:
+      loki:
+        ipv4_address: 172.22.0.6

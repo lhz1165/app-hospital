@@ -104,7 +104,7 @@ export default {
 
   created() {
     this.hoscode = this.$route.params.hoscode;
-
+    console.log("hoscode:"+this.hoscode)
     this.init();
   },
 

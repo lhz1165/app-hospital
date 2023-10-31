@@ -1,6 +1,6 @@
 {
     "name" : "appointment-wxapp",
-    "appid" : "__UNI__AAB23D5",
+    "appid" : "__UNI__82F5E07",
     "description" : "",
     "versionName" : "1.0.0",
     "versionCode" : "100",
@@ -75,9 +75,13 @@
     "h5" : {
         "router" : {
             "mode" : "history",
-            "base" : "/Yang-appoint/"
+            "base" : "/"
         },
-        "title" : "挂号系统"
+        "title" : "挂号系统",
+        "devServer" : {
+            "https" : false,
+            "port" : 8081
+        }
     }
 }
 // "domain" : "https://www.funkingka.cn/Yang-appoint"

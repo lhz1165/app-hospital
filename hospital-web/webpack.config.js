@@ -110,6 +110,7 @@ module.exports = {
     hot: true,
     inline: true,
     stats: {colors: true},
+    port: 8082,
     proxy: {
       '/hospital': {
         target: 'http://localhost:8080',
