@@ -48,10 +48,6 @@
 				<image class="icon" src="/static/center/paidui.png"></image>
 				<text class="text">候诊队列</text>
 			</view>
-			<view class="option-inbox" @click="toCreditDetail()">
-				<image class="icon" src="/static/center/xinyong.png"></image>
-				<text class="text">信用详情</text>
-			</view>
 			<view class="option-inbox" @click="toAboutUs()">
 				<image class="icon" src="/static/center/about-us.png"></image>
 				<text class="text">关于我们</text>

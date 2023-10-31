@@ -2,7 +2,7 @@ spring:
   datasource:
     url: ${SPRING_DATASOURCE_URL}
     username: root
-    password: root
+    password: ${MYSQL_PASSWORD}
     driver-class-name: com.mysql.cj.jdbc.Driver
     tomcat:
       max-active: 20
@@ -19,7 +19,7 @@ spring:
 
   redis:
     # Redis服务器地址
-    host: localhost
+    host: ${REDIS_ADDRESS}
     # Redis数据库索引（默认为0）
     database: 0
     # Redis服务器连接端口

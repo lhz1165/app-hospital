@@ -46,11 +46,11 @@
 				<text class="textData">{{userCardInfo.name}}</text>
 			</view>
 
-			<view class="item">
-				<view class="textStyle">证件号码</view>
-				<text class="textData">
-				{{userCardInfo.identificationNumber | getIdentityNum}}</text>
-			</view>
+<!--			<view class="item">-->
+<!--				<view class="textStyle">证件号码</view>-->
+<!--				<text class="textData">-->
+<!--				{{userCardInfo.identificationNumber | getIdentityNum}}</text>-->
+<!--			</view>-->
 			<view class="item">
 				<view class="textStyle">性别</view>
 				<text class="textData">{{userCardInfo.gender | getGender}}</text>
