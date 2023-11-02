@@ -11,7 +11,8 @@ spring:
       initial-size: 10
     hikari:
       max-lifetime: 1200000
-
+  resources:
+    static-locations: classpath:/static,file:/static
   servlet:
     multipart:
       # 最大支持文件大小
@@ -93,6 +94,10 @@ redis:
     expire:
       # 验证码超时时间,默认 5分钟
       authCode: 300
+app:
+  file:
+    domain: "http://localhost:8080/hospital"
+    address: "./static/img"
 
 # 七牛云文件存储
 qiniu:
@@ -105,36 +110,7 @@ qiniu:
 secure:
   ignored:
     urls: #安全路径白名单
-      - /swagger-ui.html
-      - /swagger-resources/**
-      - /swagger/**
-      - /doc.html
-      - /**/v2/api-docs
-      - /**/*.js
-      - /**/*.css
-      - /**/*.png
-      - /**/*.ico
-      - /webjars/springfox-swagger-ui/**
-      - /actuator/**
-      - /druid/**
-      - /power/account/login
-      - /power/account/register
-      - /power/account/info
-      - /power/account/logout
-      - /power/name/validation
-      - /power/account/token
-      - /user/basic/code
-      - /user/basic/message
-      - /user/basic/account/register
-      - /hospital/info/list
-      - /hospital/special/list/**
-      - /hospital/special/list
-      - /hospital/doctor/list/special/outpatient
-      - /hospital/outpatient/list
-      - /visit/plan/doctor
-      - /visit/plan/doctor/date
-      - /visit/plan/list
-      - /hospital/doctor/**
+      - /**
 
 # 小程序配置，用于调用官方API
 wx:

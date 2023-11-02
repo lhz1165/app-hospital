@@ -152,7 +152,7 @@ public class PowerAccountServiceImpl implements IPowerAccountService {
         account.setGmtModified(new Date());
 
         if (accountMapper.insertSelective(account) > 0) {
-
+            param.setAvatarUrl("http://localhost:8080/defalut_avatar.png");
             if (userBasicInfoService.insert(param)) {
                 return true;
             } else {

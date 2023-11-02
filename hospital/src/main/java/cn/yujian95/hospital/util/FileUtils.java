@@ -6,7 +6,7 @@ import java.io.*;
 
 public class FileUtils {
     //这是本地存入的格式，上传到服务器的话，格式类似于，"/root/images/pc/"
-    public static String UPLOAD_FOLDER = "./img";
+
 
     /**
      * 将文件转换成Byte数组
@@ -50,7 +50,7 @@ public class FileUtils {
             if (!dir.exists() && dir.isDirectory()) {// 判断文件目录是否存在
                 dir.mkdirs();
             }
-            file = new File(filePath + "\\" + fileName);
+            file = new File(filePath + "/" + fileName);
             fos = new FileOutputStream(file);
             bos = new BufferedOutputStream(fos);
             bos.write(bytes);

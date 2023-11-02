@@ -141,7 +141,7 @@
 					// #endif
 					// #ifdef H5
 					// H5注册时使用默认头像
-					avatarUrl: 'http://image.yujian95.cn/FmxdyLFebwrEhId3tyb7AXo5Xryc',
+					avatarUrl: 'http://localhost:8080/hospital/img/defalut_avatar.png',
 					// #endif
 					name: this.form.name,
 					password: md5(this.form.password),
