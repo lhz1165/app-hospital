@@ -23,7 +23,8 @@ import java.util.Optional;
 @CrossOrigin
 @RequestMapping("/hospital")
 public class HospitalClinicController {
-
+    //todo
+    //carid 为空报错 手机存在报错
     @Resource
     private IHospitalClinicService clinicService;
 

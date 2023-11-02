@@ -82,7 +82,8 @@
 		methods: {
 			// 获取手机验证码
 			getPhoneCode: function() {
-				if(this.isValidate && this.form.phone !== '') {
+        console.log("phone function:", this.form.phone)
+				if(this.form.phone !== '') {
 					this.getCodeNum = 60;
 					let _this = this
 					let time = setInterval(function(){
