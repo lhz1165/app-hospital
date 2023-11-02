@@ -95,7 +95,11 @@
 						},1000)
 					
 					getPhoneCode(this.form.phone).then(res => {
-					}).catch(() => {
+            //todo 信息
+            if(res.data.code === 200) {
+
+            }
+          }).catch(() => {
 						uni.showToast({
 							title: '发送失败，请检查网络',
 							icon: 'none'
