@@ -560,19 +560,19 @@ VALUES (10000005, 'admin', '$2a$10$l0dSGURNp2Q9z2m3jea37.CV9.OH76qprHxIDklyJPK2E
 
 INSERT INTO `hospital`.`hospital_info`(`id`, `name`, `phone`, `address`, `description`, `picture`, `gmt_create`,
                                        `gmt_modified`)
-VALUES (1000, '广东省中医院', '020-123452', '广州大学城', '广东省中医院', 'http://localhost:8080/hospital/img/defalut_avatar.png',
+VALUES (1000, '广东省中医院', '020-123452', '广州大学城', '广东省中医院', 'http://localhost:8080/hospital/img/hos1.png',
         '2020-02-05 13:06:55', '2020-03-16 09:57:16');
 INSERT INTO `hospital`.`hospital_info`(`id`, `name`, `phone`, `address`, `description`, `picture`, `gmt_create`,
                                        `gmt_modified`)
 VALUES (1001, '顺德分院', '020-1234567', '广东省佛山市顺德区', '位于广东省佛山市顺德区',
-        'http://localhost:8080/hospital/img/defalut_avatar.png', '2020-03-16 08:00:03', '2020-03-16 08:00:03');
+        'http://localhost:8080/hospital/img/hos2.png', '2020-03-16 08:00:03', '2020-03-16 08:00:03');
 INSERT INTO `hospital`.`hospital_info`(`id`, `name`, `phone`, `address`, `description`, `picture`, `gmt_create`,
                                        `gmt_modified`)
 VALUES (1002, '白云分院', '020-1234568', '广东省广州市白云区', '位于广东省广州市白云区',
-        'http://localhost:8080/hospital/img/defalut_avatar.png', '2020-03-16 08:03:30', '2020-03-16 08:03:30');
+        'http://localhost:8080/hospital/img/hos3.png', '2020-03-16 08:03:30', '2020-03-16 08:03:30');
 INSERT INTO `hospital`.`hospital_info`(`id`, `name`, `phone`, `address`, `description`, `picture`, `gmt_create`,
                                        `gmt_modified`)
-VALUES (1007, '越秀分院', '020-1234563', '广东省越秀区', '位于广东省越秀区', 'http://localhost:8080/hospital/img/defalut_avatar.png',
+VALUES (1007, '越秀分院', '020-1234563', '广东省越秀区', '位于广东省越秀区', 'http://localhost:8080/hospital/img/hos4.png',
         '2020-03-22 04:53:40', '2020-03-22 04:53:40');
 
 INSERT INTO `hospital`.`hospital_special`(`id`, `name`, `description`, `gmt_create`, `gmt_modified`)

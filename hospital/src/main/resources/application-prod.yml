@@ -97,6 +97,7 @@ redis:
 app:
   file:
     domain: "http://localhost:8080/hospital"
+    # 因为jar在/target里面，所以.就是target所在目录，所以./=/,./static/img= /static/img,所以file:/static
     address: "./static/img"
 
 # 七牛云文件存储
