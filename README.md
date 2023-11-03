@@ -8,22 +8,37 @@ jdk8
 
 maven3.8
 
-## 本地运行
-
-```
-前端 
-
-```
-
-
-
 ## 部署
 
+**编译**
+
+后端 
+
 ```
-前端npm run build
+cd  保存地址/app-hospital/hospital
+mvn clen package
+```
 
-进入hospital-system
+前端
 
+医院后台
+
+```
+cd  保存地址/app-hospital/hospital-web
+npm run build-dev
+```
+
+用户前台
+
+```
+cd  保存地址/app-hospital/hospital-wxapp
+使用hbuilder-发行-手机h5
+```
+
+**部署**
+
+```
+cd  保存地址/app-hospital
 docker-compose up -d
 ```
 

@@ -41,7 +41,7 @@ services:
     container_name: hosp-backend
     restart: no
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/hospital?characterEncoding=UTF-8&useSSL=false&useUnicode=true&serverTimezone=UTC
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/hospital?characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true&useUnicode=true&serverTimezone=UTC
       - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_PASSWORD=root
       - REDIS_ADDRESS=redis

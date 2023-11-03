@@ -84,20 +84,20 @@
 			getPhoneCode: function() {
         console.log("phone function:", this.form.phone)
 				if(this.form.phone !== '') {
-					this.getCodeNum = 60;
-					let _this = this
-					let time = setInterval(function(){
-						if(_this.getCodeNum == 0) {
-							clearInterval(time);
-							return;
-						}
-							_this.getCodeNum--;
-						},1000)
-					
 					getPhoneCode(this.form.phone).then(res => {
             //todo 信息
-            if(res.data.code === 200) {
-
+            if(res.data.code === 404) {
+              error(res.data.message)
+            }else{
+              this.getCodeNum = 60;
+              let _this = this
+              let time = setInterval(function(){
+                if(_this.getCodeNum == 0) {
+                  clearInterval(time);
+                  return;
+                }
+                _this.getCodeNum--;
+              },1000)
             }
           }).catch(() => {
 						uni.showToast({
