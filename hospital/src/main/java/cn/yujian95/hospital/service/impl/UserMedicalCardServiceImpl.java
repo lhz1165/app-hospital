@@ -308,6 +308,10 @@ public class UserMedicalCardServiceImpl implements IUserMedicalCardService {
      */
     @Override
     public boolean countCardId(Long cardId) {
+        if (cardId == null) {
+            return false;
+        }
+
         UserMedicalCardExample example = new UserMedicalCardExample();
 
         example.createCriteria()
