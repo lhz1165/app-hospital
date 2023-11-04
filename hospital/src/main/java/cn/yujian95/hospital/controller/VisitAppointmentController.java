@@ -17,8 +17,8 @@ import java.util.Date;
 import static cn.yujian95.hospital.dto.AppointmentEnum.*;
 
 /**
- * @author YuJian95  clj9509@163.com
- * @date 2020/3/19
+ * @author docker-compose
+ * @date 2023/11/1
  */
 
 @Api(value = "出诊模块", tags = "出诊预约接口")

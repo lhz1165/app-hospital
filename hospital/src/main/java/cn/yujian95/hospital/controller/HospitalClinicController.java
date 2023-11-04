@@ -14,8 +14,8 @@ import javax.annotation.Resource;
 import java.util.Optional;
 
 /**
- * @author YuJian95  clj9509@163.com
- * @date 2020/2/12
+ * @author docker-compose
+ * @date 2023/11/1
  */
 
 @Api(value = "医院模块", tags = "诊室信息接口")

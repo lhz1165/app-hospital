@@ -13,8 +13,8 @@ import java.util.Properties;
 /**
  * 数据库中数据表注释生成器
  *
- * @author YuJian95  clj9509@163.com
- * @date 2020/1/18
+ * @author docker-compose
+ * @date 2023/11/1
  */
 
 public class CommentGenerator extends DefaultCommentGenerator {

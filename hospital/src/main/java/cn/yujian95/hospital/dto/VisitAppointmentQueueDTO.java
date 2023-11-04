@@ -9,8 +9,8 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * @author YuJian95  clj9509@163.com
- * @date 2020/4/13
+ * @author docker-compose
+ * @date 2023/11/1
  */
 
 @EqualsAndHashCode(callSuper = true)

@@ -19,8 +19,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 /**
- * @author YuJian95  clj9509@163.com
- * @date 2020/2/6
+ * @author docker-compose
+ * @date 2023/11/1
  */
 @Api(value = "图片模块", tags = "图片接口")
 @RestController

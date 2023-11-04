@@ -12,8 +12,8 @@ import java.io.IOException;
 /**
  * 自定义的返回结果（无权限）
  *
- * @author YuJian95  clj9509@163.com
- * @date 2020/1/18
+ * @author docker-compose
+ * @date 2023/11/1
  */
 
 public class RestfulAccessDeniedHandler implements AccessDeniedHandler {

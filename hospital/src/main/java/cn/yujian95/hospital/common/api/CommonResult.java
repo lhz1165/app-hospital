@@ -8,8 +8,8 @@ import java.util.Objects;
 /**
  * 通用结果返回对象
  *
- * @author YuJian95  clj9509@163.com
- * @date 2020/1/18
+ * @author docker-compose
+ * @date 2023/11/1
  */
 
 

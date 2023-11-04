@@ -19,8 +19,8 @@ import java.io.IOException;
 /**
  * 七牛云云存储
  *
- * @author YuJian95  clj9509@163.com
- * @date 2020/2/6
+ * @author docker-compose
+ * @date 2023/11/1
  */
 
 @Component

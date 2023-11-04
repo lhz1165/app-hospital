@@ -9,8 +9,8 @@ import lombok.EqualsAndHashCode;
 import java.io.Serializable;
 
 /**
- * @author YuJian95  clj9509@163.com
- * @date 2020/3/18
+ * @author docker-compose
+ * @date 2023/11/1
  */
 
 @EqualsAndHashCode(callSuper = true)

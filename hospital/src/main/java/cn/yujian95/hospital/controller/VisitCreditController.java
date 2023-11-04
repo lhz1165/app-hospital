@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 
 /**
- * @author YuJian95  clj9509@163.com
- * @date 2020/4/21
+ * @author docker-compose
+ * @date 2023/11/1
  */
 
 @Api(value = "出诊模块", tags = "出诊信用接口")

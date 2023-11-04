@@ -5,8 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 /**
- * @author YuJian95  clj9509@163.com
- * @date 2020/1/18
+ * @author docker-compose
+ * @date 2023/11/1
  */
 
 @SpringBootApplication

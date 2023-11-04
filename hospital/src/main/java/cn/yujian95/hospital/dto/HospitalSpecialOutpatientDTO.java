@@ -12,8 +12,8 @@ import java.util.List;
 /**
  * 医院所属专科以及门诊封装类
  *
- * @author YuJian95  clj9509@163.com
- * @date 2020/2/5
+ * @author docker-compose
+ * @date 2023/11/1
  */
 @ApiModel(value = "HospitalSpecialOutpatientDTO", description = "医院所属专科以及门诊封装类")
 @Data

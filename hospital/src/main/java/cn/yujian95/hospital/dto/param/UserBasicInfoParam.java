@@ -9,8 +9,8 @@ import java.io.Serializable;
 /**
  * 普通用户信息参数
  *
- * @author YuJian95  clj9509@163.com
- * @date 2020/2/1
+ * @author docker-compose
+ * @date 2023/11/1
  */
 
 @ApiModel(value = "UserBasicInfoParam", description = "普通用户信息参数")

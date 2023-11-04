@@ -1,8 +1,8 @@
 package cn.yujian95.hospital.service;
 
 /**
- * @author YuJian95  clj9509@163.com
- * @date 2020/3/19
+ * @author docker-compose
+ * @date 2023/11/1
  */
 
 public interface IVisitBlacklistService {

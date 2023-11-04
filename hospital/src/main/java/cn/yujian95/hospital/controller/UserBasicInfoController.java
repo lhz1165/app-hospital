@@ -23,8 +23,8 @@ import java.security.Principal;
 import java.util.Optional;
 
 /**
- * @author YuJian95  clj9509@163.com
- * @date 2020/1/29
+ * @author docker-compose
+ * @date 2023/11/1
  */
 
 @Api(value = "用户模块", tags = "用户信息接口")

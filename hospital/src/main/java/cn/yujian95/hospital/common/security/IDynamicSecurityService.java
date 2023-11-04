@@ -5,8 +5,8 @@ import org.springframework.security.access.ConfigAttribute;
 import java.util.Map;
 
 /**
- * @author YuJian95  clj9509@163.com
- * @date 2020/3/12
+ * @author docker-compose
+ * @date 2023/11/1
  */
 
 public interface IDynamicSecurityService {

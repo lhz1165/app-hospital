@@ -11,8 +11,8 @@ import java.util.Optional;
 /**
  * 普通用户基础信息接口
  *
- * @author YuJian95  clj9509@163.com
- * @date 2020/1/28
+ * @author docker-compose
+ * @date 2023/11/1
  */
 
 public interface IUserBasicInfoService {

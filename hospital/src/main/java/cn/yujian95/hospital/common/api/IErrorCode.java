@@ -3,8 +3,8 @@ package cn.yujian95.hospital.common.api;
 /**
  * 错误码接口
  *
- * @author YuJian95  clj9509@163.com
- * @date 2020/1/18
+ * @author docker-compose
+ * @date 2023/11/1
  */
 
 public interface IErrorCode {

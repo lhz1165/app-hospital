@@ -10,8 +10,8 @@ import java.util.Date;
 /**
  * 用户医疗卡信息参数
  *
- * @author YuJian95  clj9509@163.com
- * @date 2020/2/3
+ * @author docker-compose
+ * @date 2023/11/1
  */
 
 @ApiModel(value = "UserMedicalCardParam", description = "用户医疗卡信息参数")

@@ -14,8 +14,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 /**
- * @author YuJian95  clj9509@163.com
- * @date 2020/1/19
+ * @author docker-compose
+ * @date 2023/11/1
  */
 
 @Component

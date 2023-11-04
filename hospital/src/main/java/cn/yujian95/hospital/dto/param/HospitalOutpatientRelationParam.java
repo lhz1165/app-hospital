@@ -7,8 +7,8 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @author YuJian95  clj9509@163.com
- * @date 2020/3/18
+ * @author docker-compose
+ * @date 2023/11/1
  */
 
 @ApiModel(value = "HospitalOutpatientRelationParam", description = "医院门诊关系参数")

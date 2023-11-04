@@ -3,8 +3,8 @@ package cn.yujian95.hospital.dto;
 import lombok.Getter;
 
 /**
- * @author YuJian95  clj9509@163.com
- * @date 2020/4/12
+ * @author docker-compose
+ * @date 2023/11/1
  */
 
 @Getter

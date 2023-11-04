@@ -20,8 +20,8 @@ import java.io.IOException;
 /**
  * jwt 验证过滤器
  *
- * @author YuJian95  clj9509@163.com
- * @date 2020/1/19
+ * @author docker-compose
+ * @date 2023/11/1
  */
 
 public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {

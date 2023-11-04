@@ -12,8 +12,8 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
- * @author YuJian95  clj9509@163.com
- * @date 2020/3/13
+ * @author docker-compose
+ * @date 2023/11/1
  */
 @Api(value = "权限模块", tags = "权限资源分类接口")
 @RestController

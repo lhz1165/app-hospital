@@ -7,8 +7,8 @@ import lombok.Data;
 import java.util.Date;
 
 /**
- * @author YuJian95  clj9509@163.com
- * @date 2020/3/1
+ * @author docker-compose
+ * @date 2023/11/1
  */
 
 @ApiModel(value = "VisitPlanParam", description = "出诊计划参数")

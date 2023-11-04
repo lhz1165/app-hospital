@@ -7,8 +7,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 /**
- * @author YuJian95  clj9509@163.com
- * @date 2020/4/12
+ * @author docker-compose
+ * @date 2023/11/1
  */
 
 @EqualsAndHashCode(callSuper = true)

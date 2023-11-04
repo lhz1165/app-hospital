@@ -17,8 +17,8 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
- * @author YuJian95  clj9509@163.com
- * @date 2020/3/12
+ * @author docker-compose
+ * @date 2023/11/1
  */
 @Service
 public class PowerMenuServiceImpl implements IPowerMenuService {
