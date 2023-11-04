@@ -4,9 +4,15 @@
 
 node-14.21.3v
 
+https://nodejs.org/download/release/v14.21.3/
+
 jdk8
 
+https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html
+
 maven3.8
+
+https://archive.apache.org/dist/maven/maven-3/
 
 ## 部署
 
