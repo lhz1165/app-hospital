@@ -17,6 +17,7 @@ maven3.8
 ```
 cd  保存地址/app-hospital/hospital
 mvn clen package
+localhost:8080
 ```
 
 前端
@@ -26,6 +27,7 @@ mvn clen package
 ```
 cd  保存地址/app-hospital/hospital-web
 npm run build-dev
+localhost:8082/
 ```
 
 用户前台
@@ -33,6 +35,7 @@ npm run build-dev
 ```
 cd  保存地址/app-hospital/hospital-wxapp
 使用hbuilder-发行-手机h5
+localhost:8081/
 ```
 
 **部署**
