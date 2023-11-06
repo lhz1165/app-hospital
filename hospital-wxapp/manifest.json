@@ -80,9 +80,7 @@
         "title" : "挂号系统",
         "devServer" : {
             "https" : false,
-            "port" : 8081
+            "port" : 9091
         }
     }
 }
-// "domain" : "https://www.funkingka.cn/Yang-appoint"
-

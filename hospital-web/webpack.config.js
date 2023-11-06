@@ -110,10 +110,10 @@ module.exports = {
     hot: true,
     inline: true,
     stats: {colors: true},
-    port: 8082,
+    port: 9092,
     proxy: {
       '/hospital': {
-        target: 'http://localhost:8080',
+        target: 'http://localhost:9090',
         pathRewrite: {['^' + process.env.VUE_APP_BASE_API]: '/'},
         changeOrigin: true
       }

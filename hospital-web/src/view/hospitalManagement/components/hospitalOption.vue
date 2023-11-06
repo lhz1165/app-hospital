@@ -123,7 +123,7 @@
       // 上传照片到七牛云
       uploadPicture: function() {
         this.fullscreenLoading = true;
-        const url = 'http://localhost:8080/hospital/picture/upload';
+        const url = 'http://localhost:9090/hospital/picture/upload';
         const config = {
           headers: {
             'Content-Type': 'multipart/form-data',

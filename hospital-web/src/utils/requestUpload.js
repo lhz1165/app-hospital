@@ -7,7 +7,7 @@ export function uploadPicture(file) {
   let formData = new FormData();
   formData.append('file', file);
 
-  const url = 'http://localhost:8080/hospital/picture/upload';
+  const url = 'http://localhost:9090/hospital/picture/upload';
   const config = {
     headers: {
       'Authorization': getToken(),

@@ -46,7 +46,7 @@ services:
       - SPRING_DATASOURCE_PASSWORD=root
       - REDIS_ADDRESS=redis
     ports:
-      - "8080:8080"
+      - "9090:9090"
       - "5005:5005"
     depends_on:
       - redis
@@ -59,7 +59,7 @@ services:
     container_name: hospital-front
     image: hospital-front-h5:0.0.1
     ports:
-      - "8081:8081"
+      - "9091:9091"
     networks:
       loki:
         ipv4_address: 172.22.0.4
@@ -68,7 +68,7 @@ services:
     container_name: hospital-front-admin
     image: hospital-front-admin:0.0.1
     ports:
-      - "8082:8082"
+      - "9092:9092"
     networks:
       loki:
         ipv4_address: 172.22.0.6

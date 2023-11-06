@@ -47,7 +47,7 @@ mybatis:
   config-location: classpath:/config/SqlMapConfig.xml
 
 server:
-  port: 8080
+  port: 9090
   servlet:
     context-path: /hospital
 
@@ -100,7 +100,7 @@ redis:
       authCode: 300
 app:
   file:
-    domain: "http://localhost:8080/hospital"
+    domain: "http://localhost:9090/hospital"
     address: "./static/img"
 
 

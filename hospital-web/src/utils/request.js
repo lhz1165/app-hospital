@@ -7,7 +7,7 @@ import store from '@/store';
 // 创建axios实例
 console.log(process.env.VUE_APP_BASE_API)
 const service = axios.create({
-  baseURL: 'http://localhost:8080/hospital',
+  baseURL: 'http://localhost:9090/hospital',
   timeout: 15000  // 请求超过15秒就报错
 })
 

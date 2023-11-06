@@ -23,7 +23,7 @@ https://archive.apache.org/dist/maven/maven-3/
 ```
 cd  保存地址/app-hospital/hospital
 mvn clen package
-localhost:8080
+localhost:9090
 ```
 
 前端
@@ -33,7 +33,7 @@ localhost:8080
 ```
 cd  保存地址/app-hospital/hospital-web
 npm run build-dev
-localhost:8082/
+localhost:9092/
 ```
 
 用户前台
@@ -41,7 +41,7 @@ localhost:8082/
 ```
 cd  保存地址/app-hospital/hospital-wxapp
 使用hbuilder-发行-手机h5
-localhost:8081/
+localhost:9091/
 ```
 
 **部署**

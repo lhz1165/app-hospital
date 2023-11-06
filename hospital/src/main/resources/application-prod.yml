@@ -43,7 +43,7 @@ mybatis:
   config-location: classpath:/config/SqlMapConfig.xml
 
 server:
-  port: 8080
+  port: 9090
   servlet:
     context-path: /hospital
 
@@ -96,7 +96,7 @@ redis:
       authCode: 300
 app:
   file:
-    domain: "http://localhost:8080/hospital"
+    domain: "http://localhost:9090/hospital"
     # 因为jar在/target里面，所以.就是target所在目录，所以./=/,./static/img= /static/img,所以file:/static
     address: "./static/img"
 
