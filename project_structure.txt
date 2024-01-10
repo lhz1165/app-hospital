@@ -1,0 +1,73 @@
+卷 DATA1 的文件夹 PATH 列表
+卷序列号为 C239-E1D8
+D:.
++---.idea
+|   \---inspectionProfiles
++---hospital
+|   +---src
+|   |   \---main
+|   |       +---java
+|   |       |   \---cn
+|   |       |       \---yujian95
+|   |       |           \---hospital
+|   |       |               +---common
+|   |       |               +---component
+|   |       |               +---config
+|   |       |               +---controller
+|   |       |               +---dto
+|   |       |               +---entity
+|   |       |               +---mapper
+|   |       |               +---service
+|   |       |               \---util
+|   |       \---resources
+|   |           +---cn
+|   |           |   \---yujian95
+|   |           |       \---hospital
+|   |           |           \---mapper
+|   |           |               \---dao
+|   |           +---config
+|   |           \---static
+|   |               \---img
++---hospital-web
+|   \---src
+|       +---api
+|       +---assets
+|       +---common
+|       +---components
+|       +---layout
+|       +---router
+|       +---store
+|       +---utils
+|       \---view
+|           +---404
+|           +---departmentManagement
+|           +---doctorManagement
+|           +---home
+|           +---hospitalManagement
+|           +---login
+|           +---outCallManagement
+|           +---patientManagement
+|           +---setUpManagement
+|           \---userPermission
+|               +---menu
+|               +---resource
+|               +---role
+\---hospital-wxapp
+    +---common
+    +---component
+    +---pages
+    |   +---center
+    |   +---home
+    |   \---photoLogin
+    +---pagesA
+    |   \---pages
+    |       +---aboutUs
+    |       +---appointRecord
+    |       +---awaitingQueue
+    |       +---creditDetail
+    |       \---treatRecord
+    +---pagesB
+    |   \---pages
+    |       +---appointPages
+    |       \---center
+    +---static
