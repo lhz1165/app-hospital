@@ -14,7 +14,7 @@ spring:
 #  mvc:
 #    static-path-pattern: /static/**
   resources:
-    static-locations: classpath:/static,file:./static
+    static-locations: classpath:/static, classpath:/META-INF/resources/,classpath:/META-INF/resources/webjars/,file:./static
 #static-locations: classpath:/static,file:D:/java/IdeaProjects/app-hospital/static
 
   servlet:
