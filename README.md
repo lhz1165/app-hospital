@@ -14,6 +14,10 @@ maven3.8
 
 https://archive.apache.org/dist/maven/maven-3/
 
+mysql 8.0
+
+cd  保存地址/app-hospital/init.sql
+
 ## 部署方式一
 
 **编译**
@@ -45,7 +49,7 @@ cd  保存地址/app-hospital/hospital-wxapp
 浏览器地址: localhost:9091/
 ```
 
-**部署方式二**
+## 部署方式二
 windows10以上有wsl，或者有linux虚拟机安装了docker，可一键启动
 ```
 cd  保存地址/app-hospital
