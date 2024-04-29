@@ -14,7 +14,7 @@ maven3.8
 
 https://archive.apache.org/dist/maven/maven-3/
 
-## 部署
+## 部署方式一
 
 **编译**
 
@@ -22,8 +22,9 @@ https://archive.apache.org/dist/maven/maven-3/
 
 ```
 cd  保存地址/app-hospital/hospital
-mvn clen package
-localhost:9090
+打包: mvn clen package
+启动: java -jar hospital.jar
+浏览器地址: localhost:9090
 ```
 
 前端
@@ -32,20 +33,20 @@ localhost:9090
 
 ```
 cd  保存地址/app-hospital/hospital-web
-npm run build-dev
-localhost:9092/
+启动： npm run build-dev
+浏览器地址: localhost:9092/
 ```
 
 用户前台
 
 ```
 cd  保存地址/app-hospital/hospital-wxapp
-使用hbuilder-发行-手机h5
-localhost:9091/
+启动： 打开hbuilder-发行-手机h5
+浏览器地址: localhost:9091/
 ```
 
-**部署**
-
+**部署方式二**
+windows10以上有wsl，或者有linux虚拟机安装了docker，可一键启动
 ```
 cd  保存地址/app-hospital
 docker-compose up -d
