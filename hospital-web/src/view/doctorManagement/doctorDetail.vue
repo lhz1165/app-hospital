@@ -5,7 +5,7 @@
         <div class="info-in-box">
           <span class="title">姓名：</span>
           <el-input placeholder="输入医生姓名" v-model="searchDoctor" style="width: 15%"></el-input>
-          <span class="title" style="margin-left: 30px;">所在专科：</span>
+          <span class="title" style="margin-left: 30px;">所在科室：</span>
           <el-select v-model="selectDepartmentID" placeholder="请选择" style="width: 15%;"
                      @change="getOutpatientByDepartmentID">
             <el-option
@@ -113,7 +113,7 @@
             },
             // 删除的模态框的数据
             deleteDialog: {
-              title: '专科',
+              title: '科室',
               dialogFormVisible: false,
               id: ''
             },
@@ -207,9 +207,9 @@
             }
           })
         },
-        // 获取数据库中的专科信息
+        // 获取数据库中的科室信息
         getDepartmentList: function() {
-          // 获取全部专科信息
+          // 获取全部科室信息
           getDepartmentList(1, 50, '').then(res => {
             if (res.code === 200 && res.data.list.length >0 ){
               this.selectDepartmentData = res.data.list;
@@ -218,10 +218,10 @@
               sessionStorage.setItem('departmentList', JSON.stringify(this.selectDepartmentData))
             }
           }).catch(() => {
-            tips('error', '获取专科信息失败');
+            tips('error', '获取科室信息失败');
           })
         },
-        // 获取专科的门诊信息
+        // 获取科室的门诊信息
         getOutpatientByDepartmentID: function () {
           getOutpatientListById(1, 50, this.selectDepartmentID).then(res => {
             if (res.code === 200 && res.data.list.length > 0) {

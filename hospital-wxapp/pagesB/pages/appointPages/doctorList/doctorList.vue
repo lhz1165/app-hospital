@@ -1,4 +1,4 @@
-<!-- 该页面是从专科的页面跳转过来的医生列表页面 -->
+<!-- 该页面是从科室的页面跳转过来的医生列表页面 -->
 <template>
 	<view>
 		<view class="doctor-outbox" v-for="(item, index) in doctorList"
@@ -54,7 +54,7 @@
 					url: '/pagesB/pages/appointPages/doctorAppointDetail/doctorAppointDetail?isTreatmentTime=' + 2
 				})
 			},
-			// 根据专科门诊获取医生列表
+			// 根据科室门诊获取医生列表
 			getDcotorByDepartment: function() {
 				this.doctorList = []
 				getDcotorByDepartment(this.page, 10, this.specialId, this.outpatientId)

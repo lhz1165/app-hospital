@@ -25,7 +25,7 @@
           <el-form-item label="用户职称:">
             <span class="text">{{ infoForm.jobTitle }}</span>
           </el-form-item>
-          <el-form-item label="用户所属专科:">
+          <el-form-item label="用户所属科室:">
             <span class="text">{{ infoForm.specialName }}</span>
           </el-form-item>
           <el-form-item label="用户所属门诊:">

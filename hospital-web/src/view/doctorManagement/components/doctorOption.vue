@@ -34,7 +34,7 @@
           </el-select>
         </div>
         <div class="info-in-box">
-          <span class="title">所属专科：</span>
+          <span class="title">所属科室：</span>
           <el-select v-model="doctorData.specialId" placeholder="请选择"
                      @change="getOutpatientByDepartmentID">
             <el-option
@@ -113,7 +113,7 @@
           genderID: 2,
           gender: '女'
         }],
-        // 所属专科的数据
+        // 所属科室的数据
         departmentSelectData: [],
         // 所属门诊的数据
         outpatientSelectData: [],
@@ -187,7 +187,7 @@
           tips('error', '修改失败')
         })
       },
-      // 获取专科的门诊信息
+      // 获取科室的门诊信息
       getOutpatientByDepartmentID: function () {
         getOutpatientListById(1, 50, this.doctorData.specialId).then(res => {
           if (res.code === 200 && res.data.list.length > 0) {

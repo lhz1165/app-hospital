@@ -24,7 +24,7 @@
           <span class="gray-text">医师</span>
         </div>
         <div class="info-in-box">
-          <span class="title">所属专科：</span>
+          <span class="title">所属科室：</span>
           <span class="gray-text">内科</span>
         </div>
         <div class="info-in-box">

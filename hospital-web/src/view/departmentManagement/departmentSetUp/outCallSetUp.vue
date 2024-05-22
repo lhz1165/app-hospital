@@ -1,7 +1,7 @@
-<!--该页面是从专科排版页面进来的查看点击的那个医院的那个专科有排版什么门诊-->
+<!--该页面是从科室排班页面进来的查看点击的那个医院的那个科室有排班什么门诊-->
 <template>
   <div class="out-box">
-    <!--      顶部的关于医院专科的选择-->
+    <!--      顶部的关于医院科室的选择-->
     <div class="top-row-box">
       <div class="info-in-box margin-right">
         <span class="title">医院：</span>
@@ -16,7 +16,7 @@
       </div>
 
       <div class="info-in-box margin-right">
-        <span class="title">专科：</span>
+        <span class="title">科室：</span>
         <el-select v-model="selectDepartmentID" placeholder="请选择" style="width: 70%;">
           <el-option
             v-for="item in departmentSelectData"
@@ -83,7 +83,7 @@
           name: '白云区分院'
         }],
         selectHospitalID: '',
-        // 顶部的专科信息
+        // 顶部的科室信息
         departmentSelectData: [{
           departmentID: '1001',
           name: '儿科'
@@ -109,7 +109,7 @@
           disabled: false
         }, {
           outpatientID: '1003',
-          name: '甲亢专科',
+          name: '甲亢科室',
           disabled: false
         }, {
           outpatientID: '1004',
@@ -170,9 +170,9 @@
       }
     },
     methods: {
-      // 点击确认选择医院和专科门诊等
+      // 点击确认选择医院和科室门诊等
       getOutCallList: function () {
-        // 发起切换医院和专科的请求
+        // 发起切换医院和科室的请求
       },
       getTableData: function(option){
         if (option.buttonName === '编辑') {

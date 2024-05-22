@@ -1,7 +1,7 @@
 <template>
   <div class="out-box">
     <div class="info-in-box">
-      <span class="title">专科：</span>
+      <span class="title">科室：</span>
       <el-select v-model="selectName" placeholder="请选择" @change="selectDepartment">
         <el-option
           v-for="item in departmentData"
@@ -48,7 +48,7 @@
         name: "outpatientDetail",
       data() {
           return {
-            // 上面的下拉框的专科的数据
+            // 上面的下拉框的科室的数据
             departmentData: [],
             selectName: '',
             selectID: '',
@@ -217,7 +217,7 @@
             });
 
         },
-        // 获取全部的专科的列表（将页面条数设置为50）
+        // 获取全部的科室的列表（将页面条数设置为50）
         getAllDepartment: function () {
           let _this = this;
           getDepartmentList(1,50,'').then(res => {
@@ -232,10 +232,10 @@
               }) // end forEach
             } // end if
           }).catch(() => {
-            tips('error', '获取专科信息失败，请检查网络');
+            tips('error', '获取科室信息失败，请检查网络');
           })
         },
-        // 获取该专科编号的门诊信息
+        // 获取该科室编号的门诊信息
         getOutpatientListById: function (ID) {
           this.tableAllData.tableData = [];
           let _this = this;

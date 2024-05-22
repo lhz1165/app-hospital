@@ -151,7 +151,7 @@
           this.deleteAccount(option)
         }
       },
-      // 点击查看门诊按钮跳转到门诊的排版页面
+      // 点击查看门诊按钮跳转到门诊的排班页面
       toOutpatient: function(row) {
         this.$router.push({
           path: '/outpatientSetUp',
@@ -166,7 +166,7 @@
         console.log(scope.scopeIndex)
         this.$refs.tableList.deleteData(scope.scopeIndex)
       },
-      // 点击添加专科
+      // 点击添加科室
       addAccount: function () {
         // 进行获取后台的数据
         this.addAccountForm.account = '';

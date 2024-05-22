@@ -1,7 +1,7 @@
-<!--该页面是点击的门诊的排版的页面-->
+<!--该页面是点击的门诊的排班的页面-->
 <template>
   <div class="out-box">
-    <!--      顶部的关于医院专科的选择-->
+    <!--      顶部的关于医院科室的选择-->
     <div class="top-row-box">
       <div class="info-in-box margin-right">
         <span class="title">医院：</span>
@@ -17,7 +17,7 @@
       </div>
 
       <div class="info-in-box margin-right">
-        <span class="title">专科：</span>
+        <span class="title">科室：</span>
         <el-select v-model="selectDepartmentID" placeholder="请选择" style="width: 70%;"
                    @change="getOutpatientByHospital">
           <el-option
@@ -163,7 +163,7 @@
         // 上面的下拉框的医院的数据
         hospitalData: [],
         selectHospitalID: 0,
-        // 顶部的专科信息
+        // 顶部的科室信息
         departmentSelectData: [],
         selectDepartmentID: 0,
         // 下拉框门诊数据
@@ -338,7 +338,7 @@
           tips('error', '获取医院信息失败');
         })
       },
-      // 获取医院的专科列表
+      // 获取医院的科室列表
       getHospitalDepartmentList: function() {
         this.departmentSelectData = [];
         getDoctorDepartmentList(this.selectHospitalID, 1, 50)
@@ -351,7 +351,7 @@
               }
             }
           }).catch(() => {
-          tips('error', '获取专科列表失败')
+          tips('error', '获取科室列表失败')
         })
       },
       // 获取门诊列表
@@ -370,7 +370,7 @@
           tips('error', '获取门诊信息失败')
         })
       },
-      // 获取列表数据，医生排版的数据
+      // 获取列表数据，医生排班的数据
       getAllOutCallList: function() {
         this.tableAllData.tableData = [];
         getAllOutCallList(dateFormYMD(this.dateOutCall), this.pageList.pageNum, this.pageList.pageSize,
@@ -400,7 +400,7 @@
           tips('error', '获取出诊列表失败')
         })
       },
-      // 获取该专科门诊的医生
+      // 获取该科室门诊的医生
       getDoctorList: function() {
         this.doctorSelectData = [];
         getDoctorList(this.selectDepartmentID, this.selectOutpatientID, 1,100, '').then(res => {

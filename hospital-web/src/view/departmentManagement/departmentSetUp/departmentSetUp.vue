@@ -22,10 +22,10 @@
       </div>
 
       <!--     点击添加门诊的按钮跳出来的弹出框-->
-      <el-dialog title="添加专科" :visible.sync="dialogFormVisible" width="35%"  @close="cancelModal"
+      <el-dialog title="添加科室" :visible.sync="dialogFormVisible" width="35%"  @close="cancelModal"
                  v-loading="isLoading">
         <el-form>
-          <el-form-item label="专科名称：" label-width="120px">
+          <el-form-item label="科室名称：" label-width="120px">
             <el-select v-model="selectDepartmentID" placeholder="请选择">
               <el-option
                 v-for="item in departmentSelectData"
@@ -136,17 +136,17 @@
             tips('error', '获取医院信息失败');
           })
         },
-        // 获取所有的专科用于添加数据
+        // 获取所有的科室用于添加数据
         getAllDepartment: function() {
           getDepartmentList(this.pageList.pageNum, this.pageList.pageSize, this.searchDepartment).then(res => {
             if (res.code === 200 && res.data.list.length >0 ){
               this.departmentSelectData = res.data.list;
             }
           }).catch(() => {
-            tips('error', '获取专科信息失败');
+            tips('error', '获取科室信息失败');
           })
         },
-        // 获取医院的专科列表
+        // 获取医院的科室列表
         getDoctorDepartmentList: function() {
           this.tableAllData.tableData = [];
           let _this = this;
@@ -174,11 +174,11 @@
                 }
               }
             }).catch(() => {
-              tips('error', '获取专科列表失败')
+              tips('error', '获取科室列表失败')
           })
         },
         //
-        // 点击查看门诊按钮跳转到门诊的排版页面
+        // 点击查看门诊按钮跳转到门诊的排班页面
         toOutpatient: function(row) {
           sessionStorage.setItem('hospitalList', JSON.stringify(this.hospitalData));
           this.$router.push({
@@ -189,7 +189,7 @@
               }
             })
         },
-        // 删除列表中的某一条专科数据
+        // 删除列表中的某一条科室数据
         deleteData: function() {
             deleteDepartmentFromHospital(this.selectHospitalID, this.deleteScope.scopeRow.ID).then(res => {
               if (res.code === 200) {
@@ -202,7 +202,7 @@
             console.log(scope.scopeIndex)
             this.$refs.tableList.deleteData(scope.scopeIndex)
         },
-          // 将在列表的专科和可添加的专科进行对比
+          // 将在列表的科室和可添加的科室进行对比
         compareDepartment: function () {
           var that = this;
           this.departmentSelectData.forEach(function (item,index) {
@@ -216,7 +216,7 @@
             }
           })
         },
-        // 点击添加专科
+        // 点击添加科室
         addDepartmentToHospital: function () {
             this.isLoading = true;
           addDepartmentToHospital({

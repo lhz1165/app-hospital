@@ -56,7 +56,7 @@
               option: ''
             }, {
               prop: 'department',
-              label: '专科/门诊',
+              label: '科室/门诊',
               width: '213',
               option: 'input'
             }, {
@@ -93,7 +93,7 @@
               option: 'input'
             }, {
               prop: 'department',
-              label: '专科/门诊',
+              label: '科室/门诊',
               width: '213',
               option: 'input'
             }, {

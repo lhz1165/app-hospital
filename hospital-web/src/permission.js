@@ -25,11 +25,11 @@ export function getPermission() {
   //   path: '/',
   //   component: layout,
   //   redirect: '/setUpManagement',
-  //   meta: {title: '排版管理', icon: 'el-icon-document'},
+  //   meta: {title: '排班管理', icon: 'el-icon-document'},
   //   children: [{
   //     path: '/setUpDetail',
   //     component: () => import('@/view/setUpManagement/setUpDetail'),
-  //     meta: {title: '排版详情', icon: 'el-icon-user'}
+  //     meta: {title: '排班详情', icon: 'el-icon-user'}
   //   }]
   // };
   // router.options.routes.push(a)

@@ -1,4 +1,4 @@
-<!-- 该页面是从首页直接点击从专科进来的 -->
+<!-- 该页面是从首页直接点击从科室进来的 -->
 <template>
 	<view>
 		<view class="VerticalBox" style="margin-top: 40rpx;">
@@ -45,7 +45,7 @@
 			};
 		},
 		methods: {
-			// 点击了专科进行切换
+			// 点击了科室进行切换
 			TabSelect(e) {
 				this.tabCur = e.currentTarget.dataset.id;
 				this.mainCur = e.currentTarget.dataset.id;
@@ -65,7 +65,7 @@
 					+ this.tabCur + '&outpatientId=' + outpatientId
 				})
 			},
-			// 获取全部的专科
+			// 获取全部的科室
 			getAllDepartmentList: function() {
 				this.departmentList = []
 				uni.showLoading({
@@ -80,10 +80,10 @@
 					}
 				}).catch(() => {
 					uni.hideLoading()
-					error('获取专科列表失败')
+					error('获取科室列表失败')
 				})
 			},
-			// 获取某个专科下的全部门诊
+			// 获取某个科室下的全部门诊
 			getOutpatientListById: function() {
 				this.outpatientList = []
 				getOutpatientListById(1, 50, this.tabCur).then(res => {

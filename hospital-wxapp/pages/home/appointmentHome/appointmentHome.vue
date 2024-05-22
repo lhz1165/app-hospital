@@ -2,7 +2,7 @@
  1、关于insureVisited = 0时是按科室进去
  2、关于insureVisited = 1时是搜医生进去
  3、关于insureVisited = 2时是按日期进去
- 4、关于insureVisited = 3时是按专科进去
+ 4、关于insureVisited = 3时是按科室进去
  -->
 <template>
 	<view>
@@ -82,14 +82,14 @@
 					visited: 'date-white.png',
 					isVisited: false
 				}, {
-					text: '按专科',
+					text: '按科室',
 					invisited: 'department-blue.png',
 					visited: 'department-white.png',
 					isVisited: false
 				}],
-				// 作为专科的入口数据
+				// 作为科室的入口数据
 				allData: {
-					departmentList: [], // 用作传过来的专科信息
+					departmentList: [], // 用作传过来的科室信息
 					currentStatues: 0 // 默认0为从首页进来的，1为从科室或者日期页面进来的
 				}
 			}

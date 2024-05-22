@@ -98,7 +98,7 @@
 				iconURL: '/static/appointment/',
 				isGetData: false, // 没有医生出诊信息时为false
 				message: '医生出诊', 
-				hospitalData: {}, // 用于获取医院id，专科门诊id,日期
+				hospitalData: {}, // 用于获取医院id，科室门诊id,日期
 			}
 		},
 		methods: {
@@ -151,7 +151,7 @@
 					url: '/pagesB/pages/appointPages/doctorAppointDetail/doctorAppointDetail?isTreatmentTime=' + 1 
 				})
 			},
-			// 获取该医院该专科门诊当天的出诊计划
+			// 获取该医院该科室门诊当天的出诊计划
 			getOutCall: function(today, hospitalId, departmentId, outpatientId) {
 				this.doctorList = [];
 				uni.showLoading({

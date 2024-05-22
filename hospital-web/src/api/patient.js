@@ -26,6 +26,14 @@ export function updateTreatStatusFinish(id) {
   })
 }
 
+// 2.1 取消预约
+export function cancelTreatStatusFinish(id) {
+  return request({
+    url: '/visit/appointment/cancel/' +  id,
+    method: 'put'
+  })
+}
+
 // 3、获取患者病历
 export function getTreatRecordCase(cardId, appointmentId) {
   return request({

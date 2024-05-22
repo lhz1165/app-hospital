@@ -1,6 +1,6 @@
 <template>
 	<view class="page-backgroud">
-		<view class="row-50-width">
+		<view class="row-100-width">
 			<!-- 左边的 -->
 			<view class="left-right-half-box">
 				<view class="left-right-inbox" v-for="(item, index) in hospitalList" 
@@ -8,6 +8,9 @@
 					<image style="width: 100%;" mode="widthFix" :src="item.picture"></image>
 					<view class="row-width">
 						<image class="icon" src="/static/appointment/hosp-icon.png"></image>
+					</view>
+					<view class="row-width">
+						<text class="blue-title">医院名：</text>
 						<text class="hospital-text">{{item.name}}</text>
 					</view>
 					<view class="row-width">
@@ -21,7 +24,7 @@
 				</view>
 			</view>
 			
-			<view class="left-right-half-box">
+			<!-- <view class="left-right-half-box">
 				<view class="left-right-inbox" v-for="(item, index) in hospitalList" 
 				:key="item.id" v-if="index % 2 !== 0" @click="toDepartmentPage(item.id, item.name)">
 					<image style="width: 100%;" mode="widthFix" :src="item.picture"></image>
@@ -38,7 +41,7 @@
 						<text class="address-phone-text cut-long-text">{{item.phone}}</text>
 					</view>
 				</view>
-			</view>
+			</view> -->
 		</view>
 	</view>
 </template>
@@ -66,7 +69,7 @@
 			}
 		},
 		methods: {
-			// 跳转到获取专科页面
+			// 跳转到获取科室页面
 			toDepartmentPage: function(id, name) {
 				let hospital = {
 					id: id,

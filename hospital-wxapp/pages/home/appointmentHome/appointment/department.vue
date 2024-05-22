@@ -1,4 +1,4 @@
-<!-- 该页面为从科室或者日期页面进来的专科门诊 -->
+<!-- 该页面为从科室或者日期页面进来的科室门诊 -->
 <template>
 	<view>
 		<view class="VerticalBox" style="margin-top: 40rpx;">
@@ -34,7 +34,7 @@
 	export default {
 		props:{
 			allData: {
-				departmentList: [], // 用作传过来的专科信息
+				departmentList: [], // 用作传过来的科室信息
 				hospitalID: 0
 			}
 		},
@@ -49,14 +49,14 @@
 			};
 		},
 		methods: {
-			// 通过父组件调用方法进行修改默认tabCur、currentDep值，因为在专科信息获取之前
+			// 通过父组件调用方法进行修改默认tabCur、currentDep值，因为在科室信息获取之前
 			/// data的初始化已经结束
 			changeInit: function(id, name) {
 				this.tabCur = id;
 				this.currentDep = name;
 				this.getOutpatientByHospital(this.allData.hospitalID)
 			},
-			// 点击了专科进行切换
+			// 点击了科室进行切换
 			TabSelect(e) {
 				this.tabCur = e.currentTarget.dataset.id;
 				this.mainCur = e.currentTarget.dataset.id;
@@ -77,7 +77,7 @@
 					 + '&outpatientId=' + outpatientId
 				})
 			},
-			// 获取医院专科的门诊列表
+			// 获取医院科室的门诊列表
 			getOutpatientByHospital: function(hospitalID) {
 				this.outpatientList = []
 				getOutpatientByHospital(hospitalID, this.tabCur, 1, 50).then(res => {

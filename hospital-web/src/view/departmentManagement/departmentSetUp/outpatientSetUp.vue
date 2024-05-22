@@ -1,7 +1,7 @@
-<!--该页面是从专科排版页面进来的查看点击的那个医院的那个专科有排版什么门诊-->
+<!--该页面是从科室排班页面进来的查看点击的那个医院的那个科室有排班什么门诊-->
 <template>
     <div class="out-box">
-<!--      顶部的关于医院专科的选择-->
+<!--      顶部的关于医院科室的选择-->
       <div class="top-row-box">
         <div class="info-in-box margin-right">
           <span class="title">医院：</span>
@@ -16,7 +16,7 @@
         </div>
 
         <div class="info-in-box margin-right">
-          <span class="title">专科：</span>
+          <span class="title">科室：</span>
           <el-select v-model="selectDepartmentID" placeholder="请选择">
             <el-option
               v-for="item in departmentSelectData"
@@ -80,7 +80,7 @@
             // 上面的下拉框的医院的数据
             hospitalData: [],
             selectHospitalID: 0,
-            // 顶部的专科信息
+            // 顶部的科室信息
             departmentSelectData: [],
             selectDepartmentID: 0,
             // 表格数据
@@ -136,7 +136,7 @@
             this.deleteDialog.id = option.scopeRow.ID; // 发送删除id
           }
         },
-        // 获取医院的专科列表
+        // 获取医院的科室列表
         getHospitalDepartmentList: function() {
           this.departmentSelectData = [];
           getDoctorDepartmentList(this.selectHospitalID, 1, 50)
@@ -149,10 +149,10 @@
                 }
               }
             }).catch(() => {
-            tips('error', '获取专科列表失败')
+            tips('error', '获取科室列表失败')
           })
         },
-        // 获取专科编号下的门诊列表
+        // 获取科室编号下的门诊列表
         getOutpatientListById: function () {
           this.outpatientSelectData = [];
           getOutpatientListById(this.pageList.pageNum, this.pageList.pageSize, this.selectDepartmentID)

@@ -21,7 +21,7 @@
 			}
 		},
 		methods: {
-			// 获取某个医院ID所属的专科
+			// 获取某个医院ID所属的科室
 			getDepartmentHospital: function(hospitalID) {
 				uni.showLoading({
 					title: '加载中'

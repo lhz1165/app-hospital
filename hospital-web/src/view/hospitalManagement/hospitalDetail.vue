@@ -1,14 +1,14 @@
 <template>
     <div class="button-table-box">
-      <div class="info-in-box">
-        <span class="title">名称：</span>
-        <el-input placeholder="输入医院名称" v-model="searchHospital" style="width: 30%"></el-input>
-        <el-button type="primary" size="mini" style="margin-left: 30px;" @click="getHospitalInfo">查询</el-button>
-      </div>
-      <div class="button-box">
-        <el-button type="primary"  size="small" icon="el-icon-circle-plus"
-                   class="add-button" @click="toAddHospital()">添加</el-button>
-      </div>
+<!--      <div class="info-in-box">-->
+<!--        <span class="title">名称：</span>-->
+<!--        <el-input placeholder="输入医院名称" v-model="searchHospital" style="width: 30%"></el-input>-->
+<!--        <el-button type="primary" size="mini" style="margin-left: 30px;" @click="getHospitalInfo">查询</el-button>-->
+<!--      </div>-->
+<!--      <div class="button-box">-->
+<!--        <el-button type="primary"  size="small" icon="el-icon-circle-plus"-->
+<!--                   class="add-button" @click="toAddHospital()">添加</el-button>-->
+<!--      </div>-->
       <table-list :tableAllData="tableAllData" @getTableData="getTableData" ref="tableList"></table-list>
       <page-pagination :page-list="pageList" ref="pagePagination"></page-pagination>
       <!--    用作删除的弹框-->
@@ -83,10 +83,10 @@ export default {
           if (option.buttonName === '查看') {
             this.getData(option.scopeRow)
           } else if (option.buttonName === '删除') {
-
-            this.deleteScope = option; // 将删除的数据存起来
-            this.deleteDialog.dialogFormVisible = true; // 打开删除弹窗
-            this.deleteDialog.id = option.scopeRow.hospitalID; // 发送删除id
+            tips('error', '禁止删除');
+            // this.deleteScope = option; // 将删除的数据存起来
+            // this.deleteDialog.dialogFormVisible = true; // 打开删除弹窗
+            // this.deleteDialog.id = option.scopeRow.hospitalID; // 发送删除id
 
           }
         },

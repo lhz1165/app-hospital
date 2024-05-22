@@ -23,7 +23,7 @@
           <span class="gray-text">{{patientData.day | getTreatTimeNoon}}</span>
         </div>
         <div class="text-box">
-          <span>就诊专科/门诊：</span>
+          <span>就诊科室/门诊：</span>
           <span class="gray-text">{{patientData.specialName}} / {{patientData.outpatientName}}</span>
         </div>
       </div>
@@ -58,7 +58,7 @@
     <el-dialog title="添加新病历" :visible.sync="dialogFormVisible" width="35%"
                             @close="cancelModal" v-loading="isLoading">
     <el-form>
-      <!--        <el-form-item label="专科名称：" label-width="120px">-->
+      <!--        <el-form-item label="科室名称：" label-width="120px">-->
       <el-input
         type="textarea"
         placeholder="请输入内容"
@@ -80,7 +80,7 @@
     <el-dialog title="修改病历" :visible.sync="dialogUpdateVisible" width="35%"
                @close="cancelModal" v-loading="isLoading">
       <el-form>
-        <!--        <el-form-item label="专科名称：" label-width="120px">-->
+        <!--        <el-form-item label="科室名称：" label-width="120px">-->
         <el-input
           type="textarea"
           placeholder="请输入内容"

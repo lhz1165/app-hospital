@@ -2,7 +2,7 @@
   <div class="button-table-box">
     <div class="info-in-box">
       <span class="title">名称：</span>
-      <el-input placeholder="输入专科名称" v-model="searchDepartment" style="width: 30%"></el-input>
+      <el-input placeholder="输入科室名称" v-model="searchDepartment" style="width: 30%"></el-input>
       <el-button type="primary" size="mini" style="margin-left: 30px;" @click="getDepartmentList">查询</el-button>
     </div>
     <div class="button-box">
@@ -13,13 +13,13 @@
     <page-pagination :page-list="pageList" ref="pagePagination"></page-pagination>
 
     <!--     点击添加门诊的按钮跳出来的弹出框-->
-    <el-dialog title="添加专科" :visible.sync="dialogFormVisible" width="35%"
+    <el-dialog title="添加科室" :visible.sync="dialogFormVisible" width="35%"
                @close="cancelModal" v-loading="isLoading">
       <el-form ref="ruleForm" :rules="rules" :model="ruleForm">
-        <el-form-item label="专科名称：" label-width="120px" prop="departmentName">
+        <el-form-item label="科室名称：" label-width="120px" prop="departmentName">
           <el-input v-model="ruleForm.departmentName" style="width: 90%;" autofocus></el-input>
         </el-form-item>
-        <el-form-item label="专科描述：" label-width="120px" prop="description">
+        <el-form-item label="科室描述：" label-width="120px" prop="description">
           <el-input v-model="ruleForm.description" style="width: 90%;" autofocus></el-input>
         </el-form-item>
       </el-form>
@@ -85,8 +85,8 @@
               description: ''
             },
             rules: {
-              departmentName: [{ required: 'true', message: '请输入专科名称', trigger: 'blur'}],
-              description: [{ required: 'true', message: '请输入专科描述', trigger: 'blur'}]
+              departmentName: [{ required: 'true', message: '请输入科室名称', trigger: 'blur'}],
+              description: [{ required: 'true', message: '请输入科室描述', trigger: 'blur'}]
             },
             // 底部分页的数据
             pageList: {
@@ -96,7 +96,7 @@
             },
             // 删除的模态框的数据
             deleteDialog: {
-              title: '专科',
+              title: '科室',
               dialogFormVisible: false,
               id: ''
             },
@@ -190,7 +190,7 @@
 
               }).catch(() => {
                 this.isLoading = false;
-                tips('error', '添加专科失败，请检查网络');
+                tips('error', '添加科室失败，请检查网络');
               })
             } else {
               return false;
@@ -198,7 +198,7 @@
           });
 
         },
-        // 从数据库获取专科信息列表
+        // 从数据库获取科室信息列表
         getDepartmentList: function () {
           this.tableAllData.tableData = [];
           let _this = this;

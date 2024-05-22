@@ -42,7 +42,7 @@
   import {tips} from "@/common/js/optionTips";
   import {getGender, getTimePeriod} from "@/common/js/timeFilters";
   import {getCookie} from "@/utils/cookies";
-  import {updateTreatStatusFinish, updateStatusAgain} from "@/api/patient";
+  import {updateTreatStatusFinish, updateStatusAgain, cancelTreatStatusFinish} from "@/api/patient";
 
   export default {
         name: "show1",
@@ -133,7 +133,17 @@
             }).catch(() => {
               tips('error', '网络错误')
             })
-          } else if (option.buttonName === '重新叫号') {
+          } else if (option.buttonName === '取消预约') {
+            // 取消患者预约
+            cancelTreatStatusFinish(option.scopeRow.ID).then(res => {
+              if (res.code === 200) {
+                this.getPatientList()
+              }
+            }).catch(() => {
+              tips('error', '网络错误')
+            })
+          }
+          else if (option.buttonName === '重新叫号') {
             // 修改患者状态
             updateStatusAgain(option.scopeRow.ID).then(res => {
               if (res.code === 200) {
@@ -171,13 +181,20 @@
         },
         // 到达医生出诊时间动态的添加就诊按钮和重新叫号按钮
         addTableButton: function () {
-          if (this.isTimeTreat) {
-            const treatButton = {
-              size: 'mini',
-              type: 'success',
-              name: '就诊'
-            }
+          //if (this.isTimeTreat) {
+          const treatButton = {
+            size: 'mini',
+            type: 'success',
+            name: '就诊'
+          };
+          const treatButton2 = {
+            size: 'mini',
+            type: 'danger',
+            name: '取消预约'
+          }
+          this.tableAllData.option.button.push(treatButton2)
             this.tableAllData.option.button.push(treatButton)
+
             // if (this.isClickTreat) {
             //   const treatAgainButton = {
             //     size: 'mini',
@@ -186,7 +203,7 @@
             //   }
             //   this.tableAllData.option.button.push(treatAgainButton)
             // }
-          }
+          //}
         },
         // 用户点击了查看按钮
         getPatientDetailByID: function (scope) {

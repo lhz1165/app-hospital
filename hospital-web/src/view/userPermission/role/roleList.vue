@@ -1,4 +1,4 @@
-<!--角色列表，可以看到管理系统有哪些管理的模块，如医生管理、专科管理等-->
+<!--角色列表，可以看到管理系统有哪些管理的模块，如医生管理、科室管理等-->
 <!--用户列表，点击权限管理看到的有哪些用户账号有权限-->
 <template>
   <div class="out-box">
@@ -94,7 +94,7 @@
           }, {
             ID: '2',
             englishName: 'departmentManagement',
-            chineseName: '专科管理',
+            chineseName: '科室管理',
             status: 1
           }, {
             ID: '3',
@@ -104,7 +104,7 @@
           }, {
             ID: '4',
             englishName: 'setUpManagement',
-            chineseName: '排版管理',
+            chineseName: '排班管理',
             status: 1
           }, {
             ID: '5',
@@ -174,7 +174,7 @@
           this.deleteAccount(option)
         }
       },
-      // 点击查看门诊按钮跳转到门诊的排版页面
+      // 点击查看门诊按钮跳转到门诊的排班页面
       toOutpatient: function(row) {
         this.$router.push({
           path: '/outpatientSetUp',
@@ -189,7 +189,7 @@
         console.log(scope.scopeIndex)
         this.$refs.tableList.deleteData(scope.scopeIndex)
       },
-      // 点击添加专科
+      // 点击添加科室
       addAccount: function () {
         // 进行获取后台的数据
         this.addAccountForm.account = '';

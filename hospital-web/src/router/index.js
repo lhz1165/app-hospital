@@ -78,15 +78,15 @@ export let constantRouterMap = [{
   path: '/',
   component: layout,
   redirect: '/departmentDetail',
-  meta: {title: '专科管理', icon: 'el-icon-guide'},
+  meta: {title: '科室管理', icon: 'el-icon-guide'},
   children: [{
     path: '/departmentDetail',
     component: () => import('@/view/departmentManagement/departmentDetail/departmentDetail'),
-    meta: {title: '专科详情', icon: 'el-icon-user'}
+    meta: {title: '科室详情', icon: 'el-icon-user'}
   }, {
     path: '/departmentSetUp',
     component: () => import('@/view/departmentManagement/departmentSetUp/departmentSetUp'),
-    meta: {title: '专科排版', icon: 'el-icon-user'}
+    meta: {title: '专科排班', icon: 'el-icon-user'}
   }, {
     path: '/outpatientDetail',
     component: () => import('@/view/departmentManagement/departmentDetail/outpatientDetail'),
@@ -100,7 +100,7 @@ export let constantRouterMap = [{
   }, {
     path: '/outpatientSetUp',
     component: () => import('@/view/departmentManagement/departmentSetUp/outpatientSetUp'),
-    meta: {title: '门诊排版', icon: 'el-icon-user'},
+    meta: {title: '门诊排班', icon: 'el-icon-user'},
     hidden: true
   }]
 }, {
@@ -170,11 +170,11 @@ export let constantRouterMap = [{
   path: '/',
   component: layout,
   redirect: '/setUpManagement',
-  meta: {title: '排版管理', icon: 'el-icon-document'},
+  meta: {title: '排班管理', icon: 'el-icon-document'},
   children: [{
     path: '/setUpDetail',
     component: () => import('@/view/setUpManagement/setUpDetail'),
-    meta: {title: '排版详情', icon: 'el-icon-user'}
+    meta: {title: '排班详情', icon: 'el-icon-user'}
   }]
 }*/
 ];
@@ -238,15 +238,15 @@ export const systemRouterMap = [
     path: '/',
     component: layout,
     redirect: '/departmentDetail',
-    meta: {title: '专科管理', icon: 'el-icon-guide'},
+    meta: {title: '科室管理', icon: 'el-icon-guide'},
     children: [{
       path: '/departmentDetail',
       component: () => import('@/view/departmentManagement/departmentDetail/departmentDetail'),
-      meta: {title: '专科详情', icon: 'el-icon-user'}
+      meta: {title: '科室详情', icon: 'el-icon-user'}
     }, {
       path: '/departmentSetUp',
       component: () => import('@/view/departmentManagement/departmentSetUp/departmentSetUp'),
-      meta: {title: '专科排版', icon: 'el-icon-user'}
+      meta: {title: '科室排班', icon: 'el-icon-user'}
     }, {
       path: '/outpatientDetail',
       component: () => import('@/view/departmentManagement/departmentDetail/outpatientDetail'),
@@ -260,7 +260,7 @@ export const systemRouterMap = [
     }, {
       path: '/outpatientSetUp',
       component: () => import('@/view/departmentManagement/departmentSetUp/outpatientSetUp'),
-      meta: {title: '门诊排版', icon: 'el-icon-user'},
+      meta: {title: '门诊排班', icon: 'el-icon-user'},
       hidden: true
     }]
   }, {
@@ -292,11 +292,11 @@ export const systemRouterMap = [
     path: '/',
     component: layout,
     redirect: '/setUpManagement',
-    meta: {title: '排版管理', icon: 'el-icon-document'},
+    meta: {title: '排班管理', icon: 'el-icon-document'},
     children: [{
       path: '/setUpDetail',
       component: () => import('@/view/setUpManagement/setUpDetail'),
-      meta: {title: '排版详情', icon: 'el-icon-user'}
+      meta: {title: '排班详情', icon: 'el-icon-user'}
     }]
   },
   /*{
