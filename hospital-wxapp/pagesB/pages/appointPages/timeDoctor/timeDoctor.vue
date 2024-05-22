@@ -24,14 +24,14 @@
 			</view>
 		</transition>
 
-		<view class="tips-positon">
-			<view class="tips-inbox" @tap="showModal()">
-				<image class="icon" src="/static/appointment/tips.png"></image>
-				<text class="tips-text">您可以点击
-					<text style="color: #7EC0EE;">这里</text>
-					切换不同分院</text>
-			</view>
-		</view>
+<!--		<view class="tips-positon">-->
+<!--			<view class="tips-inbox" @tap="showModal()">-->
+<!--				<image class="icon" src="/static/appointment/tips.png"></image>-->
+<!--				<text class="tips-text">您可以点击-->
+<!--					<text style="color: #7EC0EE;">这里</text>-->
+<!--					切换不同分院</text>-->
+<!--			</view>-->
+<!--		</view>-->
 
 		<!-- 医生列表 -->
 		<view class="doctor-outbox" @click="toDoctorAppointDetail(item)" v-if="isGetData"
