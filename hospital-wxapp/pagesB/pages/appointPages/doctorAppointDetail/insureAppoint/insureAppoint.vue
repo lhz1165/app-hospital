@@ -222,16 +222,26 @@
 										planId: that.visitInfo.planId,
 										timePeriod: that.visitInfo.timePeriod
 									}).then(res => {
-										uni.hideLoading()
-										uni.showToast({
-											title: '挂号成功',
-											icon: 'success'
-										})
-										setTimeout(function(){
-											uni.switchTab({
-												url: '/pages/center/center'
+										if(res.data.code!=200){
+											uni.hideLoading()
+											uni.showToast({
+												title: res.data.message,
+												icon: 'none'
 											})
-										},2000)
+										}else{
+											uni.hideLoading()
+											uni.showToast({
+												title: '挂号成功',
+												icon: 'success'
+											})
+											setTimeout(function(){
+												uni.switchTab({
+													url: '/pages/center/center'
+												})
+											},2000)
+										}
+										
+										
 									}).catch(() =>{
 										uni.hideLoading()
 										uni.showToast({
