@@ -82,7 +82,7 @@
                 size="mini"
                 type="warning"
                 v-if="scope.row.btnStatus === 3"
-                @click="emitIndex(scope.$index, scope.row, '重新叫号')">重新叫号</el-button>
+                @click="emitIndex(scope.$index, scope.row, '重新叫号')">过号</el-button>
               <el-button
                 size="mini"
                 type="primary"

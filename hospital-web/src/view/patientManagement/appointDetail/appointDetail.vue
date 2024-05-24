@@ -147,7 +147,7 @@
             // 修改患者状态
             updateStatusAgain(option.scopeRow.ID).then(res => {
               if (res.code === 200) {
-                tips('success', '已重新叫号');
+                tips('success', '已过号处理');
                 this.getPatientList()
               }
             }).catch(() => {

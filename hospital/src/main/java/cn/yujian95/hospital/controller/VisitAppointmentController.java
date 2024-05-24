@@ -55,7 +55,7 @@ public class VisitAppointmentController {
         }
 
         if (appointmentService.count(param.getCardId(), param.getPlanId())) {
-            return CommonResult.success("该出诊，已存在预约记录！");
+            return CommonResult.validateFailed("该出诊，已存在预约记录！");
         }
 
         if (appointmentService.insert(param)) {
