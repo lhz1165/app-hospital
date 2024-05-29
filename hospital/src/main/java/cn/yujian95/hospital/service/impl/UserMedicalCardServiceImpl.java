@@ -52,11 +52,12 @@ public class UserMedicalCardServiceImpl implements IUserMedicalCardService {
         // 就诊卡，存在
         if (countIdentificationNumber(param.getIdentificationNumber())) {
 
-            Optional<UserMedicalCard> cardOptional = getOptional(param.getIdentificationNumber());
-
-            if (cardOptional.isPresent()) {
-                return insertRelation(accountId, param.getType(), cardOptional.get().getId());
-            }
+//            Optional<UserMedicalCard> cardOptional = getOptional(param.getIdentificationNumber());
+//
+//            if (cardOptional.isPresent()) {
+//                return insertRelation(accountId, param.getType(), cardOptional.get().getId());
+//            }
+            return false;
         }
 
         // 就诊卡，不存在

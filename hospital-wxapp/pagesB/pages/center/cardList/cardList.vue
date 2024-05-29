@@ -12,7 +12,7 @@
 								<image class="icon" :src="item.gerder == 1? 
 								iconPath + 'male.png': iconPath + 'female.png'"></image>
 							</view>
-							<view class="row-box">
+							<view class="row-box" >
 								<text class="gray-text">卡号：</text>
 								<text class="gray-text">{{ item.id }}</text>
 							</view>
@@ -23,14 +23,14 @@
 						</view>
 					</movable-view>
 				</movable-area>
-				<view class="delete_box" v-if="show == item.relationId">
+				<view class="delete_box">
 					<view class="round-outbox">
 						<view class="round-box" :class="handle==1?'blue-background':''" @click="handleEdit(item)">
 							<image class="icon" src="/static/appointment/edit.png"></image>
 						</view>
 					</view>
 					<view class="round-outbox">
-						<view class="round-box" :class="handle==2?'red-background':''" @click="openConfirm(item.name,show)">
+						<view class="round-box" :class="handle==2?'red-background':''" @click="openConfirm(item.name,item.relationId)">
 							<image class="icon" src="/static/appointment/delete.png"></image>
 						</view>
 					</view>

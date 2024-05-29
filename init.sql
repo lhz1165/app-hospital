@@ -67,10 +67,10 @@ CREATE TABLE `hospital_info`  (
 -- ----------------------------
 -- Records of hospital_info
 -- ----------------------------
-INSERT INTO `hospital_info` VALUES (1000, '广东省中医院', '020-123452', '广州大学城', '广东省中医院', 'http://localhost:9090/hospital/img/hos1.png', '2023-11-04 13:06:55', '2023-11-04 13:06:55');
-INSERT INTO `hospital_info` VALUES (1001, '顺德分院', '020-1234567', '广东省佛山市顺德区', '位于广东省佛山市顺德区', 'http://localhost:9090/hospital/img/hos2.png', '2023-11-04 13:06:55', '2023-11-04 13:06:55');
-INSERT INTO `hospital_info` VALUES (1002, '白云分院', '020-1234568', '广东省广州市白云区', '位于广东省广州市白云区', 'http://localhost:9090/hospital/img/hos3.png', '2023-11-04 13:06:55', '2023-11-04 13:06:55');
-INSERT INTO `hospital_info` VALUES (1007, '越秀分院', '020-1234563', '广东省越秀区', '位于广东省越秀区', 'http://localhost:9090/hospital/img/hos4.png', '2023-11-04 13:06:55', '2023-11-04 13:06:55');
+INSERT INTO `hospital_info` VALUES (1000, '广东省中医院', '020-123452', '广州大学城', '广东省中医院', 'http://localhost:8080/hospital/img/hos1.png', '2023-11-04 13:06:55', '2023-11-04 13:06:55');
+INSERT INTO `hospital_info` VALUES (1001, '顺德分院', '020-1234567', '广东省佛山市顺德区', '位于广东省佛山市顺德区', 'http://localhost:8080/hospital/img/hos2.png', '2023-11-04 13:06:55', '2023-11-04 13:06:55');
+INSERT INTO `hospital_info` VALUES (1002, '白云分院', '020-1234568', '广东省广州市白云区', '位于广东省广州市白云区', 'http://localhost:8080/hospital/img/hos3.png', '2023-11-04 13:06:55', '2023-11-04 13:06:55');
+INSERT INTO `hospital_info` VALUES (1007, '越秀分院', '020-1234563', '广东省越秀区', '位于广东省越秀区', 'http://localhost:8080/hospital/img/hos4.png', '2023-11-04 13:06:55', '2023-11-04 13:06:55');
 
 -- ----------------------------
 -- Table structure for hospital_outpatient
@@ -430,7 +430,7 @@ CREATE TABLE `user_basic_info`  (
 -- ----------------------------
 -- Records of user_basic_info
 -- ----------------------------
-INSERT INTO `user_basic_info` VALUES (4, '患者1', 'http://localhost:9090/hospital/img/defalut_avatar.png', '18100176437', '2023-11-04 02:52:22', '2023-11-04 02:52:22');
+INSERT INTO `user_basic_info` VALUES (4, '患者1', 'http://localhost:8080/hospital/img/defalut_avatar.png', '18100176437', '2023-11-04 02:52:22', '2023-11-04 02:52:22');
 
 -- ----------------------------
 -- Table structure for user_case

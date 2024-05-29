@@ -223,8 +223,12 @@
 							uni.navigateBack({
 								delta: 1
 							})
-						}
-						
+						}	
+					}else {
+						uni.showToast({
+							title: res.data.message,
+							icon: 'error'
+						})
 					}
 				}).catch(() => {
 					uni.hideLoading()

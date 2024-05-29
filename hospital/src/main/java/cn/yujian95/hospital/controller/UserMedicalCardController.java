@@ -84,7 +84,7 @@ public class UserMedicalCardController {
             return CommonResult.success();
         }
 
-        return CommonResult.failed("服务器错误，请联系管理员！");
+        return CommonResult.failed("成员已存在");
     }
 
 

@@ -46,14 +46,14 @@
 					<text class="green-text">
 						{{ item.status | statusText }}</text>
 						<button class="cancel-button red-text" 
-						@click="cancelAppoint(item.appointmentId)"
-						v-if="(item.day - new Date().getTime()) 
-						* 1.0 / (1000 * 60 * 60) > 24 && (new Date().getTime()) < item.day">取消预约</button>
+						@click="cancelAppoint(item.appointmentId)">取消预约</button>
 				</view> 
 				
 				<!-- 当状态为2或者3时证明是失信的 -->
 				<text class="right red-text" v-if="item.status === 1 || item.status === 2">
-					{{ item.status | statusText }}</text>
+					{{ item.status | statusText }}
+				</text>
+				
 			</view>
 		</view>
 		<view class="loading">{{loadingText}}</view>
