@@ -288,7 +288,31 @@ export const systemRouterMap = [
       meta: {title: '修改医生', icon: 'el-icon-user'},
       hidden: true
     }]
-  }, {
+  },
+  {
+    path: '/',
+    component: layout,
+    redirect: '/userManagement',
+    meta: {title: '用户管理', icon: 'el-icon-s-custom'},
+    children: [{
+      path: '/userDetail',
+      component: () => import('@/view/userManagement/userDetail'),
+      meta: {title: '用户详情', icon: 'el-icon-user'}
+    },
+      {
+      path: '/addUser',
+      component: () => import('@/view/userManagement/addUser'),
+      meta: {title: '添加用户', icon: 'el-icon-user'},
+      hidden: true
+    }, {
+      path: '/editUser',
+      component: () => import('@/view/userManagement/editUser'),
+      meta: {title: '修改用户', icon: 'el-icon-user'},
+      hidden: true
+    }]
+  },
+
+  {
     path: '/',
     component: layout,
     redirect: '/setUpManagement',

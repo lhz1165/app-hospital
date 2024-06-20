@@ -4,8 +4,11 @@ import cn.hutool.core.util.RandomUtil;
 import cn.yujian95.hospital.component.AliSendSmsComponent;
 import cn.yujian95.hospital.dto.param.UserBasicInfoParam;
 import cn.yujian95.hospital.dto.param.UserRegisterParam;
+import cn.yujian95.hospital.entity.PowerAccount;
+import cn.yujian95.hospital.entity.PowerAccountExample;
 import cn.yujian95.hospital.entity.UserBasicInfo;
 import cn.yujian95.hospital.entity.UserBasicInfoExample;
+import cn.yujian95.hospital.mapper.PowerAccountMapper;
 import cn.yujian95.hospital.mapper.UserBasicInfoMapper;
 import cn.yujian95.hospital.service.IRedisService;
 import cn.yujian95.hospital.service.IUserBasicInfoService;
@@ -44,6 +47,9 @@ public class UserBasicInfoServiceImpl implements IUserBasicInfoService {
     private AliSendSmsComponent sendSmsComponent;
     @Resource
     private IRedisService redisService;
+    @Resource
+    private PowerAccountMapper powerAccountMapper;
+
     /**
      * 存入 redis中的前缀
      */

@@ -4,22 +4,28 @@ import cn.yujian95.hospital.common.api.CommonPage;
 import cn.yujian95.hospital.common.api.CommonResult;
 import cn.yujian95.hospital.component.WxComponent;
 import cn.yujian95.hospital.dto.UserInfoDTO;
+import cn.yujian95.hospital.dto.UserInfoDTO2;
 import cn.yujian95.hospital.dto.param.PowerAccountPasswordParam;
 import cn.yujian95.hospital.dto.param.UserBasicInfoParam;
 import cn.yujian95.hospital.dto.param.UserRegisterParam;
 import cn.yujian95.hospital.entity.PowerAccount;
 import cn.yujian95.hospital.entity.UserBasicInfo;
+import cn.yujian95.hospital.mapper.PowerAccountMapper;
+import cn.yujian95.hospital.mapper.UserBasicInfoMapper;
 import cn.yujian95.hospital.service.IPowerAccountService;
 import cn.yujian95.hospital.service.IUserBasicInfoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.beans.BeanUtils;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.security.Principal;
+import java.util.Date;
 import java.util.Optional;
 
 /**
@@ -232,5 +238,70 @@ public class UserBasicInfoController {
                                                                    @RequestParam Integer pageNum, @RequestParam Integer pageSize) {
 
         return CommonResult.success(CommonPage.restPage(basicInfoService.list(name, phone, pageNum, pageSize)));
+    }
+
+    @Resource
+    private UserBasicInfoMapper basicInfoMapper;
+    @Resource
+    private PowerAccountMapper accountMapper;
+
+    @ApiOperation(value = "更新用户", notes = "info和account")
+    @ApiImplicitParam(name = "id", value = "用户编号", paramType = "path", dataType = "Long",
+            required = true)
+    @RequestMapping(value = "/basic/UserAccount/{id}", method = RequestMethod.PUT)
+    public CommonResult updateUser(@PathVariable Long id, @RequestBody UserBasicInfoParam param) {
+        if (!basicInfoService.count(id)) {
+            return CommonResult.validateFailed("不存在，该用户编号！");
+        }
+        UserBasicInfo userBasicInfo = basicInfoMapper.selectByPrimaryKey(id);
+        String oldPhone = userBasicInfo.getPhone();
+
+        UserBasicInfo basicInfo = new UserBasicInfo();
+
+        BeanUtils.copyProperties(param, basicInfo);
+        basicInfo.setPhone(null);
+        basicInfo.setId(id);
+        basicInfo.setGmtModified(new Date());
+        basicInfoMapper.updateByPrimaryKeySelective(basicInfo);
+
+        //密码
+        Optional<PowerAccount> accountOptional = powerAccountService.getByName(oldPhone);
+
+        if (!accountOptional.isPresent()) {
+            return CommonResult.validateFailed("不存在，该用户账号！");
+        }
+        PowerAccount oldAccount = accountOptional.get();
+
+        if (!StringUtils.isEmpty(param.getPhone())) {
+            PowerAccount account = new PowerAccount();
+
+            account.setId(oldAccount.getId());
+            account.setName(param.getPhone());
+            accountMapper.updateByPrimaryKeySelective(account);
+
+
+            if (!StringUtils.isEmpty(param.getPassword())) {
+                powerAccountService.updatePassword(accountOptional.get().getId(), param.getPassword());
+
+            }
+        }
+
+        return CommonResult.success();
+    }
+
+    @ApiOperation(value = "获取用户详情")
+    @RequestMapping(value = "/basic/userInfo", method = RequestMethod.GET)
+    public CommonResult<UserInfoDTO2> getUserInfo(@RequestParam Long userId) {
+        UserInfoDTO2 dto = new UserInfoDTO2();
+
+        UserBasicInfo basicInfo = basicInfoService.getOptional(userId).get();
+        dto.setId(basicInfo.getId());
+        dto.setPhone(basicInfo.getPhone());
+        dto.setName(basicInfo.getName());
+        PowerAccount powerAccount = powerAccountService.getByName(basicInfo.getPhone()).get();
+
+        dto.setPassword(powerAccount.getPassword());
+        return CommonResult.success(dto);
+
     }
 }

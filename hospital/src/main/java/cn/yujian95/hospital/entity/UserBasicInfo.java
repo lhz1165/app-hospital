@@ -1,6 +1,9 @@
 package cn.yujian95.hospital.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -42,6 +45,8 @@ public class UserBasicInfo implements Serializable {
      *
      * @mbg.generated
      */
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     @ApiModelProperty(value = "创建时间")
     private Date gmtCreate;
 
@@ -54,6 +59,17 @@ public class UserBasicInfo implements Serializable {
     private Date gmtModified;
 
     private static final long serialVersionUID = 1L;
+
+    @ApiModelProperty(value = "密码")
+    private String password;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public Long getId() {
         return id;

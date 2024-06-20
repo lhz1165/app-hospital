@@ -31,4 +31,10 @@ public class UserBasicInfoParam implements Serializable {
      */
     @ApiModelProperty(value = "用户头像")
     private String avatarUrl;
+
+    @ApiModelProperty(value = "手机")
+    private String phone;
+
+    @ApiModelProperty(value = "密码")
+    private String password;
 }
